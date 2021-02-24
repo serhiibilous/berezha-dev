@@ -1,0 +1,23 @@
+{
+  "name": "berezha-dev",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serhiibilous/berezha-dev.git"
+  },
+  "author": "Serhii Bilous",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/serhiibilous/berezha-dev/issues"
+  },
+  "homepage": "https://github.com/serhiibilous/berezha-dev#readme",
+  "devDependencies": {
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0"
+  }
+}
