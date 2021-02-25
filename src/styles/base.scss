@@ -1,0 +1,66 @@
+@import "colors";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+  font-weight: 400;
+  color: $primaryBlueDark;
+  line-height: 1.2;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 56px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 42px;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 36px;
+  line-height: 1;
+}
+
+h4 {
+  font-size: 28px;
+  line-height: 1.4;
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+
+
+a {
+  color: $primaryBlueMedium;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+    color: $primaryBlueLight;
+  }
+
+  &:visited {
+    color: #8637D4;
+  }
+
+  &.active {
+    color: $primaryBlueDark;
+    text-decoration: none;
+  }
+}
