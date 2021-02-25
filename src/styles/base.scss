@@ -49,6 +49,7 @@ h5 {
 a {
   color: $primaryBlueMedium;
   text-decoration: underline;
+  outline: none;
 
   &:hover {
     text-decoration: none;
@@ -63,4 +64,9 @@ a {
     color: $primaryBlueDark;
     text-decoration: none;
   }
+}
+
+button {
+  border: 0;
+  outline: none;
 }

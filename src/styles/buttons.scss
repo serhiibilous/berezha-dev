@@ -1,0 +1,51 @@
+@import "colors";
+
+.button-primary {
+  background: $primaryBlueMedium;
+  color: $monochromeWhite;
+
+  &:hover {
+    background: $primaryBlueLight;
+  }
+
+  &:disabled {
+    background: $monochromeGrey5;
+  }
+}
+
+.button-outline {
+  border: 1px solid $primaryBlueMedium;
+  background: $monochromeWhite;
+  color: $primaryBlueMedium;
+
+  &:hover {
+    border-color: $primaryBlueLight;
+    color: $primaryBlueLight;
+  }
+
+  &:disabled {
+    border-color: $monochromeGrey5;
+    color: $monochromeGrey5;
+  }
+}
+
+.button-with-icon {
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  color: $primaryBlueMedium;
+
+  &:hover {
+    border-color: $primaryBlueLight;
+    color: $primaryBlueLight;
+  }
+
+  &:disabled {
+    border-color: $monochromeGrey5;
+    color: $monochromeGrey5;
+  }
+}
+
+.button-icon-container {
+  margin-left: 16px;
+}
