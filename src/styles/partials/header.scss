@@ -2,4 +2,67 @@
 
 .header {
   background: $monochromeWhite;
+  border-bottom: 1px solid $monochromeGrey1;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 30px;
+  padding: 15px 0;
+  .header__wrapper-menu {
+    .main__menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      li {
+        list-style: none;
+        margin-right: 32px;
+        position: relative;
+        a {
+          color: $primaryBlueDark;
+          font-size: 18px;
+          text-decoration: none;
+          &:hover {
+            color: $primaryBlueMedium;
+          }
+        }
+        &:hover {
+          .main__menu-submenu {
+            display: block;
+          }
+        }
+      }
+      .main__menu-submenu {
+        display: none;
+        background-color: $primaryMintLight;
+        padding: 20px 24px;
+        position: absolute;
+        left: -15px;
+        top: 22px;
+        li {
+          margin-bottom: 12px;
+          a {
+            color: $primaryBlueDark;
+            font-size: 14px;
+            line-height: 24px;
+            &:hover {
+              color: $primaryBlueMedium
+            }
+          }
+        }
+      }
+    }
+  }
+  .header__wrapper-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    a {
+      padding: 6px 16px;
+      border: 1px solid $borderLightColor;
+      font-size: 16px;
+      text-decoration: none;
+    }
+  }
 }
