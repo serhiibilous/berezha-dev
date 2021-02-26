@@ -1,19 +1,47 @@
 @import "colors";
 
-.button-primary {
+.button {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 6px 16px;
+  border: 1px solid transparent;
+}
+
+.button_medium {
+  padding: 10px 16px;
+}
+
+.button_large {
+  padding: 14px 16px;
+}
+
+.button_primary {
   background: $primaryBlueMedium;
+  border-color: $primaryBlueMedium;
   color: $monochromeWhite;
 
   &:hover {
     background: $primaryBlueLight;
+    border-color: $primaryBlueLight;
   }
 
   &:disabled {
     background: $monochromeGrey5;
+    border-color: $monochromeGrey5;
+  }
+
+  &:focus {
+    border-color: $borderLightColor;
+    background: $primaryBlueLight;
+  }
+
+  &:active {
+    background: $primaryBlueLight;
+    border-color: $borderDarkColor;
   }
 }
 
-.button-outline {
+.button_outline {
   border: 1px solid $primaryBlueMedium;
   background: $monochromeWhite;
   color: $primaryBlueMedium;
@@ -27,13 +55,23 @@
     border-color: $monochromeGrey5;
     color: $monochromeGrey5;
   }
+
+  &:focus {
+    border-color: $borderLightColor;
+    color: $primaryBlueLight;
+  }
+
+  &:active {
+    border-color: $borderDarkColor;
+    color: $primaryBlueLight;
+  }
 }
 
-.button-with-icon {
-  border: 1px solid transparent;
+.button_with-icon {
   display: flex;
   align-items: center;
   color: $primaryBlueMedium;
+  background: $monochromeWhite;
 
   &:hover {
     border-color: $primaryBlueLight;
@@ -44,8 +82,18 @@
     border-color: $monochromeGrey5;
     color: $monochromeGrey5;
   }
+
+  &:focus {
+    border-color: $borderLightColor;
+    color: $primaryBlueLight;
+  }
+
+  &:active {
+    border-color: $borderDarkColor;
+    color: $primaryBlueLight;
+  }
 }
 
-.button-icon-container {
+.button__icon-container {
   margin-left: 16px;
 }

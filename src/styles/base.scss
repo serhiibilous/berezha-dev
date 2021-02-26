@@ -19,32 +19,49 @@ h1, h2, h3, h4, h5, h6, p {
   font-weight: 400;
 }
 
-h1 {
+// Text styles
+
+.heading-h1 {
   font-size: 56px;
   line-height: 1;
 }
 
-h2 {
+.heading-h2 {
   font-size: 42px;
   line-height: 1;
 }
 
-h3 {
+.heading-h3 {
   font-size: 36px;
   line-height: 1;
 }
 
-h4 {
+.heading-h4 {
   font-size: 28px;
   line-height: 1.4;
 }
 
-h5 {
+.sub-title {
   font-size: 24px;
   line-height: 1.4;
 }
 
+.body-text-1 {
+  font-size: 18px;
+  line-height: 1.3;
+}
 
+.body-text-2 {
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.caption {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+// Links
 
 a {
   color: $primaryBlueMedium;
@@ -57,16 +74,30 @@ a {
   }
 
   &:visited {
-    color: #8637D4;
+    color: $visitedLink;
   }
 
   &.active {
     color: $primaryBlueDark;
     text-decoration: none;
+    cursor: default;
   }
 }
 
 button {
   border: 0;
   outline: none;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+// Content
+
+.container {
+  max-width: 1250px;
+  padding: 0 9px;
+  margin: 0 auto;
 }
