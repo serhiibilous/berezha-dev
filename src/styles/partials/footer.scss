@@ -3,4 +3,69 @@
 .footer {
   background: $primaryBlueDark;
   color: $monochromeWhite;
+  padding-top: 24px;
+  .footer__wrapper {
+    max-width: 1232px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .footer__menu {
+      display: flex;
+      justify-content: space-evenly;
+      width: 70%;
+      margin-bottom: 53px;
+      ul {
+        .footer__menu-name {
+          font-size: 14px;
+          line-height: 18px;
+          display: block;
+          margin-bottom: 24px;
+        }
+        li {
+          margin-bottom: 16px;
+          list-style: none;
+          a {
+            color: $monochromeGrey5;
+            font-size: 14px;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .footer__copyright {
+      width: 100%;
+      border-top: 1px solid $monochromeGrey7;
+      padding: 23px 0;
+      display: flex;
+      justify-content: space-between;
+      .footer__copyright-rights {
+        font-size: 14px;
+      }
+      .footer__copyright-menu {
+        display: flex;
+        justify-content: space-between;
+        width: 42%;
+        li {
+          list-style: none;
+          a {
+            color: $monochromeGrey5;
+            font-size: 14px;
+            text-decoration: none;
+          }
+        }
+      }
+      .footer__copyright-social {
+        display: flex;
+        li {
+          list-style: none;
+          margin-right: 26px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
 }
