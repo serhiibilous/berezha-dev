@@ -1,0 +1,33 @@
+.home__main-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+.home__main-information {
+  margin: 132px 0 0 67px;
+  width: 60%;
+}
+.home__main-title {
+  max-width: 458px;
+  margin-bottom: 64px;
+}
+.home__main-subtitle {
+  max-width: 560px;
+  margin-bottom: 58px;
+}
+a.home__main-button {
+  color: $monochromeWhite;
+  text-decoration: none;
+  display: inline-block;
+}
+.home__main-image {
+  background: $primaryBlueDark;
+  width: 40%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    //transform: rotate(-30deg);
+    max-width: 492px;
+  }
+}
