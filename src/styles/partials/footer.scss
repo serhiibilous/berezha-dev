@@ -1,12 +1,21 @@
-@import "../colors";
+@import '../colors';
 
 .footer {
   background: $primaryBlueDark;
   color: $monochromeWhite;
+  line-height: 18px;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+
   a {
     color: $monochromeGrey5;
     font-size: 14px;
     text-decoration: none;
+    transition: color ease 0.3s;
+
+    &:hover {
+      color: $monochromeGrey6;
+    }
   }
 }
 
@@ -22,7 +31,7 @@
 }
 
 .footer__top {
-  padding-top: 24px;
+  padding: 40px 0;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -32,7 +41,6 @@
   width: 62%;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 53px;
 }
 
 .footer__top-menu-item {
@@ -42,13 +50,11 @@
 .footer__menu {
   li {
     margin-bottom: 16px;
-    list-style: none;
   }
 }
 
 .footer__menu-title {
   font-size: 14px;
-  line-height: 18px;
   margin-bottom: 24px;
 }
 
@@ -75,6 +81,7 @@
   width: 25%;
   display: flex;
   justify-content: flex-end;
+
   li {
     margin: 0 13px;
     &:last-child {
