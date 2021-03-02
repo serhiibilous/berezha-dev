@@ -1,10 +1,11 @@
-@import "colors";
+@import 'colors';
 
 .button {
   font-size: 16px;
   line-height: 24px;
-  padding: 6px 16px;
+  padding: 5px 16px;
   border: 1px solid transparent;
+  transition: color, background, border ease 0.3s;
 }
 
 .button_medium {

@@ -1,5 +1,72 @@
-@import "../colors";
+@import '../colors';
 
 .header {
   background: $monochromeWhite;
+  border-bottom: 1px solid $monochromeGrey1;
+
+  .button_outline {
+    text-decoration: none;
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+}
+
+.header__left-content {
+  display: flex;
+  align-items: center;
+}
+
+.header__main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 40px;
+
+  a {
+    color: $primaryBlueDark;
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 24px;
+    display: inline-flex;
+    padding: 8px 0;
+    letter-spacing: 0.2px;
+
+    &:hover {
+      color: $primaryBlueMedium;
+    }
+  }
+
+  li {
+    margin: 0 20px;
+    position: relative;
+
+    &:hover {
+      .header__sub-nav {
+        display: block;
+      }
+    }
+  }
+}
+
+.header__sub-nav {
+  display: none;
+  background-color: $primaryMintLight;
+  padding: 8px 24px;
+  position: absolute;
+  left: -24px;
+  top: 38px;
+  min-width: 150px;
+
+  li {
+    margin: 12px 0;
+
+    a {
+      padding: 0;
+    }
+  }
 }

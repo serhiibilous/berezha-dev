@@ -1,57 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <!--#include virtual="./partials/head.html" -->
-  <title>Style Guide</title>
-</head>
-<body>
-<!--#include virtual="./partials/header.html" -->
-<hr>
-<h2 class="heading-h2">Typography</h2>
-<br>
-<h1 class="heading-h1">Heading H1</h1>
-<h2 class="heading-h2">Heading H2</h2>
-<h3 class="heading-h3">Heading H3</h3>
-<h4 class="heading-h4">Heading H4</h4>
-<p class="sub-title">Sub Title</p>
-<p class="body-text-1">Body Text 1</p>
-<p class="body-text-2">Body Text 2</p>
-<p class="caption">Caption</p>
-<hr>
-<hr>
-<h2 class="heading-h2">Links</h2>
-<br>
-<p class="body-text-1">
-  <a href="#">Link Normal</a>
-  <a href="#" class="active">Link Active</a>
-</p>
-<hr>
-<hr>
-<h2 class="heading-h2">Links</h2>
-<div>
-  <div>
-    <h3 class="heading-h3">Normal</h3>
-    <button class="button button_primary">Normal</button>
-    <button class="button button_primary" disabled>Disabled</button>
-    <button class="button button_primary button_medium">Normal Medium</button>
-    <button class="button button_primary button_large">Normal Large</button>
-  </div>
-  <div>
-    <h3 class="heading-h3">Outline</h3>
-    <button class="button button_outline">Outline</button>
-    <button class="button button_outline" disabled>Disabled</button>
-    <button class="button button_outline button_medium">Outline Medium</button>
-    <button class="button button_outline button_large">Outline Large</button>
-  </div>
-  <div>
-    <h3 class="heading-h3">With Icon</h3>
-    <button class="button button_with-icon">With Icon <span class="button__icon-container">></span></button>
-    <button class="button button_with-icon" disabled>With Icon <span class="button__icon-container">></span></button>
-    <button class="button button_with-icon button_medium">With Icon Medium<span class="button__icon-container">></span></button>
-    <button class="button button_with-icon button_large">With Icon Large<span class="button__icon-container">></span></button>
-  </div>
-</div>
-<hr>
-<!--#include virtual="./partials/footer.html" -->
-</body>
+  <head>
+    <!--#include file="partials/head.html" -->
+    <title>Style Guide</title>
+  </head>
+  <body>
+    <!--#include file="partials/header.html" -->
+    <div class="container">
+      <hr />
+      <h2 class="heading-h2">Typography</h2>
+      <br />
+      <h1 class="heading-h1">Heading H1</h1>
+      <h2 class="heading-h2">Heading H2</h2>
+      <h3 class="heading-h3">Heading H3</h3>
+      <h4 class="heading-h4">Heading H4</h4>
+      <p class="sub-title">Sub Title</p>
+      <p class="body-text-1">Body Text 1</p>
+      <p class="body-text-2">Body Text 2</p>
+      <p class="caption">Caption</p>
+      <hr />
+      <hr />
+      <h2 class="heading-h2">Links</h2>
+      <br />
+      <p class="body-text-1">
+        <a href="#">Link Normal</a>
+        <a href="#" class="active">Link Active</a>
+      </p>
+      <hr />
+      <hr />
+      <h2 class="heading-h2">Links</h2>
+      <div>
+        <div>
+          <h3 class="heading-h3">Normal</h3>
+          <button class="button button_primary">Normal</button>
+          <button class="button button_primary" disabled>Disabled</button>
+          <button class="button button_primary button_medium">Normal Medium</button>
+          <button class="button button_primary button_large">Normal Large</button>
+        </div>
+        <div>
+          <h3 class="heading-h3">Outline</h3>
+          <button class="button button_outline">Outline</button>
+          <button class="button button_outline" disabled>Disabled</button>
+          <button class="button button_outline button_medium">Outline Medium</button>
+          <button class="button button_outline button_large">Outline Large</button>
+        </div>
+        <div>
+          <h3 class="heading-h3">With Icon</h3>
+          <button class="button button_with-icon">With Icon <span class="button__icon-container">></span></button>
+          <button class="button button_with-icon" disabled>
+            With Icon <span class="button__icon-container">></span>
+          </button>
+          <button class="button button_with-icon button_medium">
+            With Icon Medium<span class="button__icon-container">></span>
+          </button>
+          <button class="button button_with-icon button_large">
+            With Icon Large<span class="button__icon-container">></span>
+          </button>
+        </div>
+      </div>
+      <hr />
+    </div>
+    <!--#include file="partials/footer.html" -->
+  </body>
 </html>
