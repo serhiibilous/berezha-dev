@@ -6,11 +6,19 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 65px 0 0 0;
   font-family: Helvetica, sans-serif;
   font-weight: 400;
   color: $primaryBlueDark;
   line-height: 1.2;
+
+  &.overflowed {
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    padding: 48px 0 0 0;
+  }
 }
 
 h1,
@@ -42,12 +50,12 @@ li {
 
 .heading-h2 {
   font-size: 42px;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .heading-h3 {
   font-size: 36px;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .heading-h4 {
@@ -57,17 +65,17 @@ li {
 
 .sub-title {
   font-size: 24px;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .body-text-1 {
   font-size: 18px;
-  line-height: 1.3;
+  line-height: 1.5;
 }
 
 .body-text-2 {
   font-size: 16px;
-  line-height: 1.3;
+  line-height: 1.5;
 }
 
 .caption {
@@ -111,9 +119,13 @@ button {
 // Content
 
 .container {
-  max-width: 1250px;
-  padding: 0 9px;
+  max-width: 1256px;
+  padding: 0 12px;
   margin: 0 auto;
+}
+
+.container_small {
+  max-width: 1048px;
 }
 
 // Images

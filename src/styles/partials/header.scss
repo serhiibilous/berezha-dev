@@ -4,6 +4,11 @@ $headerMobileHeight: 49;
 .header {
   background: $monochromeWhite;
   border-bottom: 1px solid $monochromeGrey2;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
 
   .button_outline {
     text-decoration: none;
