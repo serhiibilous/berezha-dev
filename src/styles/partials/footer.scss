@@ -21,6 +21,10 @@
 
 .footer__item {
   width: 25%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .footer__wrapper {
@@ -41,6 +45,10 @@
   width: 62%;
   display: flex;
   justify-content: space-around;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 }
 
 .footer__top-menu-item {
@@ -69,8 +77,13 @@
 
 .footer__bottom-wrapper {
   width: 62%;
+  min-width: 62%;
   display: flex;
   justify-content: space-around;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 }
 
 .footer__bottom-item {
@@ -82,8 +95,19 @@
   display: flex;
   justify-content: flex-end;
 
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: flex-start;
+    margin: 15px 0 0;
+  }
+
   li {
     margin: 0 13px;
+
+    @media (max-width: 768px) {
+      margin: 0 20px 0 0;
+    }
+
     &:last-child {
       margin-right: 0;
     }

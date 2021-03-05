@@ -1,13 +1,25 @@
 <header class="header" id="header">
   <div class="header__wrapper">
     <div class="header__left-content">
-      <a href="/">
-        <img src="../public/images/logo.png" alt="Berezha" title="Berezha" />
+      <a href="/" class="header__logo">
+        <img src="../public/images/logo.svg" alt="Berezha" title="Berezha" />
       </a>
-      <nav>
+      <nav class="header__nav-wrapper" id="headerNavigation">
         <ul class="header__main-nav">
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Trainings</a></li>
+          <li>
+            <a href="#">Services</a>
+            <ul class="header__sub-nav">
+              <li><a href="#">Appsec</a></li>
+              <li><a href="#">Pentest</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Trainings</a>
+            <ul class="header__sub-nav">
+              <li><a href="#">Web Application Pentester</a></li>
+              <li><a href="#">Developer Application Security</a></li>
+            </ul>
+          </li>
           <li>
             <a href="#">Company</a>
             <ul class="header__sub-nav">
@@ -21,6 +33,12 @@
         </ul>
       </nav>
     </div>
-    <a class="button button_outline" href="#">Get Quote</a>
+    <div class="header__button-menu" id="mobileNavButton">
+      <span class="header__button-menu-item"></span>
+      <span class="header__button-menu-item"></span>
+    </div>
+    <div class="header__button-quote">
+      <a class="button button_outline" href="#">Get Quote</a>
+    </div>
   </div>
 </header>
