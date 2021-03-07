@@ -1,8 +1,11 @@
-@import "fonts";
-@import "base";
-@import "buttons";
+@import 'fonts';
+@import 'base';
+@import 'buttons';
 
 // Partials
-@import "partials/header";
-@import "partials/footer";
-@import "partials/home";
+
+@import 'partials/header';
+@import 'partials/footer';
+
+// Components
+@import 'components/faq';

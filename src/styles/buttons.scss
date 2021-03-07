@@ -1,10 +1,12 @@
-@import "colors";
+@import 'colors';
 
 .button {
   font-size: 16px;
   line-height: 24px;
-  padding: 6px 16px;
+  padding: 5px 16px;
   border: 1px solid transparent;
+  transition: color, background, border ease 0.3s;
+  text-decoration: none;
 }
 
 .button_medium {
@@ -76,24 +78,41 @@
   &:hover {
     border-color: $primaryBlueLight;
     color: $primaryBlueLight;
+
+    path {
+      stroke: $primaryBlueLight;
+    }
   }
 
   &:disabled {
     border-color: $monochromeGrey5;
     color: $monochromeGrey5;
+
+    path {
+      stroke: $monochromeGrey5;
+    }
   }
 
   &:focus {
     border-color: $borderLightColor;
     color: $primaryBlueLight;
+
+    path {
+      stroke: $primaryBlueLight;
+    }
   }
 
   &:active {
     border-color: $borderDarkColor;
     color: $primaryBlueLight;
+
+    path {
+      stroke: $primaryBlueLight;
+    }
   }
 }
 
 .button__icon-container {
+  display: flex;
   margin-left: 16px;
 }
