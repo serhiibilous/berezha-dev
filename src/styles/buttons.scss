@@ -3,10 +3,11 @@
 .button {
   font-size: 16px;
   line-height: 24px;
-  padding: 5px 16px;
+  padding: 6px 16px 4px 16px;
   border: 1px solid transparent;
   transition: color, background, border ease 0.3s;
   text-decoration: none;
+  display: inline-flex;
 }
 
 .button_medium {
