@@ -1,0 +1,30 @@
+.quote {
+  padding: 104px 104px 64px;
+  background-color: $primaryMintLight;
+}
+.quote__content {
+  margin-bottom: 116px;
+}
+.quote__author {
+  display: flex;
+  justify-content: flex-end;
+}
+.quote__author-wrapper {
+  display: flex;
+  img {
+    margin-right: 16px;
+  }
+}
+.quote__author-info {
+  padding: 11px 31px 39px 0;
+  border: 1px solid $primaryBlueDark;
+  border-left: none;
+  p {
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+  }
+}
+.quote__author-name {
+  text-transform: uppercase;
+}
