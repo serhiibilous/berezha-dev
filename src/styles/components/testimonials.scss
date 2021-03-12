@@ -1,24 +1,45 @@
 .testimonials-title {
   margin-bottom: 70px;
-  max-width: 1048px;
+  @media all and (max-width: #{$mobileWidth}) {
+    margin-bottom: 35px;
+  }
 }
 .testimonials__wrapper {
   display: flex;
   justify-content: space-between;
+  @media all and (max-width: #{$mobileWidth}) {
+    flex-wrap: wrap;
+  }
 }
 .testimonials__wrapper-item {
-  max-width: 400px;
+  width: calc(33.33% - 10px);
   padding: 24px;
   background-color: #e6f8f4;
-  img {
-    margin-left: -8px;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    background: url("../public/images/brackets.svg");
+  }
+  @media all and (max-width: #{$mobileWidth}) {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 16px;
   }
 }
 .testimonials__wrapper-text {
   font-size: 18px;
   line-height: 27px;
-  margin-top: 18px;
+  margin-top: 32px;
   margin-bottom: 78px;
+  @media all and (max-width: #{$mobileWidth}) {
+    margin-bottom: 39px;
+  }
 }
 .testimonials__author-wrapper {
   display: flex;
@@ -28,11 +49,9 @@
   padding: 11px 7px 43px 0;
   border: 1px solid $primaryBlueDark;
   border-left: 0;
-  min-width: 272px;
-  p {
-    font-size: 12px;
-    line-height: 12px;
-  }
+  width: 77%;
+  font-size: 12px;
+  line-height: 12px;
 }
 .testimonials__author-name {
   text-transform: uppercase;
