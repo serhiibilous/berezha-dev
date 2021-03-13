@@ -1,9 +1,17 @@
 .quote {
   padding: 104px 104px 64px;
   background-color: $primaryMintLight;
+  margin: 80px auto;
+  @media all and (max-width: #{$mobileWidth}) {
+    padding: 60px;
+    margin: 40px auto;
+  }
 }
 .quote__content {
   margin-bottom: 116px;
+  @media all and (max-width: #{$mobileWidth}) {
+    margin-bottom: 66px;
+  }
 }
 .quote__author {
   display: flex;
@@ -11,19 +19,23 @@
 }
 .quote__author-wrapper {
   display: flex;
-  img {
-    margin-right: 16px;
-  }
+}
+.quote__author-image {
+  margin-right: 16px;
 }
 .quote__author-info {
   padding: 11px 31px 39px 0;
   border: 1px solid $primaryBlueDark;
   border-left: none;
-  p {
-    font-size: 18px;
-    line-height: 18px;
-    letter-spacing: 0.02em;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  @media all and (max-width: #{$mobileWidth}) {
+    padding: 7px 14px 11px 0;
+    font-size: 15px;
+    line-height: 15px;
   }
+
 }
 .quote__author-name {
   text-transform: uppercase;
