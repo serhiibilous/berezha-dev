@@ -1,6 +1,7 @@
 @import 'fonts';
 @import 'base';
 @import 'buttons';
+@import "variables";
 
 // Partials
 
@@ -10,3 +11,5 @@
 // Components
 @import 'components/main-block';
 @import 'components/faq';
+@import 'components/quote';
+@import 'components/testimonials';
