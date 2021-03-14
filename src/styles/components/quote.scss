@@ -1,30 +1,41 @@
+@import '../colors';
+@import '../variables';
+
 .quote {
-  padding: 104px 104px 64px;
   background-color: $primaryMintLight;
+  margin: 0 0 40px;
 }
+
 .quote__content {
-  margin-bottom: 116px;
+  padding: 104px;
+
+  @media all and (max-width: #{$mobileWidth}) {
+    padding: 40px;
+  }
 }
-.quote__author {
+
+.quote__author-container {
   display: flex;
   justify-content: flex-end;
+  padding: 0 104px 64px;
+
+  @media all and (max-width: #{$mobileWidth}) {
+    padding: 0 40px 40px;
+  }
 }
-.quote__author-wrapper {
+
+.quote__author {
   display: flex;
-  img {
-    margin-right: 16px;
-  }
 }
+
+.quote__author-image {
+  margin-right: 16px;
+}
+
 .quote__author-info {
-  padding: 11px 31px 39px 0;
+  padding: 10px 30px 10px 0;
   border: 1px solid $primaryBlueDark;
-  border-left: none;
-  p {
-    font-size: 18px;
-    line-height: 18px;
-    letter-spacing: 0.02em;
-  }
-}
-.quote__author-name {
-  text-transform: uppercase;
+  border-left: 0;
+  line-height: 1;
+  min-height: 80px;
 }
