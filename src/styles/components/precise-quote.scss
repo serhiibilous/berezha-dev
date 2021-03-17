@@ -1,0 +1,71 @@
+@import '../colors';
+
+.precise-quote {
+  background: $primaryMintLight;
+  position: relative;
+}
+
+.precise-quote__counter {
+  position: absolute;
+  bottom: 64px;
+  left: 104px;
+  color: $secondaryGreenDark;
+}
+
+.precise-quote__step {
+  padding: 64px 104px;
+  display: flex;
+  min-height: 470px;
+}
+
+.precise-quote__column {
+  &:first-child {
+    border-right: 1px solid $secondaryGreenDark;
+    padding-right: 16px;
+    width: 47%;
+  }
+
+  &:last-child {
+    width: 53%;
+    padding-left: 43px;
+  }
+}
+
+.precise-quote__heading {
+  min-height: 150px;
+  margin: 0 0 15px;
+}
+
+.precise-quote__question {
+  margin: 0 0 32px;
+}
+
+.precise-quote__answers-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.precise-quote__input {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  display: block;
+  margin: 0;
+
+  &:checked {
+    + .precise-quote__label {
+      border-color: $primaryBlueMedium;
+      color: $monochromeWhite;
+      background: $primaryBlueMedium;
+    }
+  }
+}
+
+.precise-quote__label {
+  padding: 10px 16px;
+  border: 1px solid $secondaryGreenDark;
+  margin: 0 12px 12px 0;
+  color: $secondaryGreenDark;
+  display: flex;
+  cursor: pointer;
+}
