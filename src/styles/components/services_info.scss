@@ -1,0 +1,36 @@
+@import '../colors';
+@import '../variables';
+.services__info {
+  padding: 80px 12px;
+  background: $primaryBlueDark;
+  position: relative;
+  @media all and (max-width: #{$mobileWidth}) {
+    padding: 40px 12px;
+  }
+}
+.services__info-image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  @media all and (max-width: #{$mobileWidth}) {
+    display: none;
+  }
+}
+.services__info-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.services__info-subtitle {
+  color: $monochromeWhite;
+  max-width: 816px;
+  margin-bottom: 30px;
+  z-index: 1;
+  &:last-child {
+    margin: 0;
+  }
+}
+.info__position-right {
+  right: 0;
+  left: auto;
+}
