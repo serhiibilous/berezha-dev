@@ -1,10 +1,14 @@
-.training__container {
+@import '../colors';
+
+.training-schedule {
+  padding: 120px 0 112px;
+}
+
+.training-schedule__container {
   margin: 78px 0 0;
 }
-.training_schedule {
-  padding: 112px 0 120px;
-}
-.training__item {
+
+.training-schedule__item {
   border: 1px solid $monochromeGrey2;
   padding: 23px 0;
   margin: 0 0 8px;
@@ -12,14 +16,17 @@
   display: flex;
   align-items: flex-start;
 }
-.training__item-day {
+
+.training-schedule__item-day {
   min-width: 88px;
   color: $monochromeGrey6;
   margin: 0 16px 0 0;
 }
-.training__item-title {
+
+.training-schedule__item-title {
   margin: 0 0 7px;
 }
-.training__item-hashtags {
+
+.training-schedule__item-hashtags {
   color: $monochromeGrey6;
 }
