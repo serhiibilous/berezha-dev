@@ -1,0 +1,105 @@
+@import '../colors';
+@import '../variables';
+
+.precise-quote {
+  background: $primaryMintLight;
+  position: relative;
+}
+
+.precise-quote__counter {
+  position: absolute;
+  bottom: 64px;
+  left: 104px;
+  color: $secondaryGreenDark;
+
+  @media all and (max-width: #{$mobileWidth}) {
+    bottom: 40px;
+    left: 20px;
+  }
+}
+
+.precise-quote__step {
+  padding: 64px 104px;
+  display: flex;
+  min-height: 470px;
+
+  @media all and (max-width: #{$desktopWidth}) {
+    padding: 64px;
+  }
+
+  @media all and (max-width: #{$mobileWidth}) {
+    flex-wrap: wrap;
+    padding: 40px 20px;
+  }
+}
+
+.precise-quote__column {
+  &:first-child {
+    border-right: 1px solid $secondaryGreenDark;
+    padding-right: 16px;
+    width: 47%;
+
+    @media all and (max-width: #{$mobileWidth}) {
+      width: 100%;
+      border: 0;
+      padding: 0;
+    }
+  }
+
+  &:last-child {
+    width: 53%;
+    padding-left: 43px;
+
+    @media all and (max-width: #{$mobileWidth}) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  @media all and (max-width: #{$mobileWidth}) {
+    width: 100%;
+  }
+}
+
+.precise-quote__heading {
+  min-height: 150px;
+  margin: 0 0 15px;
+}
+
+.precise-quote__question {
+  margin: 0 0 32px;
+}
+
+.precise-quote__answers-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.precise-quote__input_radio {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  display: block;
+  margin: 0;
+
+  &:checked {
+    + .precise-quote__label_radio {
+      border-color: $primaryBlueMedium;
+      color: $monochromeWhite;
+      background: $primaryBlueMedium;
+    }
+  }
+}
+
+.precise-quote__label_radio {
+  padding: 10px 16px;
+  border: 1px solid $secondaryGreenDark;
+  margin: 0 12px 12px 0;
+  color: $secondaryGreenDark;
+  display: flex;
+  cursor: pointer;
+}
+
+.precise-quote__input_text {
+  border: 0;
+}
