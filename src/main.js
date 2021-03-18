@@ -1,3 +1,5 @@
+import './js/precise-quote-form'
+
 console.log('It works')
 const HEIGHT_FIRST_BLOCK = 100
 const body = document.body
