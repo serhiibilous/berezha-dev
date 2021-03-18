@@ -15,3 +15,19 @@ export const securityObjectiveQuestions = [
   { key: 'PostIncidentHealthCheck', name: 'Post-incident health check' },
   { key: 'Other', name: 'Other' },
 ]
+
+export const industryQuestions = [
+  { key: 'ITProduct', name: 'IT Product' },
+  { key: 'ITServices', name: 'IT Services' },
+  { key: 'FinancialServices', name: 'FinancialServices' },
+  { key: 'FinTech', name: 'FinTech' },
+  { key: 'Telecom', name: 'Telecom' },
+  { key: 'Gaming', name: 'Gaming' },
+  { key: 'ECommerce', name: 'e-Commerce' },
+  { key: 'Banking', name: 'Banking' },
+  { key: 'Insurance', name: 'Insurance' },
+  { key: 'Retail', name: 'Retail' },
+  { key: 'Media', name: 'Media' },
+  { key: 'Healthcare', name: 'Healthcare' },
+  { key: 'Skip', name: 'Skip' },
+]
