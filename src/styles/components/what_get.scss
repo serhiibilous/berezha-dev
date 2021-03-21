@@ -1,0 +1,35 @@
+@import '../colors';
+@import '../variables';
+.what__get {
+  padding: 120px 0;
+  background: $primaryBlueUltralight;
+  @media all and (max-width: #{$mobileWidth}){
+    padding: 60px 0;
+  }
+}
+.what__get-title {
+  margin: 0 0 79px;
+  @media all and (max-width: #{$mobileWidth}){
+    margin: 0 0 49px;
+  }
+}
+.what__get-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.what__get-list_item {
+  position: relative;
+  margin: 0 0 22px;
+  &::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background: url('../public/images/icons/check.svg');
+    position: absolute;
+    left: -30px;
+    top: 5px;
+  }
+  @media all and (max-width: #{$mobileWidth}){
+    margin-left: 23px;
+  }
+}
