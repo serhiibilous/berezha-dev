@@ -18,6 +18,8 @@
 
 .faq__title {
   margin: 0 0 35px;
+  text-align: left;
+  width: 100%;
 }
 
 .faq__sub-title {
@@ -46,17 +48,13 @@
   margin-top: -12px;
   width: 24px;
   height: 24px;
-  border: 1px solid $primaryBlueMedium;
+  border: 1px solid $primaryBlueLight;
   border-radius: 50%;
   cursor: pointer;
   transition: border-color linear 0.2s;
 
   &:hover {
     border-color: $primaryBlueDark;
-
-    .faq__control-item {
-      background: $primaryBlueDark;
-    }
   }
 
   .faq__item_open & {
@@ -66,20 +64,19 @@
 
 .faq__control-item {
   position: absolute;
-  top: 11px;
-  width: 6px;
-  height: 1px;
-  background: $primaryBlueMedium;
-  transition: background linear 0.2s;
+  top: 50%;
+  margin-top: -1px;
+  width: 12px;
+  height: 2px;
+  background: $borderLightColor;
+  left: 50%;
+  margin-left: -6px;
+  transition: transform linear 0.1s, background linear 0.2s;
 
-  &:first-child {
-    left: 10px;
-    transform: rotate(-45deg);
-  }
-
-  &:last-child {
-    right: 10px;
-    transform: rotate(45deg);
+  .faq__item_open & {
+    &:last-child {
+      transform: rotate(90deg);
+    }
   }
 }
 

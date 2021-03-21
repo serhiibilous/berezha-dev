@@ -3,14 +3,14 @@
 
 .quote {
   background-color: $primaryMintLight;
-  margin: 0 0 40px;
+  margin: 80px 0;
 }
 
 .quote__content {
   padding: 104px;
 
   @media all and (max-width: #{$mobileWidth}) {
-    padding: 40px;
+    padding: 50px 24px;
   }
 }
 
@@ -20,7 +20,7 @@
   padding: 0 104px 64px;
 
   @media all and (max-width: #{$mobileWidth}) {
-    padding: 0 40px 40px;
+    padding: 0 24px 24px;
   }
 }
 

@@ -55,6 +55,10 @@ li {
 .heading-h2 {
   font-size: 42px;
   line-height: 1.2;
+
+  @media all and (max-width: #{$mobileWidth}) {
+    // font-size: 24px;
+  }
 }
 
 .heading-h3 {
@@ -62,7 +66,7 @@ li {
   line-height: 1.2;
 
   @media all and (max-width: #{$mobileWidth}) {
-    font-size: 28px;
+    font-size: 18px;
   }
 }
 
@@ -79,6 +83,10 @@ li {
 .body-text-1 {
   font-size: 18px;
   line-height: 1.5;
+
+  @media all and (max-width: #{$mobileWidth}) {
+    // font-size: 12px;
+  }
 }
 
 .body-text-2 {
