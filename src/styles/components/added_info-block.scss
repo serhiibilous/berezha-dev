@@ -1,0 +1,9 @@
+@import '../colors';
+@import '../variables';
+.added__info {
+  background: $primaryBlueUltralight;
+  padding: 80px 0;
+}
+.added__info-subtitle {
+  max-width: 920px;
+}
