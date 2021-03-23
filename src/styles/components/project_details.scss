@@ -1,47 +1,56 @@
 @import '../colors';
 @import '../variables';
+
 .project__details {
   padding: 80px 0 112px;
   background: $primaryBlueDark;
-  @media all and (max-width: #{$mobileWidth}){
+  @media all and (max-width: #{$mobileWidth}) {
     padding: 50px 0 72px;
   }
 }
+
 .project__details-title {
   color: $monochromeWhite;
 }
+
 .project__details_info {
   display: flex;
   background-color: #3a96ff;
   padding: 40px 28px;
   margin: 70px 0;
-  @media all and (max-width: #{$mobileWidth}){
+  @media all and (max-width: #{$mobileWidth}) {
     flex-wrap: wrap;
   }
 }
+
 .project__details_info-item {
   width: 33%;
   margin: 0 20px;
-  @media all and (max-width: #{$mobileWidth}){
+  @media all and (max-width: #{$mobileWidth}) {
     width: 100%;
     margin: 0 0 10px;
   }
 }
+
 .project__details_info-title {
   color: #0943B2;
+  font-size: 18px;
+  line-height: 1.5;
   margin-bottom: 8px;
 }
+
 .project__details_preferences {
   display: flex;
   justify-content: space-evenly;
-  @media all and (max-width: #{$mobileWidth}){
+  @media all and (max-width: #{$mobileWidth}) {
     flex-wrap: wrap;
   }
 }
+
 .project__details_preferences-item {
   display: flex;
   align-items: flex-start;
-  @media all and (max-width: #{$mobileWidth}){
+  @media all and (max-width: #{$mobileWidth}) {
     width: 100%;
     margin: 0 0 15px;
     &:last-child {
@@ -49,40 +58,41 @@
     }
   }
 }
-.list__title {
-  margin: 0 0 12px;
-}
+
 .project__details_preference-icon {
   margin: 0 30px 0 0;
-  @media all and (max-width: #{$mobileWidth}){
+  @media all and (max-width: #{$mobileWidth}) {
     width: 10%;
   }
 }
+
 .project__details_preference-list {
   color: $monochromeWhite;
-  @media all and (max-width: #{$mobileWidth}){
+  @media all and (max-width: #{$mobileWidth}) {
     width: 100%;
   }
 }
+
 .preference__list {
-  margin: 0 0 0 14px;
-}
-.preference__list-item {
-  position: relative;
-  margin: 0 0 12px;
-  &:after {
-    content: '';
-    width: 6px;
-    height: 6px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    background-color: $monochromeGrey4;
-    position: absolute;
-    left: -14px;
-    top: 6px;
-  }
-  &:last-child {
-    margin: 0;
+  margin: 12px 0 0 14px;
+
+  li {
+    position: relative;
+    margin: 0 0 12px;
+
+    &:after {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $monochromeGrey4;
+      position: absolute;
+      left: -14px;
+      top: 8px;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
   }
 }
