@@ -4,6 +4,7 @@
 .services__info {
   padding: 80px 12px;
   background: $primaryBlueDark;
+  color: $monochromeWhite;
   position: relative;
   @media all and (max-width: #{$mobileWidth}) {
     padding: 40px 12px;
@@ -43,11 +44,9 @@
 }
 
 .services__info-subtitle {
-  color: $monochromeWhite;
   max-width: 816px;
   margin-bottom: 30px;
   z-index: 1;
-  width: 100%;
 
   &:last-child {
     margin: 0;
