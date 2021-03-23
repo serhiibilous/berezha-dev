@@ -6,6 +6,10 @@
   padding: 16px 0;
 }
 
+.call-to-action_blue {
+  background: $primaryBlueMedium;
+}
+
 .call-to-action__container {
   display: flex;
 
@@ -31,6 +35,10 @@
     justify-content: center;
     text-align: center;
   }
+}
+
+.call-to-action__sub-title {
+  margin: 20px 0 0;
 }
 
 .call-to-action__button {
