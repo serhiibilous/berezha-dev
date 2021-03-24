@@ -54,20 +54,12 @@ li {
 
 .heading-h2 {
   font-size: 42px;
-  line-height: 1.2;
-
-  @media all and (max-width: #{$mobileWidth}) {
-    // font-size: 24px;
-  }
+  line-height: 1;
 }
 
 .heading-h3 {
   font-size: 36px;
-  line-height: 1.2;
-
-  @media all and (max-width: #{$mobileWidth}) {
-    font-size: 18px;
-  }
+  line-height: 1;
 }
 
 .heading-h4 {
@@ -83,10 +75,6 @@ li {
 .body-text-1 {
   font-size: 18px;
   line-height: 1.5;
-
-  @media all and (max-width: #{$mobileWidth}) {
-    // font-size: 12px;
-  }
 }
 
 .body-text-2 {
@@ -135,13 +123,18 @@ button {
 // Content
 
 .container {
-  max-width: 1256px;
-  padding: 0 12px;
+  max-width: 1264px;
+  padding: 0 16px;
   margin: 0 auto;
 }
 
 .container_small {
-  max-width: 1048px;
+  max-width: 1056px;
+}
+
+.container_title {
+  max-width: 1127px;
+  margin: 0 auto;
 }
 
 // Images
