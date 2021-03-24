@@ -1,0 +1,36 @@
+@import '../colors';
+@import '../variables';
+
+.breadcrumbs {
+  position: absolute;
+  top: calc(40px + #{$headerMobileHeight}px);
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.breadcrumbs__list {
+  display: flex;
+  font-size: 16px;
+  line-height: 24px;
+  color: $primaryBlueMedium;
+
+  li {
+    margin: 0 5px 0 0;
+
+    &:after {
+      content: '/';
+    }
+
+    &:last-child {
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    padding-right: 2px;
+  }
+}
