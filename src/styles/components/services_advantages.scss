@@ -1,0 +1,55 @@
+@import '../colors';
+@import '../variables';
+
+.services__advantages {
+  padding: 120px 0 68px 0;
+  @media all and (max-width: #{$mobileWidth}) {
+    padding: 70px 0 48px 0;
+  }
+}
+
+.services__advantages-title {
+  margin: 0 0 78px;
+}
+
+.services__advantages-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.services__advantages-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 50%;
+  padding: 0 0 0 60px;
+  margin: 0 0 80px;
+
+  @media all and (max-width: #{$mobileWidth}) {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.advantages__item-icon {
+  width: 65px;
+  min-width: 65px;
+}
+
+.advantages__item-info {
+  max-width: 400px;
+
+  @media all and (max-width: #{$mobileWidth}) {
+    width: 100%;
+  }
+}
+
+.advantages__info-subtitle {
+  color: $monochromeGrey8;
+  margin: 12px 0 0;
+}
+
+.advantages_wrapper-button {
+  text-align: center;
+}
