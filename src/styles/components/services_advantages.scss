@@ -8,6 +8,10 @@
   }
 }
 
+.services__advantages-title {
+  margin: 0 0 78px;
+}
+
 .services__advantages-container {
   display: flex;
   justify-content: center;
@@ -18,27 +22,32 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  width: 45%;
-  margin: 0 0 79px;
+  width: 50%;
+  padding: 0 0 0 60px;
+  margin: 0 0 80px;
+
   @media all and (max-width: #{$mobileWidth}) {
     width: 100%;
+    padding: 0;
   }
 }
 
 .advantages__item-icon {
   width: 65px;
+  min-width: 65px;
 }
 
 .advantages__item-info {
   max-width: 400px;
+
   @media all and (max-width: #{$mobileWidth}) {
     width: 100%;
   }
 }
 
 .advantages__info-subtitle {
-  margin: 12px 0 0;
   color: $monochromeGrey8;
+  margin: 12px 0 0;
 }
 
 .advantages_wrapper-button {
