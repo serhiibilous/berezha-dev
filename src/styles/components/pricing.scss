@@ -1,0 +1,52 @@
+@import '../colors';
+
+.pricing {
+  padding: 120px 0 112px;
+  background-color: $primaryBlueUltralight;
+}
+
+.pricing__list {
+  margin: 46px 0 46px 14px;
+
+  li {
+    margin: 0 0 16px;
+    position: relative;
+
+    &:after {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $primaryBlueLight;
+      position: absolute;
+      left: -14px;
+      top: 10px;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.pricing__action {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pricing__button {
+  background-color: $primaryBlueMedium;
+  color: $monochromeWhite;
+  margin: 0 0 0 32px;
+
+  &:hover {
+    color: $monochromeWhite;
+
+    .button__icon-container {
+      path {
+        stroke: $monochromeWhite;
+      }
+    }
+  }
+}
