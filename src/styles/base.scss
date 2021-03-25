@@ -34,6 +34,7 @@ p {
   font-weight: 400;
   letter-spacing: 0.01em;
 }
+
 ul,
 ol,
 blockquote,
@@ -41,6 +42,7 @@ figure {
   margin: 0;
   padding: 0;
 }
+
 li {
   list-style: none;
 }
@@ -141,6 +143,11 @@ button {
   max-width: 1127px;
   margin: 0 auto 78px;
 }
+
+.section_padding {
+  padding: 120px 0 112px 0;
+}
+
 // Images
 
 img {
