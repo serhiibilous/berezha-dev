@@ -2,7 +2,7 @@
 @import '../variables';
 
 .what__get {
-  padding: 120px 0;
+  padding: 120px 0 110px;
   background: $primaryBlueUltralight;
 
   @media all and (max-width: #{$mobileWidth}) {
@@ -23,21 +23,23 @@
   justify-content: center;
 }
 
-.what__get-list_item {
-  position: relative;
-  margin: 0 0 22px;
+.what__get-list {
+  li {
+    position: relative;
+    margin: 0 0 22px;
 
-  &::after {
-    content: '';
-    width: 24px;
-    height: 24px;
-    background: url('../public/images/icons/check.svg');
-    position: absolute;
-    left: -30px;
-    top: 5px;
-  }
+    &::after {
+      content: '';
+      width: 24px;
+      height: 24px;
+      background: url('../public/images/icons/check.svg');
+      position: absolute;
+      left: -30px;
+      top: 5px;
+    }
 
-  @media all and (max-width: #{$mobileWidth}) {
-    margin-left: 23px;
+    @media all and (max-width: #{$mobileWidth}) {
+      margin-left: 23px;
+    }
   }
 }
