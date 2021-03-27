@@ -153,6 +153,18 @@ button {
   }
 }
 
+.text-content {
+  margin: 0 0 48px;
+
+  p {
+    margin: 0 0 36px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
 // Images
 
 img {
@@ -170,4 +182,10 @@ img {
 
 .flex-container_center {
   justify-content: center;
+}
+
+// Backgrounds
+
+.bg-light-mint {
+  background: $primaryMintLight;
 }

@@ -1,4 +1,5 @@
 @import '../colors';
+@import '../variables';
 
 .list {
   background: $primaryBlueUltralight;
@@ -46,5 +47,23 @@
       width: 14px;
       height: 11px;
     }
+  }
+}
+
+.list__footer {
+  margin: 44px 0 0;
+  display: flex;
+
+  @media (max-width: $mobileWidth) {
+    flex-wrap: wrap;
+  }
+}
+
+.list__footer-button {
+  margin-left: 60px;
+
+  @media (max-width: $mobileWidth) {
+    margin: 25px 0 0;
+    width: 100%;
   }
 }

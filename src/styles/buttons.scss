@@ -8,6 +8,7 @@
   transition: color, background, border ease 0.3s;
   text-decoration: none;
   display: inline-flex;
+  align-items: center;
   white-space: nowrap;
 }
 
@@ -121,4 +122,38 @@
 .button__icon-container {
   display: flex;
   margin-left: 16px;
+}
+
+.icon-arrow {
+  width: 6px;
+  height: 12px;
+  position: relative;
+  display: block;
+
+  &:after,
+  &:before {
+    height: 8px;
+    width: 1px;
+    position: absolute;
+    content: '';
+    background: $primaryBlueMedium;
+    left: 3px;
+  }
+
+  &:before {
+    top: -1px;
+    transform: rotate(-40deg);
+  }
+
+  &:after {
+    bottom: -1px;
+    transform: rotate(40deg);
+  }
+}
+
+.icon-arrow_white {
+  &:after,
+  &:before {
+    background: $monochromeWhite;
+  }
 }

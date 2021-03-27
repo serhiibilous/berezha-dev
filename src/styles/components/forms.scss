@@ -5,10 +5,10 @@
 
   .form-group {
     width: 50%;
-    padding: 0 16px 0 0;
+    padding: 16px 16px 0 0;
 
     &:last-child {
-      padding: 0;
+      padding: 16px 0 0 0;
     }
   }
 }
@@ -17,13 +17,19 @@
   display: block;
   cursor: pointer;
   color: $monochromeGrey7;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.4;
   letter-spacing: 0.01em;
+  position: absolute;
+  top: 16px;
+  left: 0;
+  transition: transform linear 0.2s, font-size linear 0.2s;
 }
 
 .form-group {
+  padding-top: 16px;
   margin: 0 0 28px;
+  position: relative;
 }
 
 .form-control {
@@ -42,6 +48,18 @@
   letter-spacing: 0.01em;
   color: $primaryBlueDark;
   max-width: 100%;
+
+  &.has-value,
+  &:focus {
+    + .form-label {
+      transform: translateY(-20px);
+      font-size: 12px;
+    }
+  }
+}
+
+.form-control_textarea {
+  min-height: 50px;
 }
 
 .button-container {

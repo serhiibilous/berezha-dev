@@ -25,7 +25,7 @@ mobileNavButton.addEventListener('click', (e) => {
 })
 
 // FAQ
-const faqItems = document.querySelectorAll('.faq__control')
+const faqItems = document.querySelectorAll('.faq__item-title')
 faqItems.forEach((faq) => {
   faq.addEventListener('click', (e) => {
     const el = e.currentTarget
