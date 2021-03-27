@@ -1,0 +1,50 @@
+@import '../colors';
+
+.list {
+  background: $primaryBlueUltralight;
+}
+
+.list__sub-title {
+  margin: 0 0 46px;
+}
+
+.list__listing {
+  li {
+    position: relative;
+  }
+}
+
+.list__listing_bullets {
+  li {
+    margin: 0 0 16px;
+    padding: 0 0 0 20px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 15px;
+      left: 5px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $primaryBlueLight;
+    }
+  }
+}
+
+.list__listing_checkboxes {
+  li {
+    margin: 0 0 22px;
+    padding: 0 0 0 25px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 10px;
+      background: url('../public/images/icons/check.svg');
+      width: 14px;
+      height: 11px;
+    }
+  }
+}

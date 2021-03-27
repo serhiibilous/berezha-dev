@@ -2,19 +2,6 @@
 @import '../variables';
 
 .related-services {
-  padding: 120px 0 80px;
-
-  @media (max-width: $mobileWidth) {
-    padding: 60px 0 40px;
-  }
-}
-
-.related-services__title {
-  margin: 0 0 78px;
-
-  @media (max-width: $mobileWidth) {
-    margin: 0 0 40px;
-  }
 }
 
 .related-services__content {
@@ -42,7 +29,6 @@
 
   @media (max-width: $mobileWidth) {
     flex-wrap: wrap;
-    padding: 0 12px;
   }
 }
 

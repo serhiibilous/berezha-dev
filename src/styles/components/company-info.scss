@@ -1,0 +1,39 @@
+@import '../colors';
+@import '../variables';
+
+.company-info {
+  background: $primaryBlueUltralight;
+  padding: 16px 0;
+}
+
+.company-info__container {
+  display: flex;
+  align-items: center;
+
+  @media all and (max-width: #{$mobileWidth}) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.company-info__image {
+  margin: 0 84px 0 0;
+  min-width: 120px;
+
+  @media all and (max-width: #{$mobileWidth}) {
+    margin: 30px auto 50px;
+  }
+}
+
+.company-info__content {
+  padding: 62px 62px 62px 0;
+  border: 1px solid $primaryBlueDark;
+  border-left: 0;
+  display: flex;
+  align-items: center;
+
+  @media all and (max-width: #{$mobileWidth}) {
+    border: 1px solid $primaryBlueDark;
+    padding: 50px;
+  }
+}

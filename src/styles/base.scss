@@ -124,8 +124,12 @@ button {
 
 .container {
   max-width: 1264px;
-  padding: 0 16px;
+  padding: 0 $containerIndent;
   margin: 0 auto;
+}
+
+.container_section {
+  padding: 120px 0 110px;
 }
 
 .container_small {
@@ -133,14 +137,22 @@ button {
 }
 
 .container_title {
-  max-width: 1127px;
-  margin: 0 auto;
+  padding-left: 100px;
+  margin-bottom: 78px;
+
+  @media (max-width: $mobileWidth) {
+    padding-left: $containerIndent;
+  }
 }
 
-.container_title {
-  max-width: 1127px;
-  margin: 0 auto 78px;
+.container_content {
+  padding-left: 200px;
+
+  @media (max-width: $mobileWidth) {
+    padding-left: $containerIndent;
+  }
 }
+
 // Images
 
 img {
@@ -148,4 +160,14 @@ img {
   height: auto;
   display: block;
   border: 0;
+}
+
+// Flex basics
+
+.flex-container {
+  display: flex;
+}
+
+.flex-container_center {
+  justify-content: center;
 }
