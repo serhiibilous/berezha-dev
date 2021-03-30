@@ -28,16 +28,13 @@ function renderQuestions(service, list, container) {
   })
 }
 
-const preciseQuoteForm = document.getElementById('preciseQuote')
+const preciseQuoteForm = document.getElementById('preciseQuoteForm')
 if (preciseQuoteForm) {
   preciseQuoteForm.querySelectorAll('.form-control').forEach((formItem) => {
-    console.log('formItem')
     formItem.addEventListener('change', (event) => {
       const element = event.target
 
       if (element.value.length > 0) {
-        console.log('element', element)
-        console.log('has-value')
         element.classList.add('has-value')
       } else {
         element.classList.remove('has-value')
