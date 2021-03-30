@@ -91,7 +91,7 @@ li {
 
 a {
   color: $primaryBlueMedium;
-  text-decoration: underline;
+  text-decoration: none;
   outline: none;
 
   &:hover {
@@ -137,7 +137,7 @@ button {
 }
 
 .container_title {
-  padding-left: 100px;
+  padding-left: calc(100px + #{$containerIndent});
   margin-bottom: 78px;
 
   @media (max-width: $mobileWidth) {
@@ -146,10 +146,18 @@ button {
 }
 
 .container_content {
-  padding-left: 200px;
+  padding-left: calc(207px + #{$containerIndent});
 
   @media (max-width: $mobileWidth) {
     padding-left: $containerIndent;
+  }
+}
+
+.container_content-right-indent {
+  padding-right: calc(104px + #{$containerIndent});
+
+  @media (max-width: $mobileWidth) {
+    padding-right: $containerIndent;
   }
 }
 
@@ -182,6 +190,10 @@ img {
 
 .flex-container_center {
   justify-content: center;
+}
+
+.flex-center {
+  align-items: center;
 }
 
 // Backgrounds

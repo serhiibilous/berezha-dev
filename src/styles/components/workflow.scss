@@ -1,0 +1,48 @@
+@import '../colors';
+
+.workflow__sub-title {
+  max-width: 650px;
+}
+
+.workflow__list {
+  margin: 64px 0;
+  counter-reset: counter;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: $primaryBlueMedium;
+    left: -60px;
+  }
+
+  li {
+    position: relative;
+    counter-increment: counter;
+    margin: 0 0 54px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &:before {
+      position: absolute;
+      left: -84px;
+      top: -8px;
+      width: 48px;
+      height: 48px;
+      content: counter(counter);
+      color: $primaryBlueMedium;
+      border: 1px solid $primaryBlueMedium;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $monochromeWhite;
+      z-index: 1;
+    }
+  }
+}

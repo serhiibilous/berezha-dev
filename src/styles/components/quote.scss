@@ -6,21 +6,32 @@
   margin: 80px 0;
 }
 
+.quote__without-bg {
+  background: transparent;
+}
+
 .quote__content {
-  padding: 104px;
+  padding: 104px 104px 270px;
+  position: relative;
+  min-height: 516px;
 
   @media all and (max-width: #{$mobileWidth}) {
-    padding: 50px 24px;
+    padding: 24px 24px 150px;
+    min-height: auto;
   }
 }
 
 .quote__author-container {
+  position: absolute;
+  right: 104px;
+  bottom: 104px;
   display: flex;
   justify-content: flex-end;
-  padding: 0 104px 64px;
 
   @media all and (max-width: #{$mobileWidth}) {
-    padding: 0 24px 24px;
+    right: 24px;
+    bottom: 24px;
+    left: 24px;
   }
 }
 
@@ -30,12 +41,13 @@
 
 .quote__author-image {
   margin-right: 16px;
+  min-width: 88px;
 }
 
 .quote__author-info {
-  padding: 10px 30px 10px 0;
+  padding: 11px 30px 11px 0;
   border: 1px solid $primaryBlueDark;
   border-left: 0;
   line-height: 1;
-  min-height: 80px;
+  min-height: 88px;
 }

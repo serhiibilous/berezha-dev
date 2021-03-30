@@ -1,0 +1,51 @@
+@import '../colors';
+@import '../variables';
+
+.advantages {
+  padding-bottom: 30px;
+}
+
+.advantages__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages__item {
+  position: relative;
+  padding: 0 15px 0 50px;
+  margin: 0 0 80px 50px;
+  width: calc(50% - 50px);
+
+  @media (max-width: $mobileWidth) {
+    width: 100%;
+    margin: 0 0 40px;
+  }
+
+  .advantages__container_three-columns & {
+    width: calc(33.33% - 50px);
+
+    @media (max-width: $mobileWidth) {
+      width: 100%;
+      margin: 0 0 40px;
+    }
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+    top: 5px;
+    left: 0;
+    background: url('../public/images/icons/target.svg');
+    background-size: cover;
+  }
+}
+
+.advantages__item-title {
+  margin: 0 0 8px;
+}
+
+.advantages__info-description {
+  color: $monochromeGrey8;
+}

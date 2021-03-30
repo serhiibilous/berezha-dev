@@ -2,20 +2,8 @@
 @import '../colors';
 
 .testimonials {
-  padding: 104px 0 64px;
-
-  @media all and (max-width: #{$mobileWidth}) {
-    padding: 50px 0 40px;
-  }
 }
 
-.testimonials-title {
-  margin-bottom: 70px;
-
-  @media all and (max-width: #{$mobileWidth}) {
-    margin-bottom: 35px;
-  }
-}
 .testimonials__wrapper {
   display: flex;
   justify-content: space-between;
@@ -27,7 +15,7 @@
 
 .testimonials__wrapper-item {
   width: calc(33.33% - 8px);
-  padding: 24px;
+  padding: 24px 24px 140px;
   background-color: $primaryMintLight;
   position: relative;
 
@@ -45,13 +33,11 @@
   @media all and (max-width: #{$mobileWidth}) {
     width: 100%;
     margin-bottom: 16px;
-    padding: 16px;
   }
 }
 
 .testimonials__wrapper-text {
   margin-top: 32px;
-  margin-bottom: 78px;
 
   @media all and (max-width: #{$mobileWidth}) {
     margin-bottom: 39px;
@@ -60,13 +46,27 @@
 .testimonials__author-wrapper {
   display: flex;
   justify-content: flex-end;
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+}
+
+.testimonials__author-link {
+  margin-top: 20px;
+  display: flex;
+
+  img {
+    display: inline-block;
+  }
 }
 
 .testimonials__author-info {
-  padding: 10px 10px 10px 0;
+  padding: 11px 10px 11px 0;
   border: 1px solid $primaryBlueDark;
   border-left: 0;
   width: 77%;
+  min-width: 272px;
   min-height: 80px;
   line-height: 1;
 }

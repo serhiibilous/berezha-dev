@@ -26,11 +26,12 @@
 }
 
 .company-info__content {
-  padding: 62px 62px 62px 0;
+  padding: 45px 62px 45px 0;
   border: 1px solid $primaryBlueDark;
   border-left: 0;
   display: flex;
   align-items: center;
+  min-height: 200px;
 
   @media all and (max-width: #{$mobileWidth}) {
     border: 1px solid $primaryBlueDark;

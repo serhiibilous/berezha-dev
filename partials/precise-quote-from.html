@@ -1,6 +1,6 @@
 <div class="container">
   <section class="precise-quote precise-quote_form">
-    <form action="#" id="preciseQuote">
+    <form action="#" id="preciseQuoteForm">
       <div class="precise-quote__step">
         <div class="precise-quote__column">
           <h2 class="heading-h2 precise-quote__heading">Any questions left unanswered?</h2>
@@ -25,7 +25,14 @@
             <textarea name="Comment" id="Comment" class="form-control form-control_textarea"></textarea>
             <label class="form-label" for="Comment">Comment (optional)</label>
           </div>
-          <div class="button-container">
+          <div class="button-container flex-center">
+            <div class="flex-container">
+              <input type="checkbox" name="agreement" class="form-check-input" id="agreement" required />
+              <label class="form-check-label" for="agreement">
+                I have read and agree to the <a href="#" target="_blank">Terms&Conditions</a> and
+                <a href="#" target="_blank">Privacy Policy</a>.
+              </label>
+            </div>
             <button type="submit" class="button button_primary button_medium">Send Message</button>
           </div>
         </div>

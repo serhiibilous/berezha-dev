@@ -1,0 +1,129 @@
+@import '../colors';
+@import '../variables';
+
+.cybersecurity-services {
+}
+
+.cybersecurity-services__container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.cybersecurity__item {
+  padding: 0 168px 0 0;
+  width: 50%;
+  margin: 0 0 40px;
+
+  @media (max-width: $laptopWidth) {
+    padding: 0 20px 0 0;
+  }
+
+  @media (max-width: $mobileWidth) {
+    padding: 0;
+    width: 100%;
+  }
+
+  &:nth-child(2n) {
+    padding: 0 0 0 168px;
+
+    @media (max-width: $laptopWidth) {
+      padding: 0 0 0 20px;
+    }
+
+    @media (max-width: $mobileWidth) {
+      padding: 0;
+    }
+
+    .cybersecurity__item-content {
+      border-right: 1px solid $primaryBlueLight;
+      border-left: 0;
+
+      @media (max-width: $laptopWidth) {
+        border: 1px solid $primaryBlueLight;
+      }
+    }
+
+    .cybersecurity__item-list {
+      padding-right: 16px;
+    }
+  }
+}
+
+.cybersecurity__item-content {
+  border: 1px solid $primaryBlueLight;
+  border-right: 0;
+  padding: 24px 0 10px 24px;
+  position: relative;
+
+  @media (max-width: $laptopWidth) {
+    border: 1px solid $primaryBlueLight;
+  }
+}
+
+.cybersecurity__item-title {
+  margin: 0 0 15px;
+  padding-right: 80px;
+}
+
+.cybersecurity__item-image {
+  position: absolute;
+  top: 16px;
+  width: 56px;
+  height: 56px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cybersecurity__item-list {
+  li {
+    position: relative;
+    margin: 0 0 8px;
+    padding-left: 20px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      left: 5px;
+      top: 8px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $primaryBlueMedium;
+    }
+  }
+}
+
+.cybersecurity__item-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cybersecurity__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% - 20px));
+
+  @media (max-width: $laptopWidth) {
+    display: none;
+  }
+}
+
+.cybersecurity__button {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -168px;
+  display: flex;
+  width: 336px;
+  justify-content: center;
+
+  @media (max-width: $laptopWidth) {
+    position: static;
+    margin: 0;
+    width: 100%;
+  }
+}

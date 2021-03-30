@@ -8,18 +8,6 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
-  &.three-column {
-    .services__advantages-item {
-      width: 33.33%;
-      padding: 0 25px 0 15px;
-
-      @media all and (max-width: #{$mobileWidth}) {
-        width: 100%;
-        padding: 0;
-      }
-    }
-  }
 }
 
 .services__advantages-item {
@@ -52,6 +40,10 @@
 .advantages__info-subtitle {
   color: $monochromeGrey8;
   margin: 12px 0 0;
+
+  .three-column & {
+    margin: 8px 0 0;
+  }
 }
 
 .advantages_wrapper-button {
