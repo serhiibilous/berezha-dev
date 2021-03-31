@@ -28,11 +28,12 @@ function renderQuestions(service, list, container) {
   })
 }
 
-const preciseQuoteForm = document.getElementById('preciseQuoteForm')
-if (preciseQuoteForm) {
-  preciseQuoteForm.querySelectorAll('.form-control').forEach((formItem) => {
+function handleInputsChange() {
+  document.querySelectorAll('.form-control').forEach((formItem) => {
+    console.log('formItem', formItem)
     formItem.addEventListener('change', (event) => {
       const element = event.target
+      console.log('element', element)
 
       if (element.value.length > 0) {
         element.classList.add('has-value')
@@ -41,17 +42,67 @@ if (preciseQuoteForm) {
       }
     })
   })
+}
+handleInputsChange()
+
+function setStep(element, step) {
+  element.textContent = step
+  const dataStepText = preciseQuoteForm.querySelector(`[data-step-text]`)
+  const stepBackButton = preciseQuoteForm.querySelector(`[data-step-back]`)
+  if (step === 4) {
+    dataStepText.classList.add('hide')
+  } else {
+    dataStepText.classList.remove('hide')
+  }
+
+  if (step === 1) {
+    stepBackButton.classList.add('hide')
+  } else {
+    stepBackButton.classList.remove('hide')
+  }
+}
+
+function changeStep(steps, currentStep) {
+  steps.forEach((step) => {
+    step.classList.add('hide')
+    if (Number(step.dataset.step) !== currentStep) {
+      step.classList.add('hide')
+    } else {
+      step.classList.remove('hide')
+    }
+  })
+}
+
+const preciseQuoteForm = document.getElementById('preciseQuote')
+if (preciseQuoteForm) {
+  const steps = preciseQuoteForm.querySelectorAll(`[data-step]`)
+  const radioButtons = preciseQuoteForm.querySelectorAll('.precise-quote__input_radio')
+  let currentStep = 1
+  const stepCounter = preciseQuoteForm.querySelector(`[data-step-counter]`)
+  const stepBackButton = preciseQuoteForm.querySelector(`[data-step-back]`)
+  setStep(stepCounter, currentStep)
+  changeStep(steps, currentStep)
+
+  stepBackButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    if (currentStep === 1) return
+    const changedStep = currentStep - 1
+    currentStep = changedStep
+    setStep(stepCounter, changedStep)
+    changeStep(steps, changedStep)
+  })
+
+  radioButtons.forEach((radio) => {
+    radio.addEventListener('change', (e) => {
+      const changedStep = currentStep + 1
+      currentStep = changedStep
+      setStep(stepCounter, changedStep)
+      changeStep(steps, changedStep)
+    })
+  })
 
   preciseQuoteForm.addEventListener('submit', (event) => {
     event.preventDefault()
-
-    // const obj = {}
-    // const formData = new FormData(event.target)
-    // for (let key of formData.keys()) {
-    //   obj[key] = formData.get(key)
-    // }
-    //
-    // console.log('formData', obj)
 
     fetch('https://google.com', {
       method: 'POST',

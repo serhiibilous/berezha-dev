@@ -16,6 +16,8 @@
   bottom: 64px;
   left: 104px;
   color: $secondaryGreenDark;
+  display: flex;
+  align-items: baseline;
 
   @media all and (max-width: #{$mobileWidth}) {
     bottom: 40px;
@@ -34,7 +36,7 @@
 
   @media all and (max-width: #{$mobileWidth}) {
     flex-wrap: wrap;
-    padding: 40px 20px;
+    padding: 40px 20px 90px 20px;
   }
 }
 
@@ -117,4 +119,16 @@
 
 .precise-quote__input_text {
   border: 0;
+}
+
+.precise-quote__back-button {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 30px;
+
+  i {
+    display: inline-flex;
+    margin-right: 10px;
+    transform: rotate(180deg);
+  }
 }
