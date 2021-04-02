@@ -7,12 +7,11 @@ export const servicesQuestions = [
 ]
 
 export const securityObjectiveQuestions = [
-  { key: 'CustomerDataProtection', name: 'Customer data protection' },
-  { key: 'IntellectualPropertyProtection', name: 'Intellectual property protection' },
-  { key: 'Compliance', name: 'Compliance (ISO27001, PCI DSS, GDPR, etc.)' },
-  { key: 'Requirements', name: 'Requirements from clients, investors, or partners' },
-  { key: 'DueDiligence', name: 'Due diligence (M&A, IPO, insurance, etc.)' },
-  { key: 'PostIncidentHealthCheck', name: 'Post-incident health check' },
+  { key: 'CustomerDataProtection', name: 'Customer Data protection' },
+  { key: 'ExternalRequirements', name: 'External Requirements' },
+  { key: 'ComplianceToRegulations', name: 'Compliance to Regulations' },
+  { key: 'PostIncidentHealthCheck', name: 'Post-incident Health Check' },
+  { key: 'DueDiligence', name: 'Due Diligence' },
   { key: 'Other', name: 'Other' },
 ]
 
@@ -29,5 +28,5 @@ export const industryQuestions = [
   { key: 'Retail', name: 'Retail' },
   { key: 'Media', name: 'Media' },
   { key: 'Healthcare', name: 'Healthcare' },
-  { key: 'Skip', name: 'Skip' },
+  { key: 'Other', name: 'Other' },
 ]

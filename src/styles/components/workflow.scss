@@ -7,25 +7,28 @@
 .workflow__list {
   margin: 64px 0;
   counter-reset: counter;
-  position: relative;
-
-  &:before {
-    position: absolute;
-    content: '';
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background: $primaryBlueMedium;
-    left: -60px;
-  }
 
   li {
     position: relative;
     counter-increment: counter;
     margin: 0 0 54px;
 
+    &:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: -54px;
+      width: 1px;
+      background: $primaryBlueMedium;
+      left: -60px;
+    }
+
     &:last-child {
       margin: 0;
+
+      &:after {
+        content: none;
+      }
     }
 
     &:before {
@@ -45,4 +48,12 @@
       z-index: 1;
     }
   }
+
+  p {
+    color: $monochromeGrey8;
+  }
+}
+
+.workflow__list-title {
+  margin: 0 0 14px;
 }

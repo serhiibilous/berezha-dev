@@ -3,6 +3,14 @@
 
 .list {
   background: $primaryBlueUltralight;
+
+  p {
+    margin: 0 0 22px;
+  }
+}
+
+.list_mint-light {
+  background: $primaryMintLight;
 }
 
 .list__sub-title {

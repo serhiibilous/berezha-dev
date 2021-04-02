@@ -2,9 +2,6 @@
 @import '../colors';
 
 .slider {
-  display: flex;
-  align-items: center;
-  position: relative;
   padding: 24px 0 0;
 
   @media (max-width: $laptopWidth) {
@@ -13,14 +10,6 @@
 
   @media (max-width: $mobileWidth) {
     flex-wrap: wrap;
-  }
-}
-
-.slider__column {
-  width: 50%;
-
-  @media (max-width: $mobileWidth) {
-    width: 100%;
   }
 }
 

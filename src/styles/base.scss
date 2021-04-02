@@ -126,6 +126,7 @@ button {
   max-width: 1264px;
   padding: 0 $containerIndent;
   margin: 0 auto;
+  width: auto;
 }
 
 .container_section {
@@ -137,7 +138,7 @@ button {
 }
 
 .container_title {
-  padding-left: calc(100px + #{$containerIndent});
+  padding-left: calc(8.3333333333% + #{$containerIndent});
   margin-bottom: 78px;
 
   @media (max-width: $mobileWidth) {
@@ -145,12 +146,20 @@ button {
   }
 }
 
+.container__title {
+  margin: 0 0 70px;
+}
+
 .container_content {
-  padding-left: calc(207px + #{$containerIndent});
+  padding-left: calc(16.6666666667% + #{$containerIndent * 2});
 
   @media (max-width: $mobileWidth) {
     padding-left: $containerIndent;
   }
+}
+
+.container__sub-title {
+  margin: 0 0 44px;
 }
 
 .container_content-right-indent {

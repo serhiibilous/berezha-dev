@@ -39,6 +39,15 @@
   position: relative;
 }
 
+.form-group_file {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -8px;
+  padding: 0;
+  align-items: center;
+  min-height: 32px;
+}
+
 .form-control {
   display: block;
   width: 100%;
@@ -66,12 +75,65 @@
   }
 }
 
+.form-control_column-file {
+  width: calc(100% - 120px);
+}
+
+.form-control_attached-file {
+  border: 1px dashed $monochromeGrey5;
+  height: 32px;
+  padding: 8px 8px 8px 32px;
+  position: relative;
+  width: 100%;
+}
+
+.form-control_attached-file-name {
+  font-size: 12px;
+  color: $monochromeGrey8;
+  line-height: 1.4;
+}
+
+.form-control_delete-file-button {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    top: 1px;
+    width: 1.5px;
+    height: 14px;
+    background: $monochromeGrey8;
+  }
+
+  &:before {
+    left: 7px;
+    transform: rotate(-45deg);
+  }
+
+  &:after {
+    right: 7px;
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    &:after,
+    &:before {
+      background: $monochromeGrey9;
+    }
+  }
+}
+
 .form-control_textarea {
   min-height: 50px;
 }
 
 .button-container {
-  padding-top: 16px;
   display: flex;
   justify-content: space-between;
 }
@@ -89,4 +151,26 @@
 
 .form-check-label {
   margin: 0 20px 0 0;
+}
+
+.form-control_file {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.form-label_file {
+  display: flex;
+  color: $primaryBlueMedium;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 0 0 0 20px;
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  img {
+    margin: 0 6px 0 0;
+  }
 }

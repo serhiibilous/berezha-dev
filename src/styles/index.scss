@@ -3,11 +3,13 @@
 @import '~bootstrap/scss/mixins';
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/grid';
+@import 'components/grid';
 
 @import 'variables';
 @import 'fonts';
 @import 'base';
 @import 'buttons';
+@import 'flex';
 
 // Partials
 
@@ -26,7 +28,6 @@
 @import 'components/call-to-action';
 @import 'components/slider';
 @import 'components/breadcrumbs';
-@import 'components/project_details';
 @import 'components/services_info';
 @import 'components/services_advantages';
 @import 'components/list';
@@ -35,3 +36,5 @@
 @import 'components/progress';
 @import 'components/workflow';
 @import 'components/cybersecurity-services';
+@import 'components/details';
+@import 'components/knowledge';

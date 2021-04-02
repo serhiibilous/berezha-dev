@@ -1,4 +1,5 @@
-import './js/precise-quote-form'
+// import './js/precise-quote-form'
+// import './js/form/index'
 
 console.log('It works')
 const HEIGHT_FIRST_BLOCK = 100

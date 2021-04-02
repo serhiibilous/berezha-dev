@@ -19,13 +19,12 @@
 }
 
 .call-to-action__title {
-  padding: 60px 120px 60px 60px;
+  padding: 60px;
   border: 1px solid $monochromeWhite;
   border-right: 0;
   color: $monochromeWhite;
   display: flex;
   align-items: center;
-  width: 70%;
 
   @media (max-width: $mobileWidth) {
     width: 100%;
@@ -48,7 +47,6 @@
   margin: 23px 0;
   display: flex;
   align-items: center;
-  width: 30%;
   justify-content: flex-end;
 
   @media (max-width: $mobileWidth) {

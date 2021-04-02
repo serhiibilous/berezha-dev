@@ -3,52 +3,50 @@
 
 .services__info {
   padding: 80px 0;
-  background: $primaryBlueDark;
   color: $monochromeWhite;
   position: relative;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 
   @media all and (max-width: #{$mobileWidth}) {
     padding: 40px 12px;
   }
+}
 
-  &:before {
-    content: '';
-    width: 480px;
-    height: 412px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background: url('../public/images/services/img_pentest_value_left.svg');
+.services__info_training {
+  background: $primaryMintDark;
+  color: $primaryMintMedium;
+}
 
-    @media all and (max-width: #{$mobileWidth}) {
-      content: none;
-    }
-  }
+.services__info_services {
+  background: $primaryBlueDark;
+  color: $borderLightColor;
+}
 
-  &:after {
-    content: '';
-    width: 480px;
-    height: 412px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    background: url('../public/images/services/img_pentest_value_right.svg');
+.services__info-image {
+  position: absolute;
+}
 
-    @media all and (max-width: #{$mobileWidth}) {
-      content: none;
-    }
-  }
+.services__info-image_left {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.services__info-image_right {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .services__info-wrapper {
-  max-width: 816px;
+  color: $monochromeWhite;
   position: relative;
   z-index: 1;
 
   p {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 
     &:last-child {
       margin: 0;

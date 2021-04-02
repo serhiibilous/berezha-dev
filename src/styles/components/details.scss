@@ -1,0 +1,129 @@
+@import '../colors';
+@import '../variables';
+
+.details {
+  background: $primaryBlueDark;
+  padding: 80px 0 120px;
+  color: $monochromeWhite;
+}
+
+.details__content {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 65px;
+
+  @media (max-width: $laptopWidth) {
+    flex-wrap: wrap;
+  }
+}
+
+.details__title {
+  margin: 0 0 70px;
+}
+
+.details__content_services {
+  background: $primaryBlueLight;
+
+  .details__content-item-title {
+    color: $primaryBlueMedium;
+  }
+}
+
+.details__content_training {
+  background: $primaryMintDark;
+
+  .details__content-item-title {
+    color: $secondaryGreenDark;
+  }
+}
+
+.details__content-item {
+  padding: 0 0 0 8.3333333333%;
+  color: $primaryBlueDark;
+
+  @media (max-width: $laptopWidth) {
+    width: 100%;
+    margin: 0 0 20px;
+    padding-right: 15px;
+  }
+
+  &:last-child {
+    padding-right: 8.3333333333%;
+  }
+}
+
+.details__content-item-title {
+  margin: 0 0 8px;
+}
+
+.details__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.details__list-three-column {
+  .details__list-item {
+    width: 33.33%;
+
+    @media (max-width: $laptopWidth) {
+      width: 100%;
+      margin: 0 0 30px;
+      padding: 0;
+    }
+  }
+}
+
+.details__list-item {
+  display: flex;
+  padding: 0 0 0 32px;
+  width: auto;
+
+  @media (max-width: $laptopWidth) {
+    width: 100%;
+    margin: 0 0 30px;
+    padding: 0;
+  }
+
+  ul {
+    margin: 12px 0 0 14px;
+
+    li {
+      position: relative;
+      margin: 0 0 12px;
+
+      &:after {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $monochromeGrey4;
+        position: absolute;
+        left: -14px;
+        top: 8px;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.details__list-icon {
+  width: 65px;
+  min-width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.details__list-content {
+  margin: 0 0 0 16px;
+  padding: 14px 0 0 0;
+}
+
+.details__list-title {
+  margin: 0 0 16px;
+}
