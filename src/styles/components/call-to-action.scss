@@ -25,6 +25,7 @@
   color: $monochromeWhite;
   display: flex;
   align-items: center;
+  width: 100%;
 
   @media (max-width: $mobileWidth) {
     width: 100%;

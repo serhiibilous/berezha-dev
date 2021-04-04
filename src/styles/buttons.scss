@@ -48,6 +48,12 @@
     border-color: $borderDarkColor;
     color: $monochromeWhite;
   }
+
+  &:visited {
+    background: $primaryBlueMedium;
+    border-color: $primaryBlueMedium;
+    color: $monochromeWhite;
+  }
 }
 
 .button_outline {

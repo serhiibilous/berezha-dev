@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 65px 0 0 0;
@@ -138,7 +142,7 @@ button {
 }
 
 .container_title {
-  padding-left: calc(8.3333333333% + #{$containerIndent});
+  padding-left: calc(8.3333333333%);
   margin-bottom: 78px;
 
   @media (max-width: $mobileWidth) {
@@ -151,7 +155,7 @@ button {
 }
 
 .container_content {
-  padding-left: calc(16.6666666667% + #{$containerIndent * 2});
+  padding-left: calc(16.6666666667%);
 
   @media (max-width: $mobileWidth) {
     padding-left: $containerIndent;

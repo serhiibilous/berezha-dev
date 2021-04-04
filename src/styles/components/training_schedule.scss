@@ -1,4 +1,5 @@
 @import '../colors';
+@import '../variables';
 
 .training-schedule__module {
   margin: 0 0 70px;
@@ -27,6 +28,11 @@
     border: 1px solid $monochromeGrey2;
     border-left: 0;
     pointer-events: none;
+
+    @media (max-width: $lg) {
+      left: 0;
+      right: 0;
+    }
   }
 }
 

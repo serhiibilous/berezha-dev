@@ -11,6 +11,7 @@
 
 .breadcrumbs__list {
   display: flex;
+  flex-wrap: wrap;
   font-size: 16px;
   line-height: 24px;
   color: $primaryBlueMedium;

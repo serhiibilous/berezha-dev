@@ -8,6 +8,10 @@
     padding-top: 60px;
   }
 
+  @media (max-width: $sm) {
+    padding-top: 80px;
+  }
+
   @media (max-width: $mobileWidth) {
     flex-wrap: wrap;
   }
