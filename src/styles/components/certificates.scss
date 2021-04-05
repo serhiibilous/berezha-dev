@@ -1,0 +1,17 @@
+.certificates {
+}
+
+.certificates__description {
+  margin: 0 0 90px;
+}
+
+.certificates__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  li {
+    margin: 0 15px 30px;
+  }
+}

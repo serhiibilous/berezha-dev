@@ -75,3 +75,42 @@
     width: 100%;
   }
 }
+
+.list_contribution {
+  padding: 104px 0 70px;
+}
+
+.list_contribution-title {
+  margin: 0 0 46px;
+}
+
+.list__images {
+  display: flex;
+  justify-content: center;
+  margin: 50px -8px 0 -8px;
+
+  @media (max-width: $mobileWidth) {
+    flex-wrap: wrap;
+  }
+
+  li {
+    border: 1px solid $monochromeGrey2;
+    background: $monochromeWhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    margin: 0 8px 16px;
+    padding: 0 20px;
+    width: 100%;
+
+    @media (max-width: $mobileWidth) {
+      width: calc(50% - 16px);
+    }
+
+    @media (max-width: $sm) {
+      width: 100%;
+      margin: 0 0 16px;
+    }
+  }
+}

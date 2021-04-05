@@ -15,6 +15,14 @@
   @media (max-width: $mobileWidth) {
     flex-wrap: wrap;
   }
+
+  .row {
+    min-height: 600px;
+
+    @media (max-width: $lg) {
+      min-height: auto;
+    }
+  }
 }
 
 .slider__column-image {

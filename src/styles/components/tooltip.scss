@@ -1,0 +1,30 @@
+@import '../colors';
+@import '../variables';
+
+.tooltip__container {
+  position: relative;
+
+  &:hover {
+    .tooltip__window {
+      display: block;
+    }
+  }
+}
+
+.tooltip__window {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  color: $monochromeWhite;
+  background: $primaryBlueDark;
+  padding: 8px 12px;
+  left: calc(50% + 24px);
+  transform: translateX(-50%);
+  white-space: nowrap;
+
+  @media (max-width: $lg) {
+    white-space: normal;
+  }
+}
