@@ -1,0 +1,50 @@
+@import '../colors';
+@import '../variables';
+
+.trainers {
+  overflow: hidden;
+}
+
+.trainers__title {
+  margin: 0 0 40px;
+}
+
+.trainers__container {
+  // transform: translateX(calc(-1232px * 0.583333333333));
+  // transform: translateX(calc(-1232px * 0.583333333333));
+}
+
+.trainers__description {
+  margin: 16px 0;
+
+  @media (max-width: $lg) {
+    margin-bottom: 50px;
+  }
+
+  p {
+    margin: 0 0 25px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.our-story__description {
+  @media (max-width: $lg) {
+    margin-bottom: 50px;
+  }
+}
+
+.our-story__image {
+  display: flex;
+  justify-content: center;
+}
+
+.trainers__description_small {
+  margin-top: 64px;
+
+  @media (max-width: $lg) {
+    margin-top: 0;
+  }
+}

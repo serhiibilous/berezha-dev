@@ -1,0 +1,92 @@
+@import '../colors';
+@import '../variables';
+
+.modal__backdrop {
+  position: fixed;
+  background: rgba(14, 38, 74, 0.6);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity ease 0.3s;
+}
+
+.modal__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.modal {
+  width: 864px;
+  background: $monochromeWhite;
+  display: flex;
+  position: relative;
+}
+
+.modal__info {
+  padding: 40px;
+  width: 58%;
+}
+
+.modal__info-title {
+  margin: 0 0 24px;
+}
+
+.modal__info-sub-title {
+  margin: 0 0 24px;
+  color: $monochromeGrey6;
+}
+
+.modal__desc {
+  margin: 0 0 30px;
+
+  p {
+    margin: 0 0 24px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.modal__linkedin-link {
+  display: block;
+}
+
+.modal__photo {
+  width: 42%;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  right: 24px;
+  top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $borderDarkColor;
+  opacity: 0.5;
+  cursor: pointer;
+
+  svg {
+    opacity: 1;
+  }
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
