@@ -218,3 +218,19 @@ img {
 .bg-light-mint {
   background: $primaryMintLight;
 }
+
+// Media
+
+.mobile-hide {
+  @media (max-width: $md) {
+    display: none !important;
+  }
+}
+
+.desktop-hide {
+  display: none !important;
+
+  @media (max-width: $md) {
+    display: block !important;
+  }
+}

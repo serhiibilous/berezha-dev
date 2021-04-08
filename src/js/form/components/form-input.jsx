@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 
-export function FormInput({ isRequired, type = 'text', name, label, id, inputValue, onSetValue }) {
-  const [value, setValue] = useState(inputValue)
+export function FormInput({ isRequired, type = 'text', name, label, id, onSetValue }) {
+  const [value, setValue] = useState('')
+  const input = useRef(null)
 
   const handleChangeInput = (event) => {
     const inputValue = event.target.value
@@ -9,9 +10,15 @@ export function FormInput({ isRequired, type = 'text', name, label, id, inputVal
     onSetValue(inputValue)
   }
 
+  const handleFocusInput = (event) => {
+    event.preventDefault()
+    input.current.focus()
+  }
+
   return (
     <div className="form-group">
       <input
+        ref={input}
         value={value}
         type={type}
         name={name}
@@ -20,7 +27,7 @@ export function FormInput({ isRequired, type = 'text', name, label, id, inputVal
         required={isRequired}
         onChange={handleChangeInput}
       />
-      <label className="form-label" htmlFor={id}>
+      <label onClick={handleFocusInput} className="form-label" htmlFor={id}>
         {label}
       </label>
     </div>

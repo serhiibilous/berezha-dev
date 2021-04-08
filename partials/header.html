@@ -1,4 +1,5 @@
 <header class="header" id="header">
+  <div class="header__cover"><span></span></div>
   <div class="header__wrapper">
     <div class="header__left-content">
       <a href="/" class="header__logo">
@@ -6,10 +7,19 @@
       </a>
       <nav class="header__nav-wrapper" id="headerNavigation">
         <ul class="header__main-nav">
-          <li>
+          <li class="mobile-hide">
             <a href="/application-security-assessment.html">Appsec</a>
           </li>
-          <li><a href="/penetration-testing.html">Pentest</a></li>
+          <li class="mobile-hide"><a href="/penetration-testing.html">Pentest</a></li>
+          <li class="desktop-hide">
+            <a href="#">Services</a>
+            <ul class="header__sub-nav">
+              <li>
+                <a href="/application-security-assessment.html">Appsec</a>
+              </li>
+              <li><a href="/penetration-testing.html">Pentest</a></li>
+            </ul>
+          </li>
           <li>
             <a href="#">Trainings</a>
             <ul class="header__sub-nav">
@@ -27,7 +37,14 @@
               <li><a href="/contact.html">Contacts</a></li>
             </ul>
           </li>
-          <li><a href="https://berezhasecurity.com/blog/">Blog</a></li>
+          <li>
+            <a class="mobile-hide" href="https://berezhasecurity.com/blog/">Blog</a>
+            <ul class="header__sub-nav desktop-hide">
+              <li>
+                <a href="https://berezhasecurity.com/blog/">Blog</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </div>

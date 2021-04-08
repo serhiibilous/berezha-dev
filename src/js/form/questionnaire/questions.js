@@ -18,7 +18,7 @@ export const securityObjectiveQuestions = [
 export const industryQuestions = [
   { key: 'ITProduct', name: 'IT Product' },
   { key: 'ITServices', name: 'IT Services' },
-  { key: 'FinancialServices', name: 'FinancialServices' },
+  { key: 'FinancialServices', name: 'Financial Services' },
   { key: 'FinTech', name: 'FinTech' },
   { key: 'Telecom', name: 'Telecom' },
   { key: 'Gaming', name: 'Gaming' },

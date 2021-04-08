@@ -1,0 +1,163 @@
+@import '../colors';
+@import '../variables';
+
+.training-price {
+  background: $primaryMintDark;
+  color: $monochromeWhite;
+}
+
+.training-price__container {
+  padding: 0 40px 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $desktopWidth) {
+    padding: 0;
+  }
+}
+
+.training-price__left {
+  border: 1px solid $monochromeWhite;
+  border-right: 0;
+  padding: 63px 50px 63px 87px;
+  margin: 16px 0 24px;
+  width: 53%;
+  color: $primaryMintLight;
+
+  @media (max-width: $desktopWidth) {
+    padding: 63px 40px 63px 40px;
+  }
+
+  @media (max-width: $lg) {
+    width: 100%;
+    border: 1px solid $monochromeWhite;
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $sm) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.training-price__right {
+  border: 1px solid $monochromeWhite;
+  border-left: 0;
+  width: calc(47% - 10px);
+  padding: 24px 63px 24px 80px;
+  margin: 40px 0 40px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $desktopWidth) {
+    padding: 24px 40px 24px 40px;
+  }
+
+  @media (max-width: $lg) {
+    width: 100%;
+    border: 1px solid $monochromeWhite;
+    border-top: 0;
+    padding-top: 40px;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  @media (max-width: $sm) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.training-price__title {
+  margin: 0 0 32px;
+}
+
+.training-price__radio {
+  margin: 0 0 36px;
+}
+
+.training-price-content {
+  margin: 0 0 40px;
+}
+
+.training-price-content__title {
+  margin: 0 0 6px;
+  color: $monochromeWhite;
+}
+
+.training-price__list {
+  margin: 0 4px;
+  color: $monochromeWhite;
+}
+
+.training-price__list-title {
+  margin: 0 0 16px;
+}
+
+.training-price__checkbox {
+  position: relative;
+  background: rgba(230, 248, 244, 0.6);
+  border-radius: 18px;
+  padding: 2px;
+  color: $secondaryGreenDark;
+  display: inline-flex;
+
+  input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    margin: 0;
+
+    &:checked {
+      + label {
+        &:after {
+          transform: translateX(100%);
+        }
+      }
+    }
+  }
+
+  label {
+    display: flex;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '';
+      user-select: none;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background: $monochromeWhite;
+      border-radius: 16px;
+      z-index: 1;
+      width: 145px;
+      transition: transform ease 0.3s;
+    }
+  }
+}
+
+.training-price__checkbox-value {
+  padding: 3px 12px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  width: 145px;
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+// From
+
+.training-price__form {
+  width: 100%;
+}

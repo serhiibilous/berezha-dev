@@ -1,11 +1,22 @@
 @import '../colors';
 @import '../variables';
 
+.precise-quote__container {
+  padding-top: 70px;
+}
+
 .precise-quote {
   background: $primaryMintLight;
   position: relative;
   margin: 0 0 80px;
   width: 100%;
+  overflow: hidden;
+}
+
+.precise-quote__wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform ease 0.5s;
 }
 
 .precise-quote_form {
@@ -15,24 +26,27 @@
 .precise-quote__counter {
   position: absolute;
   bottom: 64px;
-  left: 104px;
+  left: 8.3333333333%;
   color: $secondaryGreenDark;
   display: flex;
   align-items: baseline;
 
   @media (max-width: $lg) {
-    bottom: 40px;
-    left: 20px;
+    bottom: 24px;
+    left: 24px;
   }
 }
 
 .precise-quote__step {
   padding: 64px 0;
   display: flex;
-  min-height: 450px;
+  min-width: 100%;
+  position: relative;
+  height: 480px;
 
   @media (max-width: $lg) {
-    padding: 24px;
+    padding: 24px 24px 80px;
+    height: auto;
   }
 }
 
@@ -51,18 +65,44 @@
 .precise-quote__question-content {
   border-right: 1px solid $secondaryGreenDark;
   margin-right: 64px;
-  padding-right: 64px;
-  height: 100%;
+  padding-right: 20px;
+  height: 350px;
+
+  &.services {
+    padding-right: 40px;
+
+    @media (max-width: $lg) {
+      padding: 0;
+      height: auto;
+    }
+  }
 
   @media (max-width: $lg) {
     border: 0;
     margin: 0 0 40px;
     padding: 0;
+    height: auto;
+  }
+}
+
+.precise-quote__selected-list {
+  margin: 0 0 24px;
+
+  span {
+    color: $secondaryGreenDark;
   }
 }
 
 .precise-quote__question {
   margin: 0 0 32px;
+}
+
+.precise-quote__question-title {
+  margin: 0 0 20px;
+}
+
+.precise-quote__question-sub-title {
+  margin: 0 0 24px;
 }
 
 .precise-quote__answers-container {

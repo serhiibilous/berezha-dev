@@ -14,6 +14,38 @@
     text-decoration: none;
   }
 }
+.home-page {
+  .header__cover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -1px;
+    width: calc(50% - 11px);
+
+    span {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: calc(1232px * 0.166666666667);
+      background: $primaryBlueDark;
+
+      @media (max-width: 1264px) {
+        left: calc(100% * 0.33);
+      }
+    }
+
+    @media (max-width: $lg) {
+      display: none;
+    }
+  }
+
+  &.header-home-cover-hidden {
+    .header__cover {
+      display: none !important;
+    }
+  }
+}
 
 .header__wrapper {
   display: flex;
@@ -21,7 +53,7 @@
   justify-content: space-between;
   padding: 12px 24px;
 
-  @media (max-width: 768px) {
+  @media (max-width: $md) {
     padding: 12px;
   }
 }
@@ -37,7 +69,7 @@
   align-items: center;
   margin-left: 40px;
 
-  @media (max-width: 768px) {
+  @media (max-width: $md) {
     display: block;
     margin-left: 64px;
     padding: 24px 0;
@@ -53,7 +85,7 @@
     letter-spacing: 0.2px;
     white-space: nowrap;
 
-    @media (max-width: 768px) {
+    @media (max-width: $md) {
       font-size: 16px;
       padding: 0;
       margin: 0 0 16px;
@@ -68,9 +100,15 @@
     margin: 0 20px;
     position: relative;
 
-    @media (max-width: 768px) {
+    @media (max-width: $md) {
       margin: 0 0 24px;
       padding: 0 16px 0 0;
+    }
+
+    &:last-child {
+      .header__sub-nav {
+        border: 0;
+      }
     }
 
     &:hover {
@@ -82,7 +120,7 @@
 
   > li {
     > a {
-      @media (max-width: 768px) {
+      @media (max-width: $md) {
         color: $monochromeGrey6;
       }
     }
@@ -98,7 +136,7 @@
   top: 38px;
   min-width: 150px;
 
-  @media (max-width: 768px) {
+  @media (max-width: $md) {
     display: block;
     position: static;
     border-bottom: 1px solid $monochromeGrey2;
@@ -109,7 +147,7 @@
   li {
     margin: 12px 0;
 
-    @media (max-width: 768px) {
+    @media (max-width: $md) {
       margin: 0;
     }
 
@@ -120,14 +158,14 @@
 }
 
 .header__logo {
-  @media (max-width: 768px) {
+  @media (max-width: $md) {
     max-width: 66px;
     min-width: 66px;
   }
 }
 
 .header__nav-wrapper {
-  @media (max-width: 768px) {
+  @media (max-width: $md) {
     background: $monochromeWhite;
     position: fixed;
     top: $headerMobileHeight + px;
@@ -149,7 +187,7 @@
   padding: 7px 2px;
   position: relative;
 
-  @media (max-width: 768px) {
+  @media (max-width: $md) {
     display: block;
   }
 }
@@ -174,7 +212,7 @@
 }
 
 .header__button-quote {
-  @media (max-width: 768px) {
+  @media (max-width: $md) {
     display: none;
   }
 }
