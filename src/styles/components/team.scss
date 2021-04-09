@@ -11,16 +11,6 @@
   @media (max-width: $sm) {
     flex-wrap: wrap;
   }
-
-  .trainers & {
-    top: 0;
-    left: 0;
-    width: 1000px;
-
-    @media (max-width: $lg) {
-      width: 100%;
-    }
-  }
 }
 
 .team__list {

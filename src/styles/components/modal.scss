@@ -8,9 +8,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 100;
-  opacity: 1;
-  transition: opacity ease 0.3s;
+  z-index: -1;
+  opacity: 0;
+
+  &.modal__backdrop_open {
+    z-index: 100;
+    opacity: 1;
+  }
 }
 
 .modal__container {
@@ -25,24 +29,54 @@
   background: $monochromeWhite;
   display: flex;
   position: relative;
+  transform: translateY(-100%);
+  transition: transform ease 0.3s;
+  flex-direction: row-reverse;
+
+  @media (max-width: $md) {
+    flex-wrap: wrap;
+    overflow-x: auto;
+    height: 100%;
+  }
+
+  &.modal_open {
+    transform: translateY(0);
+  }
 }
 
 .modal__info {
   padding: 40px;
   width: 58%;
+
+  @media (max-width: $md) {
+    width: 100%;
+    padding: 16px;
+  }
 }
 
 .modal__info-title {
   margin: 0 0 24px;
+
+  @media (max-width: $md) {
+    margin: 0 0 16px;
+  }
 }
 
 .modal__info-sub-title {
   margin: 0 0 24px;
   color: $monochromeGrey6;
+
+  @media (max-width: $md) {
+    margin: 0 0 16px;
+  }
 }
 
 .modal__desc {
   margin: 0 0 30px;
+
+  @media (max-width: $md) {
+    margin: 0 0 16px;
+  }
 
   p {
     margin: 0 0 24px;
@@ -61,6 +95,10 @@
   width: 42%;
   display: flex;
   align-items: center;
+
+  @media (max-width: $md) {
+    width: 100%;
+  }
 
   img {
     width: 100%;
@@ -81,6 +119,11 @@
   background: $borderDarkColor;
   opacity: 0.5;
   cursor: pointer;
+
+  @media (max-width: $md) {
+    right: 16px;
+    top: 16px;
+  }
 
   svg {
     opacity: 1;

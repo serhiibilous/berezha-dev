@@ -130,6 +130,15 @@
   margin-left: 16px;
 }
 
+.button__icon-container_left {
+  display: flex;
+  margin-right: 16px;
+
+  .icon-arrow {
+    transform: rotate(180deg);
+  }
+}
+
 .icon-arrow {
   width: 6px;
   height: 12px;
