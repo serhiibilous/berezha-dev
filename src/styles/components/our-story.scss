@@ -1,0 +1,53 @@
+@import '../colors';
+@import '../variables';
+
+.our-story {
+}
+
+.our-story__description {
+  margin: 0 0 80px;
+
+  p {
+    margin: 0 0 24px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.our-story__image {
+  position: relative;
+  margin: 0 0 110px;
+
+  @media (max-width: $md) {
+    margin: 0;
+  }
+}
+
+.our-story__quote {
+  position: absolute;
+  background: $primaryBlueUltralight;
+  bottom: -110px;
+  left: -104px;
+  padding: 144px 40px 24px;
+  width: 580px;
+
+  @media (max-width: $lg) {
+    left: 0;
+    bottom: -130px;
+  }
+
+  @media (max-width: $md) {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 144px 24px 24px;
+  }
+}
+
+.our-story__quote-logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
