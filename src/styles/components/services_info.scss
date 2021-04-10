@@ -24,6 +24,10 @@
   color: $borderLightColor;
 }
 
+.services__info_team {
+  background: $primaryBlueUltralight;
+}
+
 .services__info-image {
   position: absolute;
 }
@@ -44,6 +48,10 @@
   color: $monochromeWhite;
   position: relative;
   z-index: 1;
+
+  .services__info_team & {
+    color: $primaryBlueDark;
+  }
 
   p {
     margin-bottom: 30px;

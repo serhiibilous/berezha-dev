@@ -1,0 +1,37 @@
+@import '../variables';
+@import '../colors';
+
+.company-slider {
+  background: $primaryBlueDark;
+  overflow: hidden;
+}
+
+.company-slider__content {
+  padding: 50px 0 0;
+  display: flex;
+  align-items: center;
+  color: $monochromeWhite;
+  height: 632px;
+
+  @media (max-width: $lg) {
+    height: auto;
+    padding: 80px 0 40px;
+  }
+}
+
+.company-slider__title {
+  margin: 0 0 56px;
+}
+
+.company-slider__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2000px;
+
+  @media (max-width: $lg) {
+    position: static;
+    width: auto;
+    margin: 0 -16px;
+  }
+}

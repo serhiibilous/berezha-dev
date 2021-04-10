@@ -164,13 +164,12 @@
 }
 
 .form-check-input {
-  width: 0;
-  height: 0;
-  visibility: hidden;
+  width: 14px;
+  height: 14px;
   opacity: 0;
   margin: 0;
   outline: none;
-  // display: none;
+  position: absolute;
 
   &:checked {
     + .form-check-label {

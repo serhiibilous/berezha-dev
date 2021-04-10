@@ -18,8 +18,6 @@ if (teamMembers) {
       event.preventDefault()
       const teamMemberContainer = teamMember.closest('.team__item')
       const hiddenData = teamMemberContainer.querySelector('[data-team-member]')
-      console.log('hiddenData', hiddenData)
-      console.log('teamMemberContainer', teamMemberContainer)
       setupDataInModal(hiddenData)
       teamMemberModalBackdrop.classList.add('modal__backdrop_open')
       teamMemberModal.classList.add('modal_open')
@@ -59,6 +57,15 @@ if (teamMembers) {
     setTimeout(() => {
       teamMemberModalBackdrop.classList.remove('modal__backdrop_open')
       body.classList.remove('overflowed')
+      clearModalData()
     }, 200)
+  }
+
+  function clearModalData() {
+    teamMemberModal.querySelector('[data-team-member-name]').innerHTML = ''
+    teamMemberModal.querySelector('[data-team-member-position]').innerHTML = ''
+    teamMemberModal.querySelector('[data-team-member-info]').innerHTML = ''
+    teamMemberModal.querySelector('[data-team-member-linkedin]').setAttribute('href', '')
+    teamMemberModal.querySelector('[data-team-member-photo]').setAttribute('src', '')
   }
 }

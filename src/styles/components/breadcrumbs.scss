@@ -3,10 +3,14 @@
 
 .breadcrumbs {
   position: absolute;
-  top: calc(40px + #{$headerMobileHeight}px);
+  top: 105px;
   left: 0;
   right: 0;
   z-index: 1;
+
+  @media (max-width: $md) {
+    top: 80px;
+  }
 }
 
 .breadcrumbs__list {
@@ -15,6 +19,10 @@
   font-size: 16px;
   line-height: 24px;
   color: $primaryBlueMedium;
+
+  .breadcrumbs_white & {
+    color: $monochromeWhite;
+  }
 
   li {
     margin: 0 5px 0 0;
@@ -33,5 +41,9 @@
   a {
     text-decoration: none;
     padding-right: 2px;
+
+    .breadcrumbs_white & {
+      color: $monochromeWhite;
+    }
   }
 }
