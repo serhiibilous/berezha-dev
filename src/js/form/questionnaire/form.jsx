@@ -3,6 +3,7 @@ import { Step } from './step'
 import { FormUserData } from '../components/form-user-data'
 import { QuestionsList } from './questions-list'
 import { servicesQuestions, securityObjectiveQuestions, industryQuestions } from './questions'
+import { INTEGROMAT_API_KEY } from '../constants'
 
 export function QuestionnaireForm() {
   const [step, setStep] = useState(1)
@@ -22,16 +23,43 @@ export function QuestionnaireForm() {
   const handleSubmitForm = (event) => {
     event.preventDefault()
     const data = {
-      industry,
-      service,
-      securityObjective,
-      userFirstName,
-      userLastName,
-      userEmail,
-      userComment,
-      userFile,
+      industry: industry,
+      service: service,
+      objective: securityObjective,
+      first_name: userFirstName,
+      last_name: userLastName,
+      email: userEmail,
+      phone: '',
+      message: userComment,
     }
-    console.table(data)
+    console.table(JSON.stringify(data))
+
+    // const formData = new FormData()
+    // formData.append('industry', industry)
+    // formData.append('service', service)
+    // formData.append('objective', securityObjective)
+    // formData.append('first_name', userFirstName)
+    // formData.append('last_name', userLastName)
+    // formData.append('email', userEmail)
+    // formData.append('message', userComment)
+    // formData.append('phone', '')
+    // formData.append('userFile', userFile)
+    // console.table('formData', formData)
+
+    fetch(`https://hook.integromawwwt.com/${INTEGROMAT_API_KEY}`, {
+      method: 'POST',
+      // body: formData,
+      body: JSON.stringify(data),
+    })
+      .then((res) => {
+        if (res.ok) return res.text()
+      })
+      .then((data) => {
+        console.info(data)
+      })
+      .catch((error) => {
+        console.error(error)
+      })
   }
 
   return (

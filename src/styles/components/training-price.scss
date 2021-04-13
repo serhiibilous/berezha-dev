@@ -42,6 +42,18 @@
   }
 }
 
+.training-price__security-content {
+  padding-left: 104px;
+
+  @media (max-width: $sm) {
+    padding-left: 50px;
+  }
+
+  .training-price-content {
+    padding-top: 36px;
+  }
+}
+
 .training-price__right {
   border: 1px solid $monochromeWhite;
   border-left: 0;

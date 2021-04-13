@@ -48,6 +48,3 @@ export function RequestForm() {
     </div>
   )
 }
-
-const formContainer = document.getElementById('GetPrecizeQuote')
-if (formContainer) ReactDOM.render(<RequestForm />, formContainer)

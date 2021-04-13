@@ -19,9 +19,11 @@ if (teamMembers) {
       const teamMemberContainer = teamMember.closest('.team__item')
       const hiddenData = teamMemberContainer.querySelector('[data-team-member]')
       setupDataInModal(hiddenData)
-      teamMemberModalBackdrop.classList.add('modal__backdrop_open')
-      teamMemberModal.classList.add('modal_open')
       body.classList.add('overflowed')
+      teamMemberModalBackdrop.classList.add('modal__backdrop_open')
+      setTimeout(() => {
+        teamMemberModal.classList.add('modal_open')
+      }, 50)
     })
   })
 
