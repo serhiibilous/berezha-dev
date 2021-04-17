@@ -25,7 +25,7 @@
 }
 
 .modal {
-  width: 864px;
+  width: 936px;
   background: $monochromeWhite;
   display: flex;
   position: relative;
@@ -45,8 +45,8 @@
 }
 
 .modal__info {
-  padding: 40px;
-  width: 58%;
+  padding: 40px 40px 20px;
+  width: calc(100% - 424px);
 
   @media (max-width: $md) {
     width: 100%;
@@ -89,10 +89,15 @@
 
 .modal__linkedin-link {
   display: block;
+  transition: opacity ease 0.2s;
+
+  &:hover {
+    opacity: 0.75;
+  }
 }
 
 .modal__photo {
-  width: 42%;
+  width: 424px;
   display: flex;
   align-items: center;
 

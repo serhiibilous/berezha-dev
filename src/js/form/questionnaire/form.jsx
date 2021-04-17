@@ -12,8 +12,8 @@ export function QuestionnaireForm() {
   const [userFirstName, setUserFirstName] = useState('')
   const [userLastName, setUserLastName] = useState('')
   const [userEmail, setUserEmail] = useState('')
+  const [userPhone, setUserPhone] = useState('')
   const [userComment, setUserComment] = useState('')
-  const [userFile, setUserFile] = useState(null)
 
   // Services
   const [industry, setIndustry] = useState('')
@@ -29,37 +29,27 @@ export function QuestionnaireForm() {
       first_name: userFirstName,
       last_name: userLastName,
       email: userEmail,
-      phone: '',
+      phone: userPhone,
       message: userComment,
     }
     console.table(JSON.stringify(data))
 
-    // const formData = new FormData()
-    // formData.append('industry', industry)
-    // formData.append('service', service)
-    // formData.append('objective', securityObjective)
-    // formData.append('first_name', userFirstName)
-    // formData.append('last_name', userLastName)
-    // formData.append('email', userEmail)
-    // formData.append('message', userComment)
-    // formData.append('phone', '')
-    // formData.append('userFile', userFile)
-    // console.table('formData', formData)
-
-    fetch(`https://hook.integromawwwt.com/${INTEGROMAT_API_KEY}`, {
-      method: 'POST',
-      // body: formData,
-      body: JSON.stringify(data),
-    })
-      .then((res) => {
-        if (res.ok) return res.text()
-      })
-      .then((data) => {
-        console.info(data)
-      })
-      .catch((error) => {
-        console.error(error)
-      })
+    // fetch(`https://hook.integromat.com/${INTEGROMAT_API_KEY}`, {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(data),
+    // })
+    //   .then((res) => {
+    //     if (res.ok) return res.text()
+    //   })
+    //   .then((data) => {
+    //     console.info(data)
+    //   })
+    //   .catch((error) => {
+    //     console.error(error)
+    //   })
   }
 
   return (
@@ -82,9 +72,9 @@ export function QuestionnaireForm() {
               }
               right={
                 <>
-                  <h2 className="heading-h4 precise-quote__heading">Any questions left unanswered?</h2>
+                  <h2 className="heading-h4 precise-quote__heading">See how we can help you defeat security threats</h2>
                   <p className="sub-title">
-                    Please send us a message, and our security expert will get back to you shortly.
+                    Answer three questions and find out how our capabilities match your business goals.
                   </p>
                 </>
               }
@@ -118,7 +108,7 @@ export function QuestionnaireForm() {
                     onChangeUserLastName={setUserLastName}
                     onChangeUserEmail={setUserEmail}
                     onChangeUserComment={setUserComment}
-                    onChangeUserFile={setUserFile}
+                    onChangeUserPhone={setUserPhone}
                     step={step}
                   />
                 </>
@@ -153,7 +143,7 @@ export function QuestionnaireForm() {
                     onChangeUserLastName={setUserLastName}
                     onChangeUserEmail={setUserEmail}
                     onChangeUserComment={setUserComment}
-                    onChangeUserFile={setUserFile}
+                    onChangeUserPhone={setUserPhone}
                     step={step}
                   />
                 </>
@@ -191,7 +181,7 @@ export function QuestionnaireForm() {
                     onChangeUserLastName={setUserLastName}
                     onChangeUserEmail={setUserEmail}
                     onChangeUserComment={setUserComment}
-                    onChangeUserFile={setUserFile}
+                    onChangeUserPhone={setUserPhone}
                     step={step}
                   />
                 </>

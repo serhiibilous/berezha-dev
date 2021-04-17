@@ -1,48 +1,53 @@
 import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
 import { FormUserData } from '../components/form-user-data'
-import { Step } from '../questionnaire/step'
 
 export function RequestForm() {
   // User Data
   const [userFirstName, setUserFirstName] = useState('')
   const [userLastName, setUserLastName] = useState('')
   const [userEmail, setUserEmail] = useState('')
+  const [userPhone, setUserPhone] = useState('')
   const [userComment, setUserComment] = useState('')
 
   const handleSubmitForm = (event) => {
     event.preventDefault()
     const data = {
-      userFirstName,
-      userLastName,
-      userEmail,
-      userComment,
+      first_name: userFirstName,
+      last_name: userLastName,
+      email: userEmail,
+      phone: userPhone,
+      message: userComment,
     }
-    console.table(data)
+    console.table(JSON.stringify(data))
   }
 
   return (
     <div className="container">
       <form onSubmit={handleSubmitForm}>
         <section className="precise-quote precise-quote_form">
-          <Step
-            left={
-              <>
-                <h2 className="heading-h2 precise-quote__heading">Any questions left unanswered?</h2>
-                <p className="body-text-1">
-                  Please send us a message, and our security expert will get back to you shortly.
-                </p>
-              </>
-            }
-            right={
-              <FormUserData
-                onChangeUserFirstName={setUserFirstName}
-                onChangeUserLastName={setUserLastName}
-                onChangeUserEmail={setUserEmail}
-                onChangeUserComment={setUserComment}
-              />
-            }
-          />
+          <div className="precise-quote__step precise-quote__step_only-form">
+            <div className="row">
+              <div className="col-lg-5 offset-lg-1">
+                <div className="precise-quote__contact-us_left">
+                  <h2 className="heading-h2 precise-quote__heading">Contact Us</h2>
+                  <p className="body-text-1">
+                    Get cybersecurity advice now – <br /> talk to a BSG expert.
+                  </p>
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="precise-quote__contact-us_right">
+                  <FormUserData
+                    onChangeUserFirstName={setUserFirstName}
+                    onChangeUserLastName={setUserLastName}
+                    onChangeUserEmail={setUserEmail}
+                    onChangeUserComment={setUserComment}
+                    onChangeUserPhone={setUserPhone}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </form>
     </div>

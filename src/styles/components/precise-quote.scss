@@ -50,6 +50,10 @@
   }
 }
 
+.precise-quote__step_only-form {
+  display: block;
+}
+
 .precise-quote__heading {
   min-height: 150px;
   margin: 0 0 15px;
@@ -148,5 +152,19 @@
     display: inline-flex;
     margin-right: 10px;
     transform: rotate(180deg);
+  }
+}
+
+.precise-quote__contact-us_left {
+}
+
+.precise-quote__contact-us_right {
+  border-left: 1px solid $primaryBlueMedium;
+  padding: 0 64px;
+
+  @media (max-width: $lg) {
+    border: 0;
+    padding: 0;
+    margin-top: 40px;
   }
 }
