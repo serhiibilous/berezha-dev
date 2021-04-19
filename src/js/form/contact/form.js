@@ -69,8 +69,8 @@ export function ContactForm() {
           errors={validationErrors}
         />
         {isLoading && <Loader />}
-        {success && <Success />}
-        {error && <Error />}
+        {success && <Success isShort />}
+        {error && <Error isShort />}
       </form>
     </div>
   )
