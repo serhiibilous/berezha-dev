@@ -10,7 +10,9 @@ export function FormUserData({
   onChangeUserEmail,
   onChangeUserComment,
   onChangeUserPhone,
+  onChangeAgreement,
   isTrainingForm = false,
+  errors,
 }) {
   const isCommendFieldPresent = !step || step === 4
 
@@ -23,6 +25,7 @@ export function FormUserData({
           isRequired={true}
           label="First Name *"
           onSetValue={onChangeUserFirstName}
+          errors={errors}
         />
         <FormInput
           id="LastName"
@@ -30,6 +33,7 @@ export function FormUserData({
           isRequired={false}
           label="Last Name"
           onSetValue={onChangeUserLastName}
+          errors={errors}
         />
       </div>
       <div className="form-inline">
@@ -40,15 +44,24 @@ export function FormUserData({
           type="email"
           label="Email *"
           onSetValue={onChangeUserEmail}
+          errors={errors}
         />
-        <FormInput id="Phone" name="Phone" isRequired={true} type="tel" label="Phone" onSetValue={onChangeUserPhone} />
+        <FormInput
+          id="Phone"
+          name="Phone"
+          isRequired={true}
+          type="tel"
+          label="Phone"
+          onSetValue={onChangeUserPhone}
+          errors={errors}
+        />
       </div>
       {isCommendFieldPresent && (
         <FormTextarea name="Comment" id="Comment" label="Comment" onSetValue={onChangeUserComment} />
       )}
       <div className="form-button-container flex-center">
         <div className="flex-container">
-          <FormTermsConditions />
+          <FormTermsConditions onSetValue={onChangeAgreement} errors={errors} />
         </div>
         {isTrainingForm ? (
           <button type="submit" className="button button_with-icon button_medium">

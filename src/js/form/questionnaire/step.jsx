@@ -24,10 +24,14 @@ export function Step({ step, left, right, onChangeStep, service, currentStep }) 
   return (
     <div className="precise-quote__step">
       <div className="row">
-        <div className="col-lg-6 offset-lg-1">
-          <div className={`precise-quote__question-content ${service}`}>{left}</div>
+        <div className="col-lg-5 offset-lg-1">
+          <div className="precise-quote__contact-us_left">{left}</div>
         </div>
-        <div className="col-lg-4">{right}</div>
+        <div className="col-lg-6">
+          <div className="precise-quote__contact-us_right">
+            <div>{right}</div>
+          </div>
+        </div>
       </div>
       {step && (
         <div className="precise-quote__counter body-text-1">

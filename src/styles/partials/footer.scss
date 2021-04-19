@@ -15,6 +15,10 @@
     transition: color ease 0.3s;
     display: inline-block;
 
+    &.email-link {
+      color: $monochromeWhite;
+    }
+
     &:hover {
       color: $monochromeGrey6;
     }

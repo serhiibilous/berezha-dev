@@ -1,9 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Step } from './step'
 import { FormUserData } from '../components/form-user-data'
 import { QuestionsList } from './questions-list'
 import { servicesQuestions, securityObjectiveQuestions, industryQuestions } from './questions'
 import { INTEGROMAT_API_KEY } from '../constants'
+import { useFetch } from '../components/use-fetch'
+import { Loader } from '../components/loader'
+import { Success } from '../components/success'
+import { Error } from '../components/error'
+import { validateForm } from '../components/validate-form'
 
 export function QuestionnaireForm() {
   const [step, setStep] = useState(1)
@@ -14,14 +19,30 @@ export function QuestionnaireForm() {
   const [userEmail, setUserEmail] = useState('')
   const [userPhone, setUserPhone] = useState('')
   const [userComment, setUserComment] = useState('')
+  const [agreement, setAgreement] = useState('')
+  const [validationErrors, setValidationErrors] = useState([])
+  const [shouldValidate, setShouldValidate] = useState(false)
 
   // Services
   const [industry, setIndustry] = useState('')
   const [service, setService] = useState('')
   const [securityObjective, setSecurityObjective] = useState('')
 
+  const validationFields = [
+    { type: 'text', name: 'FirstName', value: userFirstName },
+    { type: 'email', name: 'Email', value: userEmail },
+    { type: 'checkbox', name: 'agreement', value: agreement },
+  ]
+
+  const [success, error, isLoading, fetchData] = useFetch({ url: `https://hook.integromat.com/${INTEGROMAT_API_KEY}` })
+
   const handleSubmitForm = (event) => {
     event.preventDefault()
+
+    const errors = validateForm(validationFields)
+    setValidationErrors(errors)
+    setShouldValidate(true)
+
     const data = {
       industry: industry,
       service: service,
@@ -31,26 +52,22 @@ export function QuestionnaireForm() {
       email: userEmail,
       phone: userPhone,
       message: userComment,
+      pageUrl: window.location.href,
+      formName: 'QuestionnaireForm',
     }
-    console.table(JSON.stringify(data))
 
-    // fetch(`https://hook.integromat.com/${INTEGROMAT_API_KEY}`, {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(data),
-    // })
-    //   .then((res) => {
-    //     if (res.ok) return res.text()
-    //   })
-    //   .then((data) => {
-    //     console.info(data)
-    //   })
-    //   .catch((error) => {
-    //     console.error(error)
-    //   })
+    if (errors.length === 0) {
+      // fetchData(data)
+      console.table(JSON.stringify(data))
+    }
   }
+
+  useEffect(() => {
+    if (shouldValidate) {
+      const errors = validateForm(validationFields)
+      setValidationErrors(errors)
+    }
+  }, [userFirstName, userEmail, agreement])
 
   return (
     <div className="container">
@@ -110,6 +127,8 @@ export function QuestionnaireForm() {
                     onChangeUserComment={setUserComment}
                     onChangeUserPhone={setUserPhone}
                     step={step}
+                    onChangeAgreement={setAgreement}
+                    errors={validationErrors}
                   />
                 </>
               }
@@ -145,6 +164,8 @@ export function QuestionnaireForm() {
                     onChangeUserComment={setUserComment}
                     onChangeUserPhone={setUserPhone}
                     step={step}
+                    onChangeAgreement={setAgreement}
+                    errors={validationErrors}
                   />
                 </>
               }
@@ -183,6 +204,8 @@ export function QuestionnaireForm() {
                     onChangeUserComment={setUserComment}
                     onChangeUserPhone={setUserPhone}
                     step={step}
+                    onChangeAgreement={setAgreement}
+                    errors={validationErrors}
                   />
                 </>
               }
@@ -191,6 +214,9 @@ export function QuestionnaireForm() {
               currentStep={4}
             />
           </div>
+          {isLoading && <Loader />}
+          {success && <Success />}
+          {error && <Error />}
         </section>
       </form>
     </div>

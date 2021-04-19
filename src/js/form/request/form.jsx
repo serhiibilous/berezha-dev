@@ -1,5 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FormUserData } from '../components/form-user-data'
+import { Success } from '../components/success'
+import { Error } from '../components/error'
+import { Loader } from '../components/loader'
+import { useFetch } from '../components/use-fetch'
+import { validateForm } from '../components/validate-form'
+import { INTEGROMAT_API_KEY } from '../constants'
 
 export function RequestForm() {
   // User Data
@@ -8,18 +14,47 @@ export function RequestForm() {
   const [userEmail, setUserEmail] = useState('')
   const [userPhone, setUserPhone] = useState('')
   const [userComment, setUserComment] = useState('')
+  const [agreement, setAgreement] = useState('')
+  const [validationErrors, setValidationErrors] = useState([])
+  const [shouldValidate, setShouldValidate] = useState(false)
+
+  const validationFields = [
+    { type: 'text', name: 'FirstName', value: userFirstName },
+    { type: 'email', name: 'Email', value: userEmail },
+    { type: 'checkbox', name: 'agreement', value: agreement },
+  ]
+
+  const [success, error, isLoading, fetchData] = useFetch({ url: `https://hook.integromat.com/${INTEGROMAT_API_KEY}` })
 
   const handleSubmitForm = (event) => {
     event.preventDefault()
+
+    const errors = validateForm(validationFields)
+    setValidationErrors(errors)
+    setShouldValidate(true)
+
     const data = {
       first_name: userFirstName,
       last_name: userLastName,
       email: userEmail,
       phone: userPhone,
       message: userComment,
+      pageUrl: window.location.href,
+      formName: 'ContactUs',
     }
-    console.table(JSON.stringify(data))
+
+    if (errors.length === 0) {
+      fetchData(data)
+      console.table(JSON.stringify(data))
+    }
   }
+
+  useEffect(() => {
+    if (shouldValidate) {
+      const errors = validateForm(validationFields)
+      setValidationErrors(errors)
+    }
+  }, [userFirstName, userEmail, agreement])
 
   return (
     <div className="container">
@@ -43,11 +78,16 @@ export function RequestForm() {
                     onChangeUserEmail={setUserEmail}
                     onChangeUserComment={setUserComment}
                     onChangeUserPhone={setUserPhone}
+                    onChangeAgreement={setAgreement}
+                    errors={validationErrors}
                   />
                 </div>
               </div>
             </div>
           </div>
+          {isLoading && <Loader />}
+          {success && <Success />}
+          {error && <Error />}
         </section>
       </form>
     </div>

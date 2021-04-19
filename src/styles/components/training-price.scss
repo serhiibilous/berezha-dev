@@ -10,6 +10,7 @@
   padding: 0 40px 0 16px;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 
   @media (max-width: $desktopWidth) {
     padding: 0;
@@ -43,7 +44,7 @@
 }
 
 .training-price__security-content {
-  padding-left: 104px;
+  // padding-left: 104px;
 
   @media (max-width: $sm) {
     padding-left: 50px;
@@ -58,14 +59,14 @@
   border: 1px solid $monochromeWhite;
   border-left: 0;
   width: calc(47% - 10px);
-  padding: 24px 63px 24px 80px;
+  padding: 24px 63px 24px 0;
   margin: 40px 0 40px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
 
   @media (max-width: $desktopWidth) {
-    padding: 24px 40px 24px 40px;
+    padding: 24px 40px 24px 0;
   }
 
   @media (max-width: $lg) {
@@ -75,6 +76,7 @@
     padding-top: 40px;
     margin-left: 0;
     margin-top: 0;
+    padding-left: 40px;
   }
 
   @media (max-width: $sm) {

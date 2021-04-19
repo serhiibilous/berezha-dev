@@ -66,28 +66,28 @@
   }
 }
 
-.precise-quote__question-content {
-  border-right: 1px solid $secondaryGreenDark;
-  margin-right: 64px;
-  padding-right: 20px;
-  height: 350px;
-
-  &.services {
-    padding-right: 40px;
-
-    @media (max-width: $lg) {
-      padding: 0;
-      height: auto;
-    }
-  }
-
-  @media (max-width: $lg) {
-    border: 0;
-    margin: 0 0 40px;
-    padding: 0;
-    height: auto;
-  }
-}
+//.precise-quote__question-content {
+//  border-right: 1px solid $secondaryGreenDark;
+//  margin-right: 64px;
+//  padding-right: 20px;
+//  height: 350px;
+//
+//  &.services {
+//    padding-right: 40px;
+//
+//    @media (max-width: $lg) {
+//      padding: 0;
+//      height: auto;
+//    }
+//  }
+//
+//  @media (max-width: $lg) {
+//    border: 0;
+//    margin: 0 0 40px;
+//    padding: 0;
+//    height: auto;
+//  }
+//}
 
 .precise-quote__selected-list {
   margin: 0 0 24px;
@@ -160,11 +160,102 @@
 
 .precise-quote__contact-us_right {
   border-left: 1px solid $primaryBlueMedium;
+  // border-left: 1px solid $secondaryGreenDark;
   padding: 0 64px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  min-height: 352px;
+
+  .precise-quote__wrapper & {
+    border-color: $secondaryGreenDark;
+  }
 
   @media (max-width: $lg) {
     border: 0;
     padding: 0;
     margin-top: 40px;
+    min-height: auto;
   }
+}
+
+// Success
+
+.precise-quote__success {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $primaryBlueUltralight;
+  z-index: 1;
+}
+
+.precise-quote__success-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.precise-quote__success-info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 1px solid $primaryBlueMedium;
+  padding: 48px 48px 24px;
+
+  @media (max-width: $lg) {
+    position: static;
+    margin-top: 50px;
+  }
+
+  @media (max-width: $sm) {
+    padding: 24px;
+  }
+
+  .heading-h3 {
+    margin: 0 0 12px;
+  }
+}
+
+.precise-quote__success-info-button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 29px 0 0;
+}
+
+.precise-quote__success-link {
+  display: inline-flex;
+  align-items: baseline;
+  transition: opacity ease 0.2s;
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  i {
+    margin-left: 5px;
+  }
+}
+
+.precise-quote__loader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+}
+
+.precise-quote__error {
+  padding-top: 5px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: $secondaryRedMedium;
 }

@@ -41,6 +41,12 @@
   padding-top: 16px;
   margin: 0 0 28px;
   position: relative;
+
+  &.form-group_error {
+    .form-control {
+      border-color: $secondaryRedMedium;
+    }
+  }
 }
 
 .form-group_file {
