@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { FormUserData } from '../components/form-user-data'
 import { useFetch } from '../components/use-fetch'
-import { INTEGROMAT_API_KEY } from '../constants'
+import { CONTACT_US_ENDPOINT } from '../constants'
 import { validateForm } from '../components/validate-form'
 import { Loader } from '../components/loader'
 import { Success } from '../components/success'
@@ -24,7 +24,7 @@ export function ContactForm() {
     { type: 'checkbox', name: 'agreement', value: agreement },
   ]
 
-  const [success, error, isLoading, fetchData] = useFetch({ url: `https://hook.integromat.com/${INTEGROMAT_API_KEY}` })
+  const [success, error, isLoading, fetchData] = useFetch({ url: `https://hook.integromat.com/${CONTACT_US_ENDPOINT}` })
 
   const handleSubmitForm = (event) => {
     event.preventDefault()
@@ -45,7 +45,6 @@ export function ContactForm() {
 
     if (errors.length === 0) {
       fetchData(data)
-      console.table(JSON.stringify(data))
     }
   }
 

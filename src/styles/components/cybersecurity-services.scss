@@ -2,6 +2,7 @@
 @import '../variables';
 
 .cybersecurity-services {
+  padding-bottom: 40px;
 }
 
 .cybersecurity-services__container {
@@ -99,6 +100,7 @@
 .cybersecurity__item-footer {
   display: flex;
   justify-content: flex-end;
+  min-height: 36px;
 }
 
 .cybersecurity__logo {

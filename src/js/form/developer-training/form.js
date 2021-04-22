@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { FormUserData } from '../components/form-user-data'
 import { useFetch } from '../components/use-fetch'
-import { INTEGROMAT_API_KEY } from '../constants'
+import { DEVELOPER_TRAINING_ENDPOINT } from '../constants'
 import { validateForm } from '../components/validate-form'
 import { Loader } from '../components/loader'
 import { Success } from '../components/success'
 import { Error } from '../components/error'
 
-export function SecurityTrainingForm() {
+export function DeveloperTrainingForm() {
   // User Data
   const [userFirstName, setUserFirstName] = useState('')
   const [userLastName, setUserLastName] = useState('')
@@ -24,7 +24,9 @@ export function SecurityTrainingForm() {
     { type: 'checkbox', name: 'agreement', value: agreement },
   ]
 
-  const [success, error, isLoading, fetchData] = useFetch({ url: `https://hook.integromat.com/${INTEGROMAT_API_KEY}` })
+  const [success, error, isLoading, fetchData] = useFetch({
+    url: `https://hook.integromat.com/${DEVELOPER_TRAINING_ENDPOINT}`,
+  })
 
   const handleSubmitForm = (event) => {
     event.preventDefault()
@@ -38,14 +40,14 @@ export function SecurityTrainingForm() {
       email: userEmail,
       phone: userPhone,
       message: userComment,
-      price: '2400 EUR',
+      price: '2400',
+      currency: 'EUR',
       pageUrl: window.location.href,
-      formName: 'SecurityTraining',
+      formName: 'DeveloperTraining',
     }
 
     if (errors.length === 0) {
       fetchData(data)
-      console.table(JSON.stringify(data))
     }
   }
 

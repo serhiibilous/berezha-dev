@@ -1,5 +1,5 @@
 import './request'
 import './questionnaire'
-import './training'
-import './security-training'
+import './pentester-training'
+import './developer-training'
 import './contact'

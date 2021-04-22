@@ -3,7 +3,7 @@ import { Step } from './step'
 import { FormUserData } from '../components/form-user-data'
 import { QuestionsList } from './questions-list'
 import { servicesQuestions, securityObjectiveQuestions, industryQuestions } from './questions'
-import { INTEGROMAT_API_KEY } from '../constants'
+import { QUESTIONNAIRE_ENDPOINT } from '../constants'
 import { useFetch } from '../components/use-fetch'
 import { Loader } from '../components/loader'
 import { Success } from '../components/success'
@@ -34,7 +34,9 @@ export function QuestionnaireForm() {
     { type: 'checkbox', name: 'agreement', value: agreement },
   ]
 
-  const [success, error, isLoading, fetchData] = useFetch({ url: `https://hook.integromat.com/${INTEGROMAT_API_KEY}` })
+  const [success, error, isLoading, fetchData] = useFetch({
+    url: `https://hook.integromat.com/${QUESTIONNAIRE_ENDPOINT}`,
+  })
 
   const handleSubmitForm = (event) => {
     event.preventDefault()
@@ -57,8 +59,7 @@ export function QuestionnaireForm() {
     }
 
     if (errors.length === 0) {
-      // fetchData(data)
-      console.table(JSON.stringify(data))
+      fetchData(data)
     }
   }
 

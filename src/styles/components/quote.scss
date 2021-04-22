@@ -8,6 +8,7 @@
 
 .quote__without-bg {
   background: transparent;
+  margin: 0;
 }
 
 .quote__content {
@@ -19,6 +20,11 @@
     padding: 24px 24px 150px;
     min-height: auto;
   }
+
+  .quote__without-bg & {
+    padding: 24px 104px 200px;
+    min-height: 370px;
+  }
 }
 
 .quote__author-container {
@@ -27,6 +33,10 @@
   bottom: 104px;
   display: flex;
   justify-content: flex-end;
+
+  .quote__without-bg & {
+    bottom: 80px;
+  }
 
   @media all and (max-width: #{$mobileWidth}) {
     right: 24px;

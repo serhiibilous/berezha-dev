@@ -184,6 +184,12 @@
       }
     }
   }
+
+  &:disabled {
+    + .form-check-label {
+      opacity: 0.75;
+    }
+  }
 }
 
 .form-check-label {

@@ -26,7 +26,7 @@ export function useFetch({ url }) {
         .finally(() => {
           setIsLoading(false)
         })
-    }, 1000)
+    }, 500)
   }
 
   return [isSuccess, isError, isLoading, fetchData]

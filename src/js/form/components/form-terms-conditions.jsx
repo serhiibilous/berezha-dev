@@ -28,7 +28,7 @@ export function FormTermsConditions({ onSetValue, errors = [] }) {
       />
       <label className="form-check-label caption" htmlFor="agreementField">
         <span>
-          I have read and agree to the{' '}
+          I have read and agree to the <br />
           <a href="#" target="_blank">
             Terms&Conditions
           </a>{' '}
