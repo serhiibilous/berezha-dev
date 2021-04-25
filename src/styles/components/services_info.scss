@@ -9,8 +9,8 @@
   justify-content: center;
   overflow: hidden;
 
-  @media all and (max-width: #{$mobileWidth}) {
-    padding: 40px 12px;
+  @media (max-width: $lg) {
+    padding: 56px 0;
   }
 }
 
@@ -48,6 +48,11 @@
   color: $monochromeWhite;
   position: relative;
   z-index: 1;
+
+  @media (max-width: $lg) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 
   .services__info_team & {
     color: $primaryBlueDark;

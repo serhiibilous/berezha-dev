@@ -1,8 +1,23 @@
+@import '../variables';
+
 .certificates {
+  @media (max-width: $lg) {
+    padding: 56px 0 16px;
+
+    .container__title {
+      font-size: 28px;
+      line-height: 1.5;
+      margin: 0 0 12px;
+    }
+  }
 }
 
 .certificates__description {
   margin: 0 0 90px;
+
+  @media (max-width: $lg) {
+    margin: 0 0 48px;
+  }
 }
 
 .certificates__list {
@@ -11,7 +26,11 @@
   align-items: center;
   flex-wrap: wrap;
 
+  @media (max-width: $lg) {
+    justify-content: center;
+  }
+
   li {
-    margin: 0 15px 30px;
+    margin: 0 15px 40px;
   }
 }

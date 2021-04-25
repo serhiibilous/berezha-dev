@@ -17,7 +17,7 @@ export function FormUserData({
   const isCommendFieldPresent = !step || step === 4
 
   return (
-    <div>
+    <div className="width-100">
       <div className="form-inline">
         <FormInput
           id="FirstName"
@@ -59,7 +59,7 @@ export function FormUserData({
       {isCommendFieldPresent && (
         <FormTextarea name="Comment" id="Comment" label="Comment" onSetValue={onChangeUserComment} />
       )}
-      <div className="form-button-container flex-center">
+      <div className="form-button-container">
         <div className="flex-container">
           <FormTermsConditions onSetValue={onChangeAgreement} errors={errors} />
         </div>

@@ -8,8 +8,12 @@
   right: 0;
   z-index: 1;
 
+  @media (max-width: $lg) {
+    top: 82px;
+  }
+
   @media (max-width: $md) {
-    top: 80px;
+    top: 65px;
   }
 }
 
@@ -19,6 +23,11 @@
   font-size: 16px;
   line-height: 24px;
   color: $primaryBlueMedium;
+
+  @media (max-width: $lg) {
+    font-size: 12px;
+    line-height: 16px;
+  }
 
   .breadcrumbs_white & {
     color: $monochromeWhite;

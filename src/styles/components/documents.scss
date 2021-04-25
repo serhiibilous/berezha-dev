@@ -1,0 +1,102 @@
+@import '../variables';
+@import '../colors';
+
+.documents {
+  padding: 120px 0 112px;
+
+  @media (max-width: $md) {
+    padding: 88px 0 56px;
+  }
+}
+
+.documents__page-title {
+  margin: 0 0 46px;
+
+  @media (max-width: $md) {
+    margin: 0 0 32px;
+
+    .heading-h2 {
+      font-size: 36px;
+      line-height: 1;
+    }
+  }
+}
+
+.documents__date {
+  margin: 0 0 48px;
+  color: $monochromeGrey6;
+
+  @media (max-width: $md) {
+    margin: 0 0 32px;
+  }
+}
+
+.documents__section {
+  margin: 0 0 48px;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: underline;
+    color: $primaryBlueMedium;
+
+    &:hover {
+      color: $primaryBlueMedium;
+      text-decoration: none;
+    }
+  }
+
+  p {
+    margin: 0 0 24px;
+
+    + ul {
+      margin-top: -12px;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  ul {
+    margin: 0 0 12px;
+
+    li {
+      padding-left: 20px;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: '';
+        left: 8px;
+        top: 9px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: $primaryBlueDark;
+      }
+    }
+  }
+}
+
+.documents__quote {
+  color: $secondaryRedMedium;
+}
+
+.documents__title {
+  margin: 0 0 20px;
+}
+
+.documents__sub-title {
+  margin: 0 0 17px;
+}
+
+.documents__sub-section {
+  margin: 0 0 32px;
+
+  &:last-child {
+    margin: 0;
+  }
+}

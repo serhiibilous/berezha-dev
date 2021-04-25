@@ -22,6 +22,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+  padding: 16px;
 }
 
 .modal {
@@ -50,7 +51,7 @@
 
   @media (max-width: $md) {
     width: 100%;
-    padding: 16px;
+    padding: 40px 16px;
   }
 }
 
@@ -58,7 +59,7 @@
   margin: 0 0 24px;
 
   @media (max-width: $md) {
-    margin: 0 0 16px;
+    margin: 0 0 12px;
   }
 }
 
@@ -75,7 +76,7 @@
   margin: 0 0 30px;
 
   @media (max-width: $md) {
-    margin: 0 0 16px;
+    margin: 0 0 20px;
   }
 
   p {
@@ -102,7 +103,7 @@
   align-items: center;
 
   @media (max-width: $md) {
-    width: 100%;
+    display: none;
   }
 
   img {

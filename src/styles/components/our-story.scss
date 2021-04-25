@@ -2,10 +2,28 @@
 @import '../variables';
 
 .our-story {
+  @media (max-width: $lg) {
+    padding: 56px 0 0;
+
+    .container__title {
+      font-size: 28px;
+      line-height: 1.5;
+      margin: 0 0 12px;
+    }
+
+    .sub-title {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
 }
 
 .our-story__description {
   margin: 0 0 80px;
+
+  @media (max-width: $lg) {
+    margin: 0 0 40px;
+  }
 
   p {
     margin: 0 0 24px;
@@ -20,7 +38,7 @@
   position: relative;
   margin: 0 0 110px;
 
-  @media (max-width: $md) {
+  @media (max-width: $lg) {
     margin: 0;
   }
 }
@@ -34,15 +52,13 @@
   width: 580px;
 
   @media (max-width: $lg) {
-    left: 0;
-    bottom: -130px;
-  }
-
-  @media (max-width: $md) {
     position: relative;
+    left: 0;
     bottom: 0;
     width: 100%;
-    padding: 144px 24px 24px;
+    padding: 96px 16px 40px;
+    font-size: 24px;
+    line-height: 36px;
   }
 }
 
@@ -50,4 +66,10 @@
   position: absolute;
   top: 40px;
   right: 40px;
+
+  @media (max-width: $lg) {
+    width: 66px;
+    top: 26px;
+    right: 16px;
+  }
 }

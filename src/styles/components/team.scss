@@ -3,6 +3,14 @@
 
 .container_section_team {
   padding-bottom: 0;
+
+  @media (max-width: $lg) {
+    padding: 56px 0 0;
+
+    .team__list {
+      margin: 0;
+    }
+  }
 }
 
 .team {
@@ -17,11 +25,49 @@
   }
 }
 
+// Leadership team
+
+.leadership-team {
+  @media (max-width: $lg) {
+    padding: 56px 0 0;
+
+    .container__title {
+      margin: 0 0 24px;
+      font-size: 28px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.team__list_about {
+  margin: 0 0 50px;
+  overflow-x: auto;
+  width: 100%;
+
+  @media (max-width: $sm) {
+    margin: 0 0 14px;
+  }
+}
+
+.team__list_about-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+
+  @media (max-width: $lg) {
+    justify-content: flex-start;
+  }
+}
+
 .team__list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 0 50px;
+
+  @media (max-width: $sm) {
+    margin: 0;
+  }
 
   .team__item {
     width: calc(25% - 16px);
@@ -36,8 +82,46 @@
     }
 
     @media (max-width: $sm) {
-      width: 100%;
-      margin: 0 0 16px;
+      margin: 0 8px 16px;
+      width: calc(50% - 16px);
+      max-width: none;
+      min-width: auto;
+      padding: 0;
+    }
+  }
+
+  .team__item-content {
+    margin: 0 0 20px;
+
+    @media (max-width: $sm) {
+      padding: 0 8px;
+      margin: 0;
+      min-height: 130px;
+
+      p.caption {
+        display: none;
+      }
+    }
+  }
+
+  .team__item-position {
+    @media (max-width: $sm) {
+      margin-top: 8px;
+
+      .body-text-2 {
+        font-size: 12px;
+        line-height: 20px;
+
+        .caption {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .team__item-footer {
+    @media (max-width: $sm) {
+      display: none;
     }
   }
 }
@@ -56,8 +140,8 @@
   min-width: 296px;
 
   @media (max-width: $sm) {
-    width: 100%;
-    max-width: none;
+    // width: 100%;
+    // max-width: none;
   }
 }
 
@@ -78,6 +162,11 @@
 
 .team__item-position {
   margin: 0 0 8px;
+
+  .caption {
+    display: block;
+    margin-top: 8px;
+  }
 
   .caption {
     color: $secondaryGreenDark;

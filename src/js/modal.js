@@ -1,5 +1,7 @@
 const teamMemberModalBackdrop = document.getElementById('teamMemberModal')
 const teamMembers = document.querySelectorAll('.team__item-link')
+const teamMembersMobile = document.querySelectorAll('.team__item')
+const windowWidth = window.innerWidth
 
 if (teamMembers) {
   const modalCloseButton = teamMemberModalBackdrop.querySelector('.modal__close')
@@ -13,10 +15,16 @@ if (teamMembers) {
     }
   })
 
-  teamMembers.forEach((teamMember) => {
-    teamMember.addEventListener('click', (event) => {
+  if (windowWidth <= 768) {
+    teamMembersMobile.forEach((teamMember) => setModal(teamMember))
+  }
+
+  teamMembers.forEach((teamMember) => setModal(teamMember))
+
+  function setModal(item) {
+    item.addEventListener('click', (event) => {
       event.preventDefault()
-      const teamMemberContainer = teamMember.closest('.team__item')
+      const teamMemberContainer = item.closest('.team__item') || item
       const hiddenData = teamMemberContainer.querySelector('[data-team-member]')
       setupDataInModal(hiddenData)
       body.classList.add('overflowed')
@@ -25,7 +33,7 @@ if (teamMembers) {
         teamMemberModal.classList.add('modal_open')
       }, 50)
     })
-  })
+  }
 
   modalCloseButton.addEventListener('click', (event) => {
     event.preventDefault()

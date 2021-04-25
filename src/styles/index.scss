@@ -3,6 +3,7 @@
 @import '~bootstrap/scss/mixins';
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/utilities/flex';
 @import 'components/grid';
 
 @import 'variables';
@@ -47,3 +48,4 @@
 @import 'components/contact';
 @import 'components/company-slider';
 @import 'components/our-story';
+@import 'components/documents';

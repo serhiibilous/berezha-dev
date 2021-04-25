@@ -46,6 +46,10 @@
     .form-control {
       border-color: $secondaryRedMedium;
     }
+
+    .form-label {
+      color: $secondaryRedMedium;
+    }
   }
 }
 
@@ -135,6 +139,17 @@
   display: flex;
   justify-content: space-between;
   padding-top: 16px;
+  align-items: center;
+
+  @media (max-width: $sm) {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    .flex-container {
+      width: 100%;
+      margin-bottom: 14px;
+    }
+  }
 }
 
 .form-check__container {
