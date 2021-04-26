@@ -3,6 +3,20 @@
 
 .cybersecurity-services {
   padding-bottom: 40px;
+
+  @media (max-width: $lg) {
+    padding: 0;
+
+    .container_title {
+      margin: 0 0 24px;
+      padding: 0 0 0 16px;
+
+      .heading-h2 {
+        font-size: 28px;
+        line-height: 1.5;
+      }
+    }
+  }
 }
 
 .cybersecurity-services__container {
@@ -16,23 +30,28 @@
   width: 50%;
   margin: 0 0 40px;
 
-  @media (max-width: $laptopWidth) {
+  @media (max-width: $xl) {
     padding: 0 20px 0 0;
   }
 
-  @media (max-width: $mobileWidth) {
+  @media (max-width: $md) {
     padding: 0;
     width: 100%;
+    margin: 0 0 24px;
+
+    &:nth-child(4) {
+      margin: 0;
+    }
   }
 
   &:nth-child(2n) {
     padding: 0 0 0 168px;
 
-    @media (max-width: $laptopWidth) {
+    @media (max-width: $xl) {
       padding: 0 0 0 20px;
     }
 
-    @media (max-width: $mobileWidth) {
+    @media (max-width: $md) {
       padding: 0;
     }
 
@@ -40,7 +59,7 @@
       border-right: 1px solid $primaryBlueLight;
       border-left: 0;
 
-      @media (max-width: $laptopWidth) {
+      @media (max-width: $xl) {
         border: 1px solid $primaryBlueLight;
       }
     }
@@ -57,14 +76,24 @@
   padding: 24px 0 10px 24px;
   position: relative;
 
-  @media (max-width: $laptopWidth) {
+  @media (max-width: $xl) {
     border: 1px solid $primaryBlueLight;
+  }
+
+  @media (max-width: $md) {
+    padding: 20px 0 16px 16px;
   }
 }
 
 .cybersecurity__item-title {
   margin: 0 0 15px;
   padding-right: 80px;
+
+  @media (max-width: $md) {
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 0 0 12px;
+  }
 }
 
 .cybersecurity__item-image {
@@ -76,6 +105,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: $md) {
+    top: 10px;
+    right: 8px;
+  }
 }
 
 .cybersecurity__item-list {
@@ -101,6 +135,7 @@
   display: flex;
   justify-content: flex-end;
   min-height: 36px;
+  padding-right: 16px;
 }
 
 .cybersecurity__logo {
@@ -109,7 +144,7 @@
   left: 50%;
   transform: translate(-50%, calc(-50% - 20px));
 
-  @media (max-width: $laptopWidth) {
+  @media (max-width: $xl) {
     display: none;
   }
 }
@@ -123,9 +158,13 @@
   width: 336px;
   justify-content: center;
 
-  @media (max-width: $laptopWidth) {
+  @media (max-width: $xl) {
     position: static;
     margin: 0;
     width: 100%;
+  }
+
+  @media (max-width: $md) {
+    display: none;
   }
 }

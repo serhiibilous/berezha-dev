@@ -9,8 +9,9 @@
   margin: 0 0 80px;
   padding: 20px 0;
 
-  @media (max-width: $mobileWidth) {
-    padding: 0 20px;
+  @media (max-width: $lg) {
+    padding: 16px 0;
+    margin: 0 0 34px;
   }
 }
 
@@ -19,11 +20,28 @@
   text-align: center;
   border-right: 1px solid $primaryBlueDark;
 
-  @media (max-width: $mobileWidth) {
+  @media (max-width: $lg) {
     width: 100%;
-    border-right: 0;
-    border-bottom: 1px solid $primaryBlueDark;
-    padding: 20px 0;
+    border: 0;
+    padding: 24px 0;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      width: 72px;
+      height: 1px;
+      background: $primaryBlueDark;
+      left: 50%;
+      margin-left: -36px;
+    }
+
+    &:last-child {
+      &:after {
+        content: none;
+      }
+    }
   }
 
   &:last-child {
@@ -33,5 +51,5 @@
 
 .progress__item-counter {
   color: $primaryBlueMedium;
-  margin: 0 0 5px;
+  margin: 0 0 2px;
 }

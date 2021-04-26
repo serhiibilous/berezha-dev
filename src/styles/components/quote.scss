@@ -16,14 +16,23 @@
   position: relative;
   min-height: 516px;
 
-  @media all and (max-width: #{$mobileWidth}) {
-    padding: 24px 24px 150px;
+  @media (max-width: $lg) {
+    padding: 40px 0 110px;
     min-height: auto;
+    font-size: 24px;
+    line-height: 1.5;
   }
 
   .quote__without-bg & {
     padding: 24px 104px 200px;
     min-height: 370px;
+
+    @media (max-width: $lg) {
+      padding: 40px 0 110px;
+      min-height: auto;
+      font-size: 24px;
+      line-height: 1.5;
+    }
   }
 }
 
@@ -36,22 +45,39 @@
 
   .quote__without-bg & {
     bottom: 80px;
+
+    @media (max-width: $lg) {
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
   }
 
-  @media all and (max-width: #{$mobileWidth}) {
-    right: 24px;
-    bottom: 24px;
-    left: 24px;
+  @media (max-width: $lg) {
+    bottom: 0;
+    right: 0;
+    left: 0;
   }
 }
 
 .quote__author {
   display: flex;
+  min-width: 400px;
+
+  @media (max-width: $lg) {
+    width: 100%;
+    min-width: auto;
+  }
 }
 
 .quote__author-image {
   margin-right: 16px;
   min-width: 88px;
+
+  @media (max-width: $lg) {
+    min-width: 70px;
+    width: 70px;
+  }
 }
 
 .quote__author-info {
@@ -60,4 +86,12 @@
   border-left: 0;
   line-height: 1;
   min-height: 88px;
+  width: 100%;
+
+  @media (max-width: $lg) {
+    min-height: 70px;
+    font-size: 14px;
+    line-height: 1;
+    padding: 7px 20px 7px 0;
+  }
 }

@@ -138,17 +138,16 @@
   position: relative;
   max-width: 296px;
   min-width: 296px;
-
-  @media (max-width: $sm) {
-    // width: 100%;
-    // max-width: none;
-  }
 }
 
 .team__item-photo {
   margin: 0 0 16px;
   display: flex;
   justify-content: center;
+
+  @media (max-width: $sm) {
+    display: block;
+  }
 }
 
 .team__item-content {

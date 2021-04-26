@@ -2,13 +2,25 @@
 @import '../colors';
 
 .testimonials {
+  @media (max-width: $lg) {
+    padding: 56px 0 0;
+
+    .container_title {
+      margin: 0 0 24px;
+
+      .heading-h2 {
+        font-size: 28px;
+        line-height: 1.5;
+      }
+    }
+  }
 }
 
 .testimonials__wrapper {
   display: flex;
   justify-content: center;
 
-  @media all and (max-width: #{$mobileWidth}) {
+  @media (max-width: $lg) {
     flex-wrap: wrap;
   }
 }
@@ -31,25 +43,26 @@
     background: url('../public/images/icons/brackets.svg');
   }
 
-  @media all and (max-width: #{$mobileWidth}) {
+  @media (max-width: $lg) {
     width: 100%;
-    margin: 0 0 16px;
+    margin: 0 0 24px;
+    padding: 56px 24px 170px;
   }
 }
 
 .testimonials__wrapper-text {
   margin-top: 32px;
 
-  @media all and (max-width: #{$mobileWidth}) {
-    margin-bottom: 39px;
+  @media (max-width: $lg) {
+    margin: 0;
   }
 }
+
 .testimonials__author-wrapper {
   display: flex;
   justify-content: flex-end;
   position: absolute;
   bottom: 24px;
-  left: 24px;
   right: 24px;
 }
 
@@ -70,4 +83,8 @@
   min-width: 272px;
   min-height: 80px;
   line-height: 1;
+
+  @media (max-width: $lg) {
+    min-width: 220px;
+  }
 }

@@ -5,6 +5,10 @@
   background: $primaryBlueUltralight;
   padding: 16px 0;
   color: $primaryBlueDark;
+
+  @media (max-width: $lg) {
+    padding: 0 0 40px;
+  }
 }
 
 .company-info_dark {
@@ -15,12 +19,14 @@
 .company-info__image {
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 100%;
-  padding: 10px;
 
-  @media (max-width: $md) {
-    padding: 10px 0 20px;
+  @media (max-width: $lg) {
+    width: 66px;
+    height: 66px;
+    position: absolute;
+    top: 17px;
+    left: 18px;
   }
 }
 
@@ -36,9 +42,11 @@
     border-color: $monochromeWhite;
   }
 
-  @media (max-width: $md) {
-    border: 1px solid $primaryBlueDark;
-    padding: 24px;
-    text-align: center;
+  @media (max-width: $lg) {
+    padding: 15px 15px 15px 0;
+    min-height: auto;
+    margin: 104px 0 0 100px;
+    font-size: 24px;
+    line-height: 1.5;
   }
 }
