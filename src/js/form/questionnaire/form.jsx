@@ -78,6 +78,14 @@ export function QuestionnaireForm() {
             <Step
               left={
                 <>
+                  <div className="tablet-show precise-quote__mobile-top">
+                    <h2 className="heading-h4 precise-quote__heading">
+                      See how we can help you defeat security threats
+                    </h2>
+                    <p className="sub-title precise-quote__sub-heading">
+                      Answer three questions and find out how our capabilities match your business goals.
+                    </p>
+                  </div>
                   <p className="heading-h3 precise-quote__question">Pick your industry</p>
                   <QuestionsList
                     questions={industryQuestions}
@@ -89,12 +97,12 @@ export function QuestionnaireForm() {
                 </>
               }
               right={
-                <>
+                <div className="tablet-hide">
                   <h2 className="heading-h4 precise-quote__heading">See how we can help you defeat security threats</h2>
                   <p className="sub-title">
                     Answer three questions and find out how our capabilities match your business goals.
                   </p>
-                </>
+                </div>
               }
               step={step}
               service="industry"
@@ -104,7 +112,7 @@ export function QuestionnaireForm() {
 
             <Step
               left={
-                <>
+                <div className="precise-quote__mobile-top">
                   <p className="heading-h3 precise-quote__question">Pick our services</p>
                   <QuestionsList
                     questions={servicesQuestions}
@@ -113,7 +121,7 @@ export function QuestionnaireForm() {
                     onChangeStep={setStep}
                     step={step}
                   />
-                </>
+                </div>
               }
               right={
                 <>
@@ -141,7 +149,7 @@ export function QuestionnaireForm() {
 
             <Step
               left={
-                <>
+                <div className="precise-quote__mobile-top">
                   <p className="heading-h3 precise-quote__question">Pick your security objective</p>
                   <QuestionsList
                     questions={securityObjectiveQuestions}
@@ -150,7 +158,7 @@ export function QuestionnaireForm() {
                     onChangeStep={setStep}
                     step={step}
                   />
-                </>
+                </div>
               }
               right={
                 <>
@@ -178,7 +186,7 @@ export function QuestionnaireForm() {
 
             <Step
               left={
-                <>
+                <div className="precise-quote__mobile-top">
                   <p className="heading-h3 precise-quote__question">Customize your request</p>
                   <ul className="body-text-2  precise-quote__selected-list">
                     <li>
@@ -191,10 +199,10 @@ export function QuestionnaireForm() {
                       <span>Objective:</span> {securityObjective}
                     </li>
                   </ul>
-                  <p className="sub-title">
+                  <p className="sub-title precise-quote__selected-title">
                     Please send us a message, and our security expert will get back to you shortly.
                   </p>
-                </>
+                </div>
               }
               right={
                 <>

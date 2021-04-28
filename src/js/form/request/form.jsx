@@ -64,7 +64,7 @@ export function RequestForm() {
               <div className="col-lg-5 offset-lg-1">
                 <div className="precise-quote__contact-us_left">
                   <h2 className="heading-h2 precise-quote__heading">Contact Us</h2>
-                  <p className="body-text-1">
+                  <p className="body-text-1 precise-quote__sub-heading">
                     Get cybersecurity advice now – <br /> talk to a BSG expert.
                   </p>
                 </div>
@@ -86,7 +86,7 @@ export function RequestForm() {
           </div>
           {isLoading && <Loader />}
           {success && <Success />}
-          {error && <Error />}
+          {true && <Error />}
         </section>
       </form>
     </div>

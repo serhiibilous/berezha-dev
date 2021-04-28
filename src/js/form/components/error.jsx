@@ -2,7 +2,7 @@ import React from 'react'
 
 export function Error({ isShort = false }) {
   return (
-    <div className="precise-quote__success">
+    <div className="precise-quote__success error-wrapper">
       <div className="precise-quote__step precise-quote__step_only-form">
         <div className="row">
           <div className={!isShort ? 'col-lg-5 offset-lg-1' : 'col-lg-10 offset-lg-1'}>

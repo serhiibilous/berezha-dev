@@ -231,6 +231,20 @@ img {
   }
 }
 
+.tablet-hide {
+  @media (max-width: $lg) {
+    display: none !important;
+  }
+}
+
+.tablet-show {
+  display: none;
+
+  @media (max-width: $lg) {
+    display: block !important;
+  }
+}
+
 .desktop-hide {
   display: none !important;
 

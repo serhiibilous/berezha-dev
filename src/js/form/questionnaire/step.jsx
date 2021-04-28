@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-export function Step({ step, left, right, onChangeStep, service, currentStep }) {
+export function Step({ step, left, right, onChangeStep, service, currentStep, className }) {
   const [isStepVisible, setIsStepVisible] = useState(true)
   const handleChangeStep = (event) => {
     event.preventDefault()
@@ -23,13 +23,13 @@ export function Step({ step, left, right, onChangeStep, service, currentStep }) 
 
   return (
     <div className="precise-quote__step">
-      <div className="row">
+      <div className={`row ${className}`}>
         <div className="col-lg-5 offset-lg-1">
           <div className="precise-quote__contact-us_left">{left}</div>
         </div>
         <div className="col-lg-6">
           <div className="precise-quote__contact-us_right">
-            <div>{right}</div>
+            <div className="width-100">{right}</div>
           </div>
         </div>
       </div>

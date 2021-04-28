@@ -41,8 +41,16 @@
   align-items: baseline;
 
   @media (max-width: $lg) {
-    bottom: 24px;
-    left: 24px;
+    bottom: 40px;
+    left: 16px;
+  }
+}
+
+.precise-quote__mobile-top {
+  @media (max-width: $lg) {
+    border-bottom: 1px solid $secondaryGreenDark;
+    padding-bottom: 27px;
+    margin-bottom: 20px;
   }
 }
 
@@ -54,8 +62,12 @@
   height: 480px;
 
   @media (max-width: $lg) {
-    padding: 40px 16px 26px;
+    padding: 40px 16px 80px;
     height: auto;
+
+    .precise-quote_form & {
+      padding-bottom: 26px;
+    }
   }
 }
 
@@ -77,8 +89,26 @@
   }
 }
 
+.precise-quote__sub-heading {
+  @media (max-width: $lg) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.precise-quote__selected-title {
+  @media (max-width: $lg) {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
 .precise-quote__selected-list {
   margin: 0 0 24px;
+
+  @media (max-width: $lg) {
+    margin: 0 0 14px;
+  }
 
   span {
     color: $secondaryGreenDark;
@@ -87,14 +117,30 @@
 
 .precise-quote__question {
   margin: 0 0 32px;
+
+  @media (max-width: $lg) {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 0 21px;
+  }
 }
 
 .precise-quote__question-title {
   margin: 0 0 20px;
+
+  @media (max-width: $lg) {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 0 10px;
+  }
 }
 
 .precise-quote__question-sub-title {
   margin: 0 0 24px;
+
+  @media (max-width: $lg) {
+    margin: 0 0 14px;
+  }
 }
 
 .precise-quote__answers-container {
@@ -125,6 +171,10 @@
   color: $secondaryGreenDark;
   display: flex;
   cursor: pointer;
+
+  @media (max-width: $lg) {
+    margin: 0 8px 8px 0;
+  }
 }
 
 .precise-quote__input_text {
@@ -162,10 +212,18 @@
     border-color: $secondaryGreenDark;
   }
 
+  .flex-lg-row-reverse & {
+    border-right: 1px solid $primaryBlueMedium;
+    border-left: 0;
+
+    @media (max-width: $lg) {
+      border: 0;
+    }
+  }
+
   @media (max-width: $lg) {
     border: 0;
     padding: 0;
-    margin-top: 30px;
     min-height: auto;
     height: auto;
   }
@@ -181,6 +239,11 @@
   bottom: 0;
   background: $primaryBlueUltralight;
   z-index: 1;
+
+  &.error-wrapper {
+    background: $monochromeGrey5;
+    color: $secondaryRedDark;
+  }
 }
 
 .precise-quote__success-content {
