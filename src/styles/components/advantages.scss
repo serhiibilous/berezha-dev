@@ -85,3 +85,24 @@
     line-height: 1.45;
   }
 }
+
+.advantages__button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.advantages__button {
+  display: inline-flex;
+
+  &.is-open {
+    .icon-arrow {
+      transform: rotate(-90deg);
+    }
+  }
+
+  .icon-arrow {
+    margin-left: 10px;
+    margin-top: 4px;
+    transform: rotate(90deg);
+  }
+}

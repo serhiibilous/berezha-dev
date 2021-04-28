@@ -35,7 +35,7 @@ export function QuestionnaireForm() {
   ]
 
   const [success, error, isLoading, fetchData] = useFetch({
-    url: `https://hook.integromat.com/${QUESTIONNAIRE_ENDPOINT}`,
+    url: `/formhook/${QUESTIONNAIRE_ENDPOINT}`,
   })
 
   const handleSubmitForm = (event) => {

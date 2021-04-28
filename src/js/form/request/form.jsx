@@ -24,7 +24,7 @@ export function RequestForm() {
     { type: 'checkbox', name: 'agreement', value: agreement },
   ]
 
-  const [success, error, isLoading, fetchData] = useFetch({ url: `https://hook.integromat.com/${CONTACT_US_ENDPOINT}` })
+  const [success, error, isLoading, fetchData] = useFetch({ url: `/formhook/${CONTACT_US_ENDPOINT}` })
 
   const handleSubmitForm = (event) => {
     event.preventDefault()

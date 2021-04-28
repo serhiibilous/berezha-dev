@@ -3,7 +3,7 @@
 
 .testimonials {
   @media (max-width: $lg) {
-    padding: 56px 0 0;
+    padding: 56px 0 30px;
 
     .container_title {
       margin: 0 0 24px;
@@ -13,15 +13,6 @@
         line-height: 1.5;
       }
     }
-  }
-}
-
-.testimonials__wrapper {
-  display: flex;
-  justify-content: center;
-
-  @media (max-width: $lg) {
-    flex-wrap: wrap;
   }
 }
 
@@ -45,7 +36,7 @@
 
   @media (max-width: $lg) {
     width: 100%;
-    margin: 0 0 24px;
+    margin: 0 16px 0 0;
     padding: 56px 24px 170px;
   }
 }

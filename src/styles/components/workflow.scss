@@ -1,17 +1,36 @@
 @import '../colors';
 
+.workflow {
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
 .workflow__sub-title {
-  max-width: 650px;
+}
+
+.workflow__desc {
+  margin: 0 0 48px;
 }
 
 .workflow__list {
-  margin: 64px 0;
   counter-reset: counter;
+  margin: 0 0 48px;
+
+  &.with-larger-indents {
+    li {
+      margin: 0 0 48px;
+    }
+  }
 
   li {
     position: relative;
     counter-increment: counter;
-    margin: 0 0 54px;
+    margin: 0 0 18px;
 
     &:after {
       position: absolute;
@@ -52,8 +71,21 @@
   p {
     color: $monochromeGrey8;
   }
+
+  a {
+    display: inline-block;
+  }
 }
 
 .workflow__list-title {
-  margin: 0 0 14px;
+  margin: 0 0 8px;
+
+  .with-larger-indents & {
+    margin: 0 0 14px;
+  }
+}
+
+.workflow__button-container {
+  display: flex;
+  justify-content: center;
 }

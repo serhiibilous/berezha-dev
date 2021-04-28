@@ -25,7 +25,7 @@ export function DeveloperTrainingForm() {
   ]
 
   const [success, error, isLoading, fetchData] = useFetch({
-    url: `https://hook.integromat.com/${DEVELOPER_TRAINING_ENDPOINT}`,
+    url: `/formhook/${DEVELOPER_TRAINING_ENDPOINT}`,
   })
 
   const handleSubmitForm = (event) => {

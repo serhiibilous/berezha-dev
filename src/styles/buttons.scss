@@ -6,8 +6,8 @@
   padding: 6px 16px 4px 16px;
   border: 1px solid transparent;
   transition: color, background, border ease 0.3s;
-  text-decoration: none;
-  display: inline-flex;
+  text-decoration: none !important;
+  display: inline-flex !important;
   align-items: center;
   white-space: nowrap;
 }
@@ -148,7 +148,7 @@
   &:after,
   &:before {
     height: 8px;
-    width: 1px;
+    width: 1.5px;
     position: absolute;
     content: '';
     background: $primaryBlueMedium;
@@ -156,12 +156,12 @@
   }
 
   &:before {
-    top: -1px;
+    top: -0.5px;
     transform: rotate(-40deg);
   }
 
   &:after {
-    bottom: -1px;
+    bottom: -0.5px;
     transform: rotate(40deg);
   }
 }
