@@ -184,6 +184,12 @@
 
 .team__item-icon {
   padding: 8px;
+
+  @media (max-width: $md) {
+    img {
+      display: none;
+    }
+  }
 }
 
 .team__item-link {

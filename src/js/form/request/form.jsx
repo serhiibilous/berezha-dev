@@ -86,7 +86,7 @@ export function RequestForm() {
           </div>
           {isLoading && <Loader />}
           {success && <Success />}
-          {true && <Error />}
+          {error && <Error />}
         </section>
       </form>
     </div>
