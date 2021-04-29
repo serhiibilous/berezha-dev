@@ -2,6 +2,20 @@
 @import '../variables';
 
 .services__advantages {
+  padding: 120px 0 68px;
+
+  @media (max-width: $lg) {
+    padding: 56px 0 40px;
+
+    .heading-h2 {
+      font-size: 28px;
+      line-height: 1.5;
+    }
+
+    .container__title {
+      margin: 0 0 26px;
+    }
+  }
 }
 
 .services__advantages-container {
@@ -17,23 +31,38 @@
   width: 50%;
   padding: 0 0 0 60px;
   margin: 0 0 80px;
+  position: relative;
 
-  @media all and (max-width: #{$mobileWidth}) {
+  @media (max-width: $lg) {
     width: 100%;
     padding: 0;
+    margin: 0 0 20px;
   }
 }
 
-//.advantages__item-icon {
-//  width: 65px;
-//  min-width: 65px;
-//}
+.services__advantages-item-icon {
+  width: 65px;
+  min-width: 65px;
+  margin-top: -8px;
+
+  @media (max-width: $lg) {
+    width: 32px;
+    min-width: 32px;
+    margin: -3px 8px 0 0;
+  }
+}
 
 .advantages__item-info {
   max-width: 400px;
 
-  @media all and (max-width: #{$mobileWidth}) {
+  @media (max-width: $lg) {
     width: 100%;
+    max-width: none;
+
+    .heading-h4 {
+      font-size: 18px;
+      line-height: 1.5;
+    }
   }
 }
 
@@ -41,11 +70,25 @@
   color: $monochromeGrey8;
   margin: 12px 0 0;
 
-  .three-column & {
-    margin: 8px 0 0;
+  @media (max-width: $lg) {
+    margin: 5px 0 0;
+    font-size: 14px;
+    line-height: 1.45;
   }
 }
 
 .advantages_wrapper-button {
+  margin-top: -16px;
   text-align: center;
+
+  @media (max-width: $lg) {
+    margin-top: 6px;
+  }
+
+  @media (max-width: $sm) {
+    .button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
 }

@@ -1,6 +1,20 @@
 @import '../colors';
+@import '../variables';
 
 .workflow {
+  @media (max-width: $lg) {
+    padding: 56px 0;
+
+    .heading-h2 {
+      font-size: 28px;
+      line-height: 1.5;
+    }
+
+    .container__title {
+      margin: 0 0 12px;
+    }
+  }
+
   a {
     text-decoration: underline;
 
@@ -15,15 +29,33 @@
 
 .workflow__desc {
   margin: 0 0 48px;
+
+  @media (max-width: $lg) {
+    margin: 0 0 20px;
+    font-size: 18px;
+    line-height: 1.5;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
 }
 
 .workflow__list {
   counter-reset: counter;
   margin: 0 0 48px;
 
+  @media (max-width: $lg) {
+    margin: 0 0 20px;
+  }
+
   &.with-larger-indents {
     li {
       margin: 0 0 48px;
+
+      @media (max-width: $lg) {
+        margin: 0 0 28px;
+      }
     }
   }
 
@@ -31,6 +63,10 @@
     position: relative;
     counter-increment: counter;
     margin: 0 0 18px;
+
+    @media (max-width: $lg) {
+      padding-left: 40px;
+    }
 
     &:after {
       position: absolute;
@@ -40,6 +76,11 @@
       width: 1px;
       background: $primaryBlueMedium;
       left: -60px;
+
+      @media (max-width: $lg) {
+        left: 15px;
+        bottom: -34px;
+      }
     }
 
     &:last-child {
@@ -65,6 +106,14 @@
       justify-content: center;
       background: $monochromeWhite;
       z-index: 1;
+
+      @media (max-width: $lg) {
+        font-size: 16px;
+        width: 30px;
+        height: 30px;
+        left: 0;
+        top: -4px;
+      }
     }
   }
 
@@ -79,6 +128,11 @@
 
 .workflow__list-title {
   margin: 0 0 8px;
+
+  @media (max-width: $lg) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 
   .with-larger-indents & {
     margin: 0 0 14px;
