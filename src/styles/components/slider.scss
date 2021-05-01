@@ -8,12 +8,9 @@
     padding-top: 60px;
   }
 
-  @media (max-width: $sm) {
-    padding-top: 80px;
-  }
-
-  @media (max-width: $mobileWidth) {
-    flex-wrap: wrap;
+  @media (max-width: $lg) {
+    margin: 0 -16px;
+    padding: 0;
   }
 
   .row {
@@ -47,7 +44,7 @@
   display: flex;
 
   @media (max-width: $lg) {
-    margin: 32px 0 0;
+    margin: 24px 0 0;
   }
 
   @media (max-width: $mobileWidth) {
@@ -105,28 +102,83 @@
   top: -50px;
 }
 
+.slider__image {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    top: 50%;
+    margin: -200px 0 0 -200px;
+    opacity: 0.1;
+  }
+
+  &.slider__image_pentest {
+    &:before {
+      background: $secondaryRedMedium;
+    }
+  }
+
+  &.slider__image_appsec {
+    &:before {
+      background: $primaryBlueLight;
+    }
+  }
+}
+
 .slider__content-heading {
   @media (max-width: $lg) {
     height: 360px;
     display: flex;
     align-items: flex-end;
     padding: 0 16px 28px;
+    overflow: hidden;
+    position: relative;
 
     .heading-h1 {
       font-size: 36px;
       line-height: 1;
       margin: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 608px;
+      height: 608px;
+      left: 50%;
+    }
+
+    &.pentest-heading {
+      background: rgba(254, 38, 64, 0.1);
+
+      &:after {
+        bottom: 50px;
+        margin-left: -250px;
+        background: url('../public/images/services/pentest/img_service_pentest.svg');
+      }
+    }
+
+    &.appsec-heading {
+      background: rgba(0, 118, 254, 0.1);
+
+      &:after {
+        bottom: 0;
+        margin-left: -235px;
+        background: url('../public/images/services/appsec/img_service_appsec.svg');
+      }
     }
 
     &.home-heading {
       background: $primaryBlueDark;
       color: $monochromeWhite;
-      position: relative;
-      overflow: hidden;
 
       &:after {
-        position: absolute;
-        content: '';
         bottom: -15px;
         left: -60px;
         background: url('../public/images/home/main.svg');
@@ -141,7 +193,8 @@
   @media (max-width: $lg) {
     padding: 20px 16px 32px;
 
-    .heading-h4 {
+    .heading-h4,
+    .sub-title {
       font-size: 18px;
       line-height: 1.5;
     }

@@ -2,12 +2,35 @@
 @import '../variables';
 
 .related-services {
+  @media (max-width: $lg) {
+    padding: 0;
+
+    .container__title {
+      margin: 0 0 24px;
+    }
+
+    .heading-h2 {
+      font-size: 28px;
+      line-height: 1.5;
+    }
+
+    .body-text-2 {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
 }
 
 .related-services__content {
   position: relative;
   display: flex;
   justify-content: center;
+
+  .container {
+    @media (max-width: $lg) {
+      width: 100%;
+    }
+  }
 
   &:after {
     position: absolute;
@@ -27,8 +50,9 @@
   z-index: 1;
   display: flex;
 
-  @media (max-width: $mobileWidth) {
-    flex-wrap: wrap;
+  @media (max-width: $lg) {
+    position: static;
+    max-width: none;
   }
 }
 
@@ -40,14 +64,21 @@
   width: 50%;
   position: relative;
 
-  @media (max-width: $mobileWidth) {
+  @media (max-width: $lg) {
+    padding: 24px 16px 48px;
     width: 100%;
-    margin: 0 0 16px;
+    margin: 0 16px 0 0;
   }
 }
 
 .related-services__item-title {
   margin: 0 0 20px;
+
+  @media (max-width: $lg) {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 0 5px;
+  }
 }
 
 .related-services__item-description {

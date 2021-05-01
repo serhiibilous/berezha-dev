@@ -4,11 +4,21 @@
 .quote {
   background-color: $primaryMintLight;
   margin: 80px 0;
+
+  @media (max-width: $lg) {
+    margin: 56px -16px;
+    padding: 0 16px 24px;
+  }
 }
 
 .quote__without-bg {
   background: transparent;
   margin: 0;
+
+  @media (max-width: $lg) {
+    margin: 0 -16px;
+    padding: 0 16px 24px;
+  }
 }
 
 .quote__content {

@@ -1,4 +1,29 @@
 @import '../colors';
+@import '../variables';
+
+.faq-section {
+  @media (max-width: $lg) {
+    padding: 40px 0 0;
+
+    .heading-h2 {
+      font-size: 28px;
+      line-height: 1.5;
+    }
+
+    .container__title {
+      margin: 0 0 24px;
+    }
+
+    .body-text-2 {
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .advantages__button-container {
+      margin-top: 8px;
+    }
+  }
+}
 
 .faq {
   display: flex;
@@ -48,6 +73,10 @@
   cursor: pointer;
   transition: border-color linear 0.2s;
 
+  @media (max-width: $lg) {
+    right: 16px;
+  }
+
   &:hover {
     border-color: $primaryBlueDark;
   }
@@ -87,8 +116,14 @@
   position: relative;
   cursor: pointer;
 
-  @media (max-width: 768px) {
-    padding: 10px 72px 10px 0;
+  @media (max-width: $lg) {
+    padding: 15px 48px 15px 0;
+    min-height: 48px;
+
+    .body-text-1 {
+      font-size: 16px;
+      line-height: 1.5;
+    }
   }
 }
 
@@ -103,8 +138,8 @@
     max-height: none;
   }
 
-  @media (max-width: 768px) {
-    padding: 0 16px 0 0;
+  @media (max-width: $lg) {
+    padding: 0 16px;
   }
 
   p {

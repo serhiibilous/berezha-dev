@@ -4,6 +4,7 @@
 .mobile-slider__container {
   @media (max-width: $lg) {
     position: relative;
+    z-index: 1;
   }
 }
 
@@ -24,8 +25,12 @@
   bottom: 0;
   left: 0;
   right: 0;
-  display: flex;
   justify-content: center;
+  display: none;
+
+  @media (max-width: $lg) {
+    display: flex;
+  }
 }
 
 .mobile-slider__pagination-item {

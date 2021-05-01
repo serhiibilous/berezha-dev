@@ -4,10 +4,18 @@
 .list {
   background: $primaryBlueUltralight;
 
+  &.list_pricing {
+    @media (max-width: $lg) {
+      .container__title {
+        margin: 0 0 12px;
+      }
+    }
+  }
+
   @media (max-width: $lg) {
     padding: 40px 0;
 
-    .container_title {
+    .container__title {
       margin: 0 0 24px;
     }
 
@@ -17,6 +25,11 @@
     }
 
     .sub-title {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .body-text-1 {
       font-size: 16px;
       line-height: 1.5;
     }
@@ -33,6 +46,12 @@
 
 .list__sub-title {
   margin: 0 0 46px;
+
+  @media (max-width: $lg) {
+    margin: 0 0 15px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
 }
 
 .list__listing {
@@ -46,15 +65,26 @@
     margin: 0 0 16px;
     padding: 0 0 0 20px;
 
+    @media (max-width: $lg) {
+      &:last-child {
+        margin: 0;
+      }
+    }
+
     &:before {
       position: absolute;
       content: '';
-      top: 15px;
+      top: 10px;
       left: 5px;
       width: 6px;
       height: 6px;
       border-radius: 50%;
       background: $primaryBlueLight;
+
+      @media (max-width: $lg) {
+        top: 8px;
+        left: 5px;
+      }
     }
   }
 }
@@ -91,19 +121,31 @@
 }
 
 .list__footer {
-  margin: 44px 0 0;
+  margin: 45px 0 0;
   display: flex;
 
-  @media (max-width: $mobileWidth) {
-    flex-wrap: wrap;
+  @media (max-width: $lg) {
+    margin: 24px 0 0;
+    flex-direction: column;
+
+    .heading-h1 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.5;
+    }
+
+    .button {
+      width: 100%;
+      justify-content: center;
+    }
   }
 }
 
 .list__footer-button {
   margin-left: 60px;
 
-  @media (max-width: $mobileWidth) {
-    margin: 25px 0 0;
+  @media (max-width: $lg) {
+    margin: 32px 0 0;
     width: 100%;
   }
 }

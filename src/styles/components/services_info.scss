@@ -10,7 +10,20 @@
   overflow: hidden;
 
   @media (max-width: $lg) {
-    padding: 56px 0;
+    padding: 56px 0 40px;
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .advantages__button-container {
+      // margin-top: -14px;
+    }
+
+    .advantages__button {
+      color: $monochromeWhite;
+    }
   }
 }
 
@@ -63,6 +76,10 @@
 
     &:last-child {
       margin: 0;
+
+      @media (max-width: $lg) {
+        margin: 0 0 20px;
+      }
     }
   }
 }

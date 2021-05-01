@@ -162,7 +162,7 @@
   justify-content: center;
 
   @media (max-width: $mobileWidth) {
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
   }
 
@@ -170,7 +170,7 @@
     margin: 0 45px;
 
     @media (max-width: $mobileWidth) {
-      margin: 0 5px 10px;
+      margin: 0 10px 10px;
     }
   }
 }

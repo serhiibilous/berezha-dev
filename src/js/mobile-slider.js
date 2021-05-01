@@ -1,12 +1,12 @@
 const mobileSlider = document.getElementById('mobileSlider')
-const screenWidth = window.innerWidth
-const pageIndent = 32
 
-if (mobileSlider && screenWidth <= 992) {
+if (mobileSlider) {
   const screenWidth = window.innerWidth
+  const pageIndent = 32
   const slides = mobileSlider.querySelectorAll('[data-slider-item]')
   const pagination = mobileSlider.querySelector('.mobile-slider__pagination')
   const content = mobileSlider.querySelector('.mobile-slider__content')
+  const paginationItems = pagination.querySelectorAll('.mobile-slider__pagination-item')
   let sliderWidth = screenWidth - pageIndent
 
   window.addEventListener('resize', () => {
@@ -15,7 +15,8 @@ if (mobileSlider && screenWidth <= 992) {
   })
 
   slides.forEach((slide, index) => {
-    setSliderWidth(sliderWidth)
+    sliderWidth = window.innerWidth - pageIndent
+    setSliderWidth(window.innerWidth <= 992 ? sliderWidth : null)
     const paginationItem = document.createElement('div')
     paginationItem.classList.add('mobile-slider__pagination-item')
     if (index === 0) paginationItem.classList.add('active')
@@ -31,8 +32,6 @@ if (mobileSlider && screenWidth <= 992) {
       slide.style.minWidth = width + 'px'
     })
   }
-
-  const paginationItems = pagination.querySelectorAll('.mobile-slider__pagination-item')
 
   content.addEventListener('scroll', (e) => {
     const scrollPosition = e.target.scrollLeft

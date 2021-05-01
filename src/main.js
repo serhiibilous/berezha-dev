@@ -1,7 +1,7 @@
 import './js/faq'
 import './js/mobile-menu'
 import './js/header'
-import './js/form'
+// import './js/form'
 import './js/slider'
 import './js/modal'
 import './js/mobile-slider'

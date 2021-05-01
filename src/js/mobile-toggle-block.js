@@ -5,6 +5,9 @@ if (mobileToggleableBlocks) {
     const button = block.querySelector('[data-toggle-button]')
     const items = block.querySelectorAll('[data-toggle-item]')
     let isOpen = false
+    const dataToggleBlockCount = block.getAttribute('data-toggle-block')
+    const counter = dataToggleBlockCount ? +dataToggleBlockCount : 3
+
     initializeList(window.innerWidth <= 992)
 
     window.addEventListener('resize', () => {
@@ -24,7 +27,7 @@ if (mobileToggleableBlocks) {
       }
       items.forEach((item, index) => {
         if (isMobile) {
-          if (index >= 3) item.classList.add('hide')
+          if (index >= counter) item.classList.add('hide')
         } else {
           item.classList.remove('hide')
         }
@@ -37,7 +40,7 @@ if (mobileToggleableBlocks) {
       buttonElement.classList.toggle('is-open')
       items.forEach((item, index) => {
         if (isOpen) {
-          if (index >= 3) item.classList.add('hide')
+          if (index >= counter) item.classList.add('hide')
         } else {
           item.classList.remove('hide')
         }
