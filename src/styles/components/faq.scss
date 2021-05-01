@@ -21,6 +21,10 @@
 
     .advantages__button-container {
       margin-top: 8px;
+
+      &.with-indent {
+        margin-bottom: 56px;
+      }
     }
   }
 }

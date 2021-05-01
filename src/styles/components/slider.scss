@@ -127,6 +127,18 @@
       background: $primaryBlueLight;
     }
   }
+
+  &.slider__image_developer-training {
+    &:before {
+      background: $primaryMintLight;
+      opacity: 1;
+    }
+
+    img {
+      position: relative;
+      z-index: 1;
+    }
+  }
 }
 
 .slider__content-heading {
@@ -171,6 +183,16 @@
         bottom: 0;
         margin-left: -235px;
         background: url('../public/images/services/appsec/img_service_appsec.svg');
+      }
+    }
+
+    &.developer-training-heading {
+      background: $primaryMintLight;
+
+      &:after {
+        bottom: -60px;
+        margin-left: -140px;
+        background: url('../public/images/trainings/developer/developer-training.svg');
       }
     }
 
