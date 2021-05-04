@@ -6,7 +6,6 @@ if (mobileSlider) {
   const slides = mobileSlider.querySelectorAll('[data-slider-item]')
   const pagination = mobileSlider.querySelector('.mobile-slider__pagination')
   const content = mobileSlider.querySelector('.mobile-slider__content')
-  const paginationItems = pagination.querySelectorAll('.mobile-slider__pagination-item')
   let sliderWidth = screenWidth - pageIndent
 
   window.addEventListener('resize', () => {
@@ -37,7 +36,7 @@ if (mobileSlider) {
     const scrollPosition = e.target.scrollLeft
     const currentSlideNumber = Math.round(scrollPosition / sliderWidth)
 
-    paginationItems.forEach((item, index) => {
+    pagination.querySelectorAll('.mobile-slider__pagination-item').forEach((item, index) => {
       item.classList.remove('active')
       if (currentSlideNumber === index) {
         item.classList.add('active')
