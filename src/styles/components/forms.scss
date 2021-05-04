@@ -141,13 +141,22 @@
   padding-top: 16px;
   align-items: center;
 
+  @media (max-width: $lg) {
+    padding-top: 0;
+  }
+
   @media (max-width: $sm) {
     flex-wrap: wrap;
     justify-content: flex-end;
 
     .flex-container {
       width: 100%;
-      margin-bottom: 14px;
+      margin-bottom: 22px;
+    }
+
+    .button {
+      width: 100%;
+      justify-content: center;
     }
   }
 }
@@ -168,6 +177,15 @@
   }
 
   &.body-text-2 {
+    @media (max-width: $lg) {
+      font-size: 14px;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
     .form-check-label {
       &:after {
         top: 4px;

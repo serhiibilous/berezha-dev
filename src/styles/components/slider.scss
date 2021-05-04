@@ -11,6 +11,7 @@
   @media (max-width: $lg) {
     margin: 0 -16px;
     padding: 0;
+    overflow: hidden;
   }
 
   .row {
@@ -128,7 +129,8 @@
     }
   }
 
-  &.slider__image_developer-training {
+  &.slider__image_developer-training,
+  &.slider__image_pentester-training {
     &:before {
       background: $primaryMintLight;
       opacity: 1;
@@ -193,6 +195,16 @@
         bottom: -60px;
         margin-left: -140px;
         background: url('../public/images/trainings/developer/developer-training.svg');
+      }
+    }
+
+    &.pentester-training-heading {
+      background: $primaryMintLight;
+
+      &:after {
+        bottom: -25px;
+        margin-left: -260px;
+        background: url('../public/images/trainings/pentester/pentester-training.svg');
       }
     }
 

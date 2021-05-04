@@ -1,13 +1,50 @@
 @import '../colors';
 @import '../variables';
 
+.training-schedule {
+  @media (max-width: $lg) {
+    padding: 0 0 56px;
+
+    .container__title {
+      margin: 0 0 24px;
+    }
+
+    .heading-h2 {
+      font-size: 28px;
+      line-height: 1.5;
+    }
+
+    &.with-indent {
+      padding: 56px 0 0;
+    }
+  }
+}
+
 .training-schedule__module {
   margin: 0 0 70px;
+
+  @media (max-width: $lg) {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
 }
 
 .training-schedule__sub-title {
   color: $secondaryGreenDark;
   margin: 0 0 24px;
+
+  @media (max-width: $lg) {
+    margin: 0 0 16px;
+    font-size: 24px;
+    line-height: 1.5;
+
+    &.with-title {
+      margin-top: -12px;
+    }
+  }
 }
 
 .training-schedule__item {
@@ -17,6 +54,18 @@
   align-items: flex-start;
   position: relative;
   margin: 0 0 8px;
+
+  @media (max-width: $lg) {
+    padding: 11px 16px 15px 0;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    > div {
+      margin: 0 -8px;
+    }
+  }
 
   &:after {
     position: absolute;
@@ -38,21 +87,43 @@
 
 .training-schedule__item-day {
   color: $monochromeGrey6;
+
+  @media (max-width: $lg) {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 8px;
+  }
 }
 
 .training-schedule__item-title {
   margin: 0 0 5px;
   color: $primaryBlueDark;
+
+  @media (max-width: $lg) {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 4px;
+  }
 }
 
 .training-schedule__item-content {
   color: $monochromeGrey8;
   margin: 0 0 4px;
 
+  @media (max-width: $lg) {
+    font-size: 14px;
+    line-height: 1.45;
+    margin: 0 0 4px;
+  }
+
   ul {
     li {
       padding: 0 0 0 11px;
       position: relative;
+
+      @media (max-width: $lg) {
+        padding: 0 0 0 16px;
+      }
 
       &:before {
         position: absolute;
@@ -63,6 +134,13 @@
         height: 5px;
         border-radius: 50%;
         background: $monochromeGrey8;
+
+        @media (max-width: $lg) {
+          width: 4px;
+          height: 4px;
+          top: 8px;
+          left: 5px;
+        }
       }
     }
   }
@@ -70,4 +148,9 @@
 
 .training-schedule__item-hashtags {
   color: $monochromeGrey6;
+
+  @media (max-width: $lg) {
+    font-size: 14px;
+    line-height: 1.45;
+  }
 }

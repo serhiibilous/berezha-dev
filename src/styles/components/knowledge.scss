@@ -2,6 +2,30 @@
 @import '../variables';
 
 .knowledge {
+  @media (max-width: $lg) {
+    padding: 0;
+
+    .container__title {
+      margin: 0 0 18px;
+    }
+
+    .heading-h2 {
+      font-size: 28px;
+      line-height: 1.5;
+    }
+
+    .sub-title {
+      &.container__sub-title {
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 0 0 26px;
+      }
+    }
+
+    .advantages__button-container {
+      width: 100%;
+    }
+  }
 }
 
 .knowledge__list {
@@ -14,15 +38,32 @@
   padding-right: calc(8.3333333333%);
   margin: 0 0 67px;
 
-  @media (max-width: $sm) {
+  @media (max-width: $lg) {
     width: 100%;
+    margin: 0 0 20px;
+    padding: 0;
+
+    &:last-child {
+      margin: 0;
+    }
   }
 }
 
 .knowledge__list-title {
   margin: 0 0 8px;
+
+  @media (max-width: $lg) {
+    margin: 0 0 5px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
 }
 
 .knowledge__list-content {
   color: $monochromeGrey8;
+
+  @media (max-width: $lg) {
+    font-size: 14px;
+    line-height: 1.45;
+  }
 }

@@ -1,0 +1,177 @@
+@import '../colors';
+@import '../variables';
+
+.training-program {
+  .container__title {
+    margin: 0 0 46px;
+
+    @media (max-width: $lg) {
+      margin: 0 0 12px;
+    }
+  }
+
+  a {
+    display: inline-block;
+
+    &.advantages__button {
+      display: inline-flex;
+    }
+  }
+
+  &.pentester-program {
+    .container__title {
+      margin: 0 0 72px;
+
+      @media (max-width: $lg) {
+        margin: 0 0 24px;
+      }
+    }
+  }
+
+  @media (max-width: $lg) {
+    padding: 56px 0;
+
+    &.pentester-program {
+      padding: 56px 0 0;
+    }
+
+    .heading-h2 {
+      font-size: 28px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.training-program__list {
+  counter-reset: counter;
+
+  li {
+    position: relative;
+    counter-increment: counter;
+    margin: 0 0 18px;
+    font-size: 18px;
+    line-height: 1.5;
+
+    @media (max-width: $lg) {
+      padding-left: 40px;
+      font-size: 14px;
+      margin: 0 0 24px;
+    }
+
+    .pentester-program & {
+      margin: 0 0 48px;
+      font-size: 16px;
+
+      &:last-child {
+        margin: 0;
+      }
+
+      @media (max-width: $lg) {
+        font-size: 14px;
+        margin: 0 0 24px;
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        top: 24px;
+        left: -60px;
+        width: 1px;
+        background: $primaryBlueMedium;
+        bottom: -48px;
+
+        @media (max-width: $lg) {
+          left: 15px;
+        }
+      }
+
+      &:last-child {
+        &:after {
+          content: none;
+        }
+      }
+    }
+
+    &:before {
+      position: absolute;
+      left: -84px;
+      top: -4px;
+      width: 48px;
+      height: 48px;
+      content: counter(counter);
+      color: $primaryBlueMedium;
+      border: 1px solid $primaryBlueMedium;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $monochromeWhite;
+      z-index: 1;
+      font-size: 24px;
+
+      .pentester-program & {
+        top: -8px;
+
+        @media (max-width: $lg) {
+          top: -2px;
+        }
+      }
+
+      @media (max-width: $lg) {
+        font-size: 16px;
+        width: 30px;
+        height: 30px;
+        left: 0;
+        top: -2px;
+      }
+    }
+  }
+}
+
+.training-program__button-container {
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: $lg) {
+    margin: 40px 0 0;
+  }
+
+  @media (max-width: $sm) {
+    .button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+.training-program__desc {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 0 48px;
+
+  @media (max-width: $lg) {
+    font-size: 14px;
+    margin: 0 0 24px;
+  }
+}
+
+.training-program__list-title {
+  font-size: 28px;
+  line-height: 1.5;
+  margin: 0 0 8px;
+
+  .pentester-program & {
+    font-size: 24px;
+    margin: 0 0 14px;
+
+    @media (max-width: $lg) {
+      font-size: 18px;
+      margin: 0 0 5px;
+    }
+  }
+
+  @media (max-width: $lg) {
+    font-size: 18px;
+    margin: 0 0 5px;
+  }
+}

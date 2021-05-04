@@ -238,7 +238,7 @@ img {
 }
 
 .tablet-show {
-  display: none;
+  display: none !important;
 
   @media (max-width: $lg) {
     display: block !important;
