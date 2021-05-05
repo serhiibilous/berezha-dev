@@ -68,6 +68,10 @@
     .precise-quote_form & {
       padding-bottom: 26px;
     }
+
+    .precise-quote__success & {
+      padding-bottom: 40px;
+    }
   }
 }
 
@@ -200,6 +204,13 @@
   }
 }
 
+.precise-quote__success-sub-title {
+  @media (max-width: $lg) {
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+}
+
 .precise-quote__contact-us_right {
   border-left: 1px solid $primaryBlueMedium;
   padding: 0 64px;
@@ -210,6 +221,10 @@
 
   .precise-quote__wrapper & {
     border-color: $secondaryGreenDark;
+  }
+
+  .training-price__container & {
+    border-color: $monochromeWhite;
   }
 
   .flex-lg-row-reverse & {
@@ -232,13 +247,14 @@
 // Success
 
 .precise-quote__success {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  //position: absolute;
+  //top: 0;
+  //left: 0;
+  //right: 0;
+  //bottom: 0;
   background: $primaryBlueUltralight;
   z-index: 1;
+  width: 100%;
 
   &.error-wrapper {
     background: $monochromeGrey5;
@@ -262,15 +278,23 @@
 
   @media (max-width: $lg) {
     position: static;
-    margin-top: 50px;
+    margin-top: 30px;
+
+    .heading-h3 {
+      font-size: 24px;
+    }
   }
 
   @media (max-width: $sm) {
-    padding: 24px;
+    padding: 16px;
   }
 
   .heading-h3 {
     margin: 0 0 12px;
+  }
+
+  .training-price__container & {
+    border-color: $monochromeWhite;
   }
 }
 
@@ -278,6 +302,19 @@
   display: flex;
   justify-content: flex-end;
   margin: 29px 0 0;
+
+  .training-price__container & {
+    a {
+      color: $monochromeWhite;
+    }
+
+    .icon-arrow {
+      &:after,
+      &:before {
+        background: $monochromeWhite;
+      }
+    }
+  }
 }
 
 .precise-quote__success-link {

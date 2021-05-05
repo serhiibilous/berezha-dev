@@ -1,12 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 
 export function FormTermsConditions({ onSetValue, errors = [] }) {
   const [error, setError] = useState()
+  const id = Math.floor(Math.random() * 1000)
 
-  const handleChangeInput = (event) => {
-    const inputValue = event.target.checked
-    onSetValue(inputValue)
-  }
+  const handleChangeInput = useCallback(
+    (event) => {
+      const inputValue = event.target.checked
+      onSetValue(inputValue)
+    },
+    [onSetValue]
+  )
 
   useEffect(() => {
     const currentError = errors.find((item) => item.key === 'agreement')
@@ -23,10 +27,10 @@ export function FormTermsConditions({ onSetValue, errors = [] }) {
         type="checkbox"
         name="agreementField"
         className="form-check-input"
-        id="agreementField"
+        id={`agreementField_${id}`}
         onChange={handleChangeInput}
       />
-      <label className="form-check-label caption" htmlFor="agreementField">
+      <label className="form-check-label caption" htmlFor={`agreementField_${id}`}>
         <span>
           I have read and agree to the <br />
           <a href="/terms-and-conditions.html" target="_blank">

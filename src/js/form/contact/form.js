@@ -58,15 +58,17 @@ export function ContactForm() {
   return (
     <div className="contact__form">
       <form onSubmit={handleSubmitForm}>
-        <FormUserData
-          onChangeUserFirstName={setUserFirstName}
-          onChangeUserLastName={setUserLastName}
-          onChangeUserEmail={setUserEmail}
-          onChangeUserComment={setUserComment}
-          onChangeUserPhone={setUserPhone}
-          onChangeAgreement={setAgreement}
-          errors={validationErrors}
-        />
+        {!error && !success && (
+          <FormUserData
+            onChangeUserFirstName={setUserFirstName}
+            onChangeUserLastName={setUserLastName}
+            onChangeUserEmail={setUserEmail}
+            onChangeUserComment={setUserComment}
+            onChangeUserPhone={setUserPhone}
+            onChangeAgreement={setAgreement}
+            errors={validationErrors}
+          />
+        )}
         {isLoading && <Loader />}
         {success && <Success isShort />}
         {error && <Error isShort />}

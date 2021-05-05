@@ -59,31 +59,33 @@ export function RequestForm() {
     <div className="container">
       <form onSubmit={handleSubmitForm}>
         <section className="precise-quote precise-quote_form">
-          <div className="precise-quote__step precise-quote__step_only-form">
-            <div className="row">
-              <div className="col-lg-5 offset-lg-1">
-                <div className="precise-quote__contact-us_left">
-                  <h2 className="heading-h2 precise-quote__heading">Contact Us</h2>
-                  <p className="body-text-1 precise-quote__sub-heading">
-                    Get cybersecurity advice now – <br /> talk to a BSG expert.
-                  </p>
+          {!error && !success && (
+            <div className="precise-quote__step precise-quote__step_only-form">
+              <div className="row">
+                <div className="col-lg-5 offset-lg-1">
+                  <div className="precise-quote__contact-us_left">
+                    <h2 className="heading-h2 precise-quote__heading">Contact Us</h2>
+                    <p className="body-text-1 precise-quote__sub-heading">
+                      Get cybersecurity advice now – <br /> talk to a BSG expert.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="precise-quote__contact-us_right">
-                  <FormUserData
-                    onChangeUserFirstName={setUserFirstName}
-                    onChangeUserLastName={setUserLastName}
-                    onChangeUserEmail={setUserEmail}
-                    onChangeUserComment={setUserComment}
-                    onChangeUserPhone={setUserPhone}
-                    onChangeAgreement={setAgreement}
-                    errors={validationErrors}
-                  />
+                <div className="col-lg-6">
+                  <div className="precise-quote__contact-us_right">
+                    <FormUserData
+                      onChangeUserFirstName={setUserFirstName}
+                      onChangeUserLastName={setUserLastName}
+                      onChangeUserEmail={setUserEmail}
+                      onChangeUserComment={setUserComment}
+                      onChangeUserPhone={setUserPhone}
+                      onChangeAgreement={setAgreement}
+                      errors={validationErrors}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          )}
           {isLoading && <Loader />}
           {success && <Success />}
           {error && <Error />}

@@ -74,157 +74,161 @@ export function QuestionnaireForm() {
     <div className="container">
       <form onSubmit={handleSubmitForm}>
         <section className="precise-quote">
-          <div className="precise-quote__wrapper" style={{ transform: ` translateX(-${step - 1}00%)` }}>
-            <Step
-              left={
-                <>
-                  <div className="tablet-show precise-quote__mobile-top">
+          {!error && !success && (
+            <div className="precise-quote__wrapper" style={{ transform: ` translateX(-${step - 1}00%)` }}>
+              <Step
+                left={
+                  <>
+                    <div className="tablet-show precise-quote__mobile-top">
+                      <h2 className="heading-h4 precise-quote__heading">
+                        See how we can help you defeat security threats
+                      </h2>
+                      <p className="sub-title precise-quote__sub-heading">
+                        Answer three questions and find out how our capabilities match your business goals.
+                      </p>
+                    </div>
+                    <p className="heading-h3 precise-quote__question">Pick your industry</p>
+                    <QuestionsList
+                      questions={industryQuestions}
+                      service="industry"
+                      onSelectService={setIndustry}
+                      onChangeStep={setStep}
+                      step={step}
+                    />
+                  </>
+                }
+                right={
+                  <div className="tablet-hide">
                     <h2 className="heading-h4 precise-quote__heading">
                       See how we can help you defeat security threats
                     </h2>
-                    <p className="sub-title precise-quote__sub-heading">
+                    <p className="sub-title">
                       Answer three questions and find out how our capabilities match your business goals.
                     </p>
                   </div>
-                  <p className="heading-h3 precise-quote__question">Pick your industry</p>
-                  <QuestionsList
-                    questions={industryQuestions}
-                    service="industry"
-                    onSelectService={setIndustry}
-                    onChangeStep={setStep}
-                    step={step}
-                  />
-                </>
-              }
-              right={
-                <div className="tablet-hide">
-                  <h2 className="heading-h4 precise-quote__heading">See how we can help you defeat security threats</h2>
-                  <p className="sub-title">
-                    Answer three questions and find out how our capabilities match your business goals.
-                  </p>
-                </div>
-              }
-              step={step}
-              service="industry"
-              onChangeStep={setStep}
-              currentStep={1}
-            />
+                }
+                step={step}
+                service="industry"
+                onChangeStep={setStep}
+                currentStep={1}
+              />
 
-            <Step
-              left={
-                <div className="precise-quote__mobile-top">
-                  <p className="heading-h3 precise-quote__question">Pick our services</p>
-                  <QuestionsList
-                    questions={servicesQuestions}
-                    service="services"
-                    onSelectService={setService}
-                    onChangeStep={setStep}
-                    step={step}
-                  />
-                </div>
-              }
-              right={
-                <>
-                  <p className="sub-title precise-quote__question-title">Not sure what to choose?</p>
-                  <p className="body-text-2 precise-quote__question-sub-title">
-                    Send us a message and our security expert will get back to you shortly.
-                  </p>
-                  <FormUserData
-                    onChangeUserFirstName={setUserFirstName}
-                    onChangeUserLastName={setUserLastName}
-                    onChangeUserEmail={setUserEmail}
-                    onChangeUserComment={setUserComment}
-                    onChangeUserPhone={setUserPhone}
-                    step={step}
-                    onChangeAgreement={setAgreement}
-                    errors={validationErrors}
-                  />
-                </>
-              }
-              service="services"
-              step={step}
-              onChangeStep={setStep}
-              currentStep={2}
-            />
+              <Step
+                left={
+                  <div className="precise-quote__mobile-top">
+                    <p className="heading-h3 precise-quote__question">Pick our services</p>
+                    <QuestionsList
+                      questions={servicesQuestions}
+                      service="services"
+                      onSelectService={setService}
+                      onChangeStep={setStep}
+                      step={step}
+                    />
+                  </div>
+                }
+                right={
+                  <>
+                    <p className="sub-title precise-quote__question-title">Not sure what to choose?</p>
+                    <p className="body-text-2 precise-quote__question-sub-title">
+                      Send us a message and our security expert will get back to you shortly.
+                    </p>
+                    <FormUserData
+                      onChangeUserFirstName={setUserFirstName}
+                      onChangeUserLastName={setUserLastName}
+                      onChangeUserEmail={setUserEmail}
+                      onChangeUserComment={setUserComment}
+                      onChangeUserPhone={setUserPhone}
+                      step={step}
+                      onChangeAgreement={setAgreement}
+                      errors={validationErrors}
+                    />
+                  </>
+                }
+                service="services"
+                step={step}
+                onChangeStep={setStep}
+                currentStep={2}
+              />
 
-            <Step
-              left={
-                <div className="precise-quote__mobile-top">
-                  <p className="heading-h3 precise-quote__question">Pick your security objective</p>
-                  <QuestionsList
-                    questions={securityObjectiveQuestions}
-                    service="securityObjective"
-                    onSelectService={setSecurityObjective}
-                    onChangeStep={setStep}
-                    step={step}
-                  />
-                </div>
-              }
-              right={
-                <>
-                  <p className="sub-title precise-quote__question-title">Not sure what to choose?</p>
-                  <p className="body-text-2 precise-quote__question-sub-title">
-                    Send us a message and our security expert will get back to you shortly.
-                  </p>
-                  <FormUserData
-                    onChangeUserFirstName={setUserFirstName}
-                    onChangeUserLastName={setUserLastName}
-                    onChangeUserEmail={setUserEmail}
-                    onChangeUserComment={setUserComment}
-                    onChangeUserPhone={setUserPhone}
-                    step={step}
-                    onChangeAgreement={setAgreement}
-                    errors={validationErrors}
-                  />
-                </>
-              }
-              service="securityObjective"
-              step={step}
-              onChangeStep={setStep}
-              currentStep={3}
-            />
+              <Step
+                left={
+                  <div className="precise-quote__mobile-top">
+                    <p className="heading-h3 precise-quote__question">Pick your security objective</p>
+                    <QuestionsList
+                      questions={securityObjectiveQuestions}
+                      service="securityObjective"
+                      onSelectService={setSecurityObjective}
+                      onChangeStep={setStep}
+                      step={step}
+                    />
+                  </div>
+                }
+                right={
+                  <>
+                    <p className="sub-title precise-quote__question-title">Not sure what to choose?</p>
+                    <p className="body-text-2 precise-quote__question-sub-title">
+                      Send us a message and our security expert will get back to you shortly.
+                    </p>
+                    <FormUserData
+                      onChangeUserFirstName={setUserFirstName}
+                      onChangeUserLastName={setUserLastName}
+                      onChangeUserEmail={setUserEmail}
+                      onChangeUserComment={setUserComment}
+                      onChangeUserPhone={setUserPhone}
+                      step={step}
+                      onChangeAgreement={setAgreement}
+                      errors={validationErrors}
+                    />
+                  </>
+                }
+                service="securityObjective"
+                step={step}
+                onChangeStep={setStep}
+                currentStep={3}
+              />
 
-            <Step
-              left={
-                <div className="precise-quote__mobile-top">
-                  <p className="heading-h3 precise-quote__question">Customize your request</p>
-                  <ul className="body-text-2  precise-quote__selected-list">
-                    <li>
-                      <span>Industry:</span> {industry}
-                    </li>
-                    <li>
-                      <span>Service:</span> {service}
-                    </li>
-                    <li>
-                      <span>Objective:</span> {securityObjective}
-                    </li>
-                  </ul>
-                  <p className="sub-title precise-quote__selected-title">
-                    Please send us a message, and our security expert will get back to you shortly.
-                  </p>
-                </div>
-              }
-              right={
-                <>
-                  <FormUserData
-                    onChangeUserFirstName={setUserFirstName}
-                    onChangeUserLastName={setUserLastName}
-                    onChangeUserEmail={setUserEmail}
-                    onChangeUserComment={setUserComment}
-                    onChangeUserPhone={setUserPhone}
-                    step={step}
-                    onChangeAgreement={setAgreement}
-                    errors={validationErrors}
-                  />
-                </>
-              }
-              step={step}
-              onChangeStep={setStep}
-              currentStep={4}
-            />
-          </div>
+              <Step
+                left={
+                  <div className="precise-quote__mobile-top">
+                    <p className="heading-h3 precise-quote__question">Customize your request</p>
+                    <ul className="body-text-2  precise-quote__selected-list">
+                      <li>
+                        <span>Industry:</span> {industry}
+                      </li>
+                      <li>
+                        <span>Service:</span> {service}
+                      </li>
+                      <li>
+                        <span>Objective:</span> {securityObjective}
+                      </li>
+                    </ul>
+                    <p className="sub-title precise-quote__selected-title">
+                      Please send us a message, and our security expert will get back to you shortly.
+                    </p>
+                  </div>
+                }
+                right={
+                  <>
+                    <FormUserData
+                      onChangeUserFirstName={setUserFirstName}
+                      onChangeUserLastName={setUserLastName}
+                      onChangeUserEmail={setUserEmail}
+                      onChangeUserComment={setUserComment}
+                      onChangeUserPhone={setUserPhone}
+                      step={step}
+                      onChangeAgreement={setAgreement}
+                      errors={validationErrors}
+                    />
+                  </>
+                }
+                step={step}
+                onChangeStep={setStep}
+                currentStep={4}
+              />
+            </div>
+          )}
           {isLoading && <Loader />}
-          {success && <Success />}
+          {success && <Success bgColor="#e6f8f4" />}
           {error && <Error />}
         </section>
       </form>

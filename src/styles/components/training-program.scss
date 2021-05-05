@@ -175,3 +175,16 @@
     margin: 0 0 5px;
   }
 }
+
+.training-program__button {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: $sm) {
+    .button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
