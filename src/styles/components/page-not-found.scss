@@ -1,3 +1,68 @@
+@import '../colors';
+@import '../variables';
+
+.page-not-found_container {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
 .page-not-found {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .text-content {
+    margin: 0;
+
+    p {
+      margin: 0 0 22px;
+    }
+
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.page-not-found__graphic-container {
+  width: 400px;
+  height: 400px;
+  padding: 0 24px 24px;
+  background: $monochromeGrey1;
+  margin: 0 auto 32px;
+
+  @media (max-width: $sm) {
+    width: 100%;
+    padding: 24px;
+    height: auto;
+  }
+}
+
+.page-not-found__graphic {
+  border: 1px solid $primaryBlueDark;
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 47px;
+
+  .heading-h1 {
+    margin: 0 0 24px;
+
+    @media (max-width: $sm) {
+      margin-top: 50px;
+    }
+  }
+}
+
+.page-not-found__error-text {
+  font-size: 128px;
+  line-height: 1;
+  letter-spacing: 0.03em;
 }
