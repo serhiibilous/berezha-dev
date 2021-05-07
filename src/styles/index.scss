@@ -54,4 +54,6 @@
 @import 'components/training-program';
 @import 'components/page-not-found';
 
-@import 'base';
+.hide {
+  display: none !important;
+}
