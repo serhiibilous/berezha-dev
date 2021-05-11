@@ -185,7 +185,9 @@
   }
 
   li {
-    margin-left: 26px;
+    margin-left: 24px;
+    display: flex;
+    align-items: center;
 
     @media (max-width: $mobileWidth) {
       margin: 0 15px;
