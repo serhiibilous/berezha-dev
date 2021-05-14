@@ -33,11 +33,11 @@ export function FormTermsConditions({ onSetValue, errors = [] }) {
       <label className="form-check-label caption" htmlFor={`agreementField_${id}`}>
         <span>
           I have read and agree to the <br />
-          <a href="/terms-and-conditions.html" target="_blank">
+          <a href="/terms-and-conditions" target="_blank">
             Terms&Conditions
           </a>{' '}
           and{' '}
-          <a href="/privacy-policy-bsg.html" target="_blank">
+          <a href="/privacy-policy-bsg" target="_blank">
             Privacy Policy
           </a>
           .
