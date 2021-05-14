@@ -19,7 +19,7 @@ export function Success({ isShort = false, bgColor = '#e6f1ff' }) {
             <div className="col-lg-6">
               <div className="precise-quote__contact-us_right">
                 <div className="precise-quote__success-content">
-                  <p className="sub-title precise-quote__success-sub-title">Wait productively – download our report</p>
+                  <p className="sub-title precise-quote__success-sub-title">Wait productively – download our report!</p>
                   <div className="precise-quote__success-info">
                     <p className="heading-h3">Тop 10 Vulnerabilities</p>
                     <p className="body-text-1">We discover during Penetration Testing</p>
@@ -29,7 +29,7 @@ export function Success({ isShort = false, bgColor = '#e6f1ff' }) {
                         className="precise-quote__success-link body-text-2"
                         download={true}
                         target="_blank">
-                        Download Report <i className="icon-arrow" />
+                        Download the report <i className="icon-arrow" />
                       </a>
                     </div>
                   </div>

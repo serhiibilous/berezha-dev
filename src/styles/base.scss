@@ -100,11 +100,15 @@ a {
 
   &:hover {
     text-decoration: none;
-    color: $primaryBlueLight;
+    color: $primaryBlueMedium;
   }
 
   &:visited {
-    color: $visitedLink;
+    color: $primaryBlueMedium;
+  }
+
+  &:active {
+    color: $primaryBlueMedium;
   }
 
   &.active {
