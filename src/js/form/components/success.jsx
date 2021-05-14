@@ -25,7 +25,7 @@ export function Success({ isShort = false, bgColor = '#e6f1ff' }) {
                     <p className="body-text-1">We discover during Penetration Testing</p>
                     <div className="precise-quote__success-info-button">
                       <a
-                        href="/public/Report.pdf"
+                        href="/public/Top-10-security-vulnerabilities-BSG-2020-Report.pdf"
                         className="precise-quote__success-link body-text-2"
                         download={true}
                         target="_blank">

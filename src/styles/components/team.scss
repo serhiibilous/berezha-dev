@@ -142,11 +142,12 @@
 
 .team__item-photo {
   margin: 0 0 16px;
-  display: flex;
-  justify-content: center;
+  max-height: 264px;
+  overflow: hidden;
 
-  @media (max-width: $sm) {
-    display: block;
+  img {
+    max-height: 264px;
+    max-width: 264px;
   }
 }
 
