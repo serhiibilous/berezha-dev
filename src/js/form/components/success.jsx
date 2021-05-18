@@ -1,4 +1,5 @@
 import React from 'react'
+import { PDF_REPORT } from '../constants'
 
 export function Success({ isShort = false, bgColor = '#e6f1ff' }) {
   return (
@@ -25,11 +26,11 @@ export function Success({ isShort = false, bgColor = '#e6f1ff' }) {
                     <p className="body-text-1">We discover during Penetration Testing</p>
                     <div className="precise-quote__success-info-button">
                       <a
-                        href="/public/Top-10-security-vulnerabilities-BSG-2020-Report.pdf"
+                        href={PDF_REPORT.link}
                         className="precise-quote__success-link body-text-2"
                         download={true}
                         target="_blank">
-                        Download the report <i className="icon-arrow" />
+                        {PDF_REPORT.name} <i className="icon-arrow" />
                       </a>
                     </div>
                   </div>

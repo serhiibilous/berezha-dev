@@ -1,4 +1,5 @@
 import React from 'react'
+import { contactEmail } from '../constants'
 
 export function Error({ isShort = false }) {
   return (
@@ -19,8 +20,8 @@ export function Error({ isShort = false }) {
                     Please try again later refresh page or contact us via email:
                   </p>
                   <p className="sub-title precise-quote__success-sub-title">
-                    <a href="mailto:hello@bsg.tech" target="_blank">
-                      hello@bsg.tech
+                    <a href={`mailto:${contactEmail}`} target="_blank">
+                      {contactEmail}
                     </a>
                   </p>
                 </div>
