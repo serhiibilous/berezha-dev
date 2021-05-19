@@ -2,10 +2,10 @@
 @import '../colors';
 
 .documents {
-  padding: 120px 0 112px;
+  padding: 80px 0 112px;
 
   @media (max-width: $md) {
-    padding: 88px 0 56px;
+    padding: 40px 0 56px;
   }
 }
 

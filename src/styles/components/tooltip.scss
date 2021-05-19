@@ -3,6 +3,7 @@
 
 .tooltip__container {
   position: relative;
+  display: block;
 
   &:hover {
     .tooltip__window {
@@ -23,6 +24,7 @@
   left: calc(50% + 24px);
   transform: translateX(-50%);
   white-space: nowrap;
+  z-index: 1;
 
   @media (max-width: $lg) {
     white-space: normal;

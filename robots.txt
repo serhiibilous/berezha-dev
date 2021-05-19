@@ -4,5 +4,4 @@ Allow: /
 Disallow: /privacy-policy-bsg/
 Disallow: /terms-and-conditions/
 
-Sitemap: https://bsg.tech/sitemap_index.xml
-Sitemap: https://bsg.tech/sitemap-images.xml
+Sitemap: https://bsg.tech/sitemap.xml

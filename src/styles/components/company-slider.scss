@@ -5,13 +5,13 @@
   background: $primaryBlueDark;
   overflow: hidden;
 
-  @media (max-width: $lg) {
-    padding-top: 48px;
-  }
+  //@media (max-width: $lg) {
+  //  padding-top: 48px;
+  //}
 }
 
 .company-slider__content {
-  padding: 50px 0 0;
+  // padding: 50px 0 0;
   display: flex;
   align-items: center;
   color: $monochromeWhite;

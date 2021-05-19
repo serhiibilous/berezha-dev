@@ -69,6 +69,20 @@
   align-items: center;
   margin-left: 40px;
 
+  > li {
+    > a:not(.active-link) {
+      cursor: default;
+
+      &:hover {
+        color: $primaryBlueDark;
+
+        @media (max-width: $md) {
+          color: $monochromeGrey6;
+        }
+      }
+    }
+  }
+
   @media (max-width: $md) {
     display: block;
     margin-left: 64px;
