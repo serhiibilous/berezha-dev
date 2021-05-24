@@ -5,7 +5,7 @@ export const PENTESTER_TRAINING_ENDPOINT = 'wt1pt3ehdye4hw2j6hqsfwirp17g8195'
 
 export const PDF_REPORT = {
   name: 'Download the report',
-  link: '/public/Top-10-security-vulnerabilities-BSG-2020-Report.pdf',
+  link: 'https://hubs.ly/H0NXY580',
 }
 
 export const contactEmail = 'hello@bsg.tech'
